@@ -28,10 +28,14 @@
   <body>
 
     <!-- Header Tags -->
+    <!-- some html semantics to organize code are : headers, nav, etc -->
+    <header>
     <h1>Content Whats displayed inthe page.</h1>
-    <h2>h2 heading</h2>
+    <!-- CSS style attribute -->
+    <h2 style="border:1px solid black">h2 heading</h2>
     <h3>h3 heading</h3>
     <h4>h4 heading</h4>
+    </header>
 
     <!-- Paragraph Tag -->
     <p>A text written within the p element or also known as a
@@ -222,10 +226,11 @@
     <br><br><br>
 
     <!-- Forms -->
+    Form:
     <form>
       username : <input type="text"><br>
       password : <input type="password"><br>
-      Favroites :<br>
+      Favroites :
       SQL :<input type="checkbox" name="language" value="sql" checked>
       Python :<input type="checkbox" name="language" value="python">
       R :<input type="checkbox" name="language" value="R"> <br>
@@ -237,11 +242,47 @@
 
     <br><br><br>
 
+    <!-- Contact Form -->
+    <form>
+      <!-- label -->
+    <label for="typeform">Type of Form :</label> Contact Form<br>
+    <!-- drop down box -->
+    <select name="suject">
+      <option value="support">support</option>
+      <option value="info">info</option>
+      <option value="billing">billing</option>
+    </select><br>
+    <!-- text box -->
+    <textarea rows="5" cols="20">Your message...</textarea><br>
+    <label>Click here :</label><input type="button" value="Notify me">
+    </form>
+
+    <br><br><br>
+
+    <!-- New html 5 input types -->
+    <input type="color"><br>
+    <input type="date"><br>
+    email :<input type="email"><br>
+    number :<input type="number"><br>
+    url :<input type="url"><br>
+    telephone :<input type="tel" name="" value=""><br>
+    <input type="datetime-local" name="" value=""><br>
+    slider :<input type="range" min="50" max="200"><br>
+    <input type="submit" name="submitbutton" value="submit"><br>
+
+    <!-- Uploading ability -->
+    upload :<input type="file">
+
+    <br><br><br>
+
 <!-- Links -->
 
     <!-- Anchor tags lets us add hyperlinks. -->
-    <a href="basics.html">Home</a> <br> <a href="exercise1.html">About Us</a>
-    <br><a href="../practice/dummy.html">Any Text for hyperlink</a>
+    <nav>
+    <a href="basics.html">Home</a> <br>
+    <a href="exercise1.html">About Us</a><br>
+    <a href="../practice/dummy.html">Any Text for hyperlink</a>
+    </nav>
 
     <!-- Anchor tags containig hyperlink to another website -->
     <p>
