@@ -1,0 +1,30 @@
+a{
+  color:green;
+}
+h1{
+  color:blue;
+}
+
+/* An element can have styling applied by using its element and as well as a class */
+/* span{
+  background-color:yellow;
+} */
+
+div{
+  color:red;
+}
+
+/* Tags are given a hash */
+#stars{
+  color:deeppink;
+}
+
+/* Classes begin with a period */
+.class1{
+  color:purple;
+}
+.class2{
+  color:orange;
+}
+.class3{
+}
