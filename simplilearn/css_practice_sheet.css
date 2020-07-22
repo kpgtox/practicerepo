@@ -1,3 +1,26 @@
+header{
+  /* background-image: url(http://lorempixel.com/400/200);
+  background-repeat:no-repeat;
+  background-size: cover; */
+}
+
+/* Applying styling to entire body section.  */
+body{
+  /* Change bg color */
+  /* background-color:#cfcfcf; */
+
+  /* background-image: url(http://lorempixel.com/400/200);
+  background-repeat:no-repeat;
+  background-size: 800px 300px;
+  /* bg image stays on scrolling */
+  /* background-attachment: fixed;
+  background-position: center; */
+
+  /* Shorthand command for above set of ops, needs a specific order of parameters */
+  background: #cfcfcf url(http://lorempixel.com/400/200) no-repeat fixed center;
+  background-size: 800px 300px;
+}
+
 a{
   color:green;
 }
@@ -21,10 +44,15 @@ div{
 
 /* Classes begin with a period */
 .class1{
-  color:purple;
+  /* Using hex codes for colors */
+  background-color:black;
+  color:#df00eb;
 }
 .class2{
-  color:orange;
+  /* rgba values for a color */
+  color:rgba(219, 183, 0);
 }
 .class3{
+  /* keyword for a color */
+  color:aquamarine;
 }
