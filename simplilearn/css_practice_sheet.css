@@ -9,7 +9,7 @@ nav{
   margin:auto;
 
   /* Set color for the Background of the container. */
-  background-color: white;
+  background-color: hotpink;
 
   /* Add a border to the nav container */
   /* Shorthand command */
@@ -49,6 +49,7 @@ header{
 
   text-align:center;
   font-family: "Fira Sans";
+  letter-spacing: 7px;
 }
 
 /* Applying styling to entire body section.  */
@@ -68,6 +69,31 @@ body{
 /* Set styling to all anchor elements */
 a{
   color:green;
+}
+
+/* a:link{
+  color: black;
+} */
+
+/* hyperlinks behaviour after clicked. */
+a:visited{
+  color: white;
+}
+
+/* Anchor elements or hyperlinks settings when hovered over them */
+a:hover{
+  background-color: white;
+  color: black;
+}
+
+/* link behaviour when clicked on it */
+a:active{
+  color: white;
+}
+
+/* Configuring all hyperlinks within the txt1 class */
+.txt2 a{
+  color: deeppink;
 }
 
 h1{
@@ -111,7 +137,9 @@ div{
 }
 
 /* ID's also start with a hash */
-#txt1{
+.txt1{
+  /* Content Settings */
+
   /* Text color */
   color: white;
 
@@ -119,6 +147,11 @@ div{
   font: italic bold 20px fantasy;
   /* font-family: cursive;
   font-size: 14px; */
+
+  /* Space between lines */
+  line-height: 50px;
+
+  /* Container Settings */
 
   /* Set margin of the container */
   margin-left: 25%;
