@@ -1,7 +1,21 @@
 header{
+
   /* background-image: url(http://lorempixel.com/400/200);
   background-repeat:no-repeat;
   background-size: cover; */
+
+  /* borders */
+  /* shorthand commands */
+  border: double red;
+  border-bottom: solid blue;
+  /* border-style:double;
+  border-width:medium;
+  border-color:black; */
+
+  /* Outline: */
+  outline: purple solid 4px;
+  margin:5px;
+
 }
 
 /* Applying styling to entire body section.  */
