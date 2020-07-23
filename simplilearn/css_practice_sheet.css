@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap");
+
 nav{
   /* Size of the conatiner */
   width: 50%;
@@ -27,7 +29,7 @@ nav{
   text-align: center;
 
   /* Set Font */
-  font-family:monospace;
+  font-family: "Fira Sans";
   font-size: 20px;
 }
 
@@ -46,7 +48,7 @@ header{
   background-color: yellow;
 
   text-align:center;
-  font-family:sans-serif;
+  font-family: "Fira Sans";
 }
 
 /* Applying styling to entire body section.  */
