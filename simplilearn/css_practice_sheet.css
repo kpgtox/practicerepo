@@ -23,7 +23,10 @@ nav{
   /* Padding */
   /* Further spacing around the container before content
   is placed inside the container*/
-  padding: 2px 190px;
+  padding-top: 20px;
+
+  /* Algin content inside the container. */
+  text-align: center;
 }
 
 header{
@@ -40,7 +43,9 @@ header{
 
   /* Padding inside */
   padding-left:10%;
-  padding-right:10%
+  padding-right:10%;
+
+  text-align:center;
 }
 
 /* Applying styling to entire body section.  */
@@ -128,9 +133,12 @@ div{
 }
 
 .container{
+  /* Container configuration */
   background-color: hotpink;
   margin: 40px;
   border: 2px solid black;
   padding: 10px;
   color: white;
+  /* Content configuration */
+  text-align: center;;
 }
