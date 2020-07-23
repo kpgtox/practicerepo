@@ -1,42 +1,50 @@
 nav{
+  /* Margin or placement for this container called nav. */
+  margin-left: 25%;
+  margin-right: 25%;
+
+  /* Size of the conatiner */
+  width: auto;
+  height: 40px;
+
+  /* Set color for the Background of the container. */
   background-color: white;
-  padding: 10px;
-  height: 20px;
+
+  /* Set color for the content inside this container. */
+  color: red;
+
+  /* Add a border to the nav container */
+  /* Shorthand command */
+  border: 10px blue double;
+  /* border-style: double;
+  border-color: blue;
+  border-width: 10px; */
+
+  /* Padding */
+  /* Further spacing around the container before content
+  is placed inside the container*/
+  padding: 2px 190px;
 }
 
 header{
+  margin: 30px;
 
-  /* background-image: url(http://lorempixel.com/400/200);
-  background-repeat:no-repeat;
-  background-size: cover; */
-  background-color: yellow;
-
-  /* borders */
-  /* shorthand commands */
-  border: double red;
-  border-bottom: solid blue;
-  /* border-style:double;
-  border-width:medium;
-  border-color:black; */
-
-  /* Outline: */
-  outline: purple solid 4px;
-
-  /* Margin */
-  /* top 10 left and right 30px and bottom 20px */
-  margin:20px;
+  width: auto;
   height: 150px;
 
-  /* Padding inside */
-  padding-left:100px;
+  background-color: yellow;
 
+  border-style: groove;
+  border-width: 10px;
+  border-color: white;
+
+  /* Padding inside */
+  padding-left:10%;
+  padding-right:10%
 }
 
 /* Applying styling to entire body section.  */
 body{
-  /* Change bg color */
-  /* background-color:#cfcfcf; */
-
   /* background-image: url(http://lorempixel.com/400/200);
   background-repeat:no-repeat;
   background-size: 800px 300px;
@@ -49,6 +57,7 @@ body{
   background-size:cover;
 }
 
+/* Set styling to all anchor elements */
 a{
   color:green;
 }
@@ -86,7 +95,7 @@ div{
 .class3{
   /* keyword for a color */
   color:aquamarine;
-}
+}ª
 
 .tclass{
   background-color: blue;
@@ -95,12 +104,33 @@ div{
 
 /* ID's also start with a hash */
 #txt1{
+  /* Text color */
   color: white;
+
+  /* Set margin of the container */
+  margin-left: 25%;
+  margin-right: 25%;
+
+  /* Width of the container */
+  /* After setting margins for a container,
+  its best to set the width of the container to auto. */
+  width: auto;
+
+  /* Adding a border around this container */
   border-style: dotted;
   border-color: yellow;
-  /* Setting size based on the percentage of the sieze of the window.
-  instead of using pixel values */
-  width: 50%;
-  max-width: 1920px;
-  padding: 20px;
+  border-width: 4px;
+  /* border curvature on the corners */
+  border-radius: 10px;
+
+  /* Set Padding between the content and the edges of the container. */
+  padding:10px;
+}
+
+.container{
+  background-color: hotpink;
+  margin: 40px;
+  border: 2px solid black;
+  padding: 10px;
+  color: white;
 }
