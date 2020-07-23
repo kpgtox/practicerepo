@@ -54,8 +54,9 @@ header{
 
 /* Applying styling to entire body section.  */
 body{
-  background-image: url(http://www.lorempixel.com/400/200);
+  background-image: url(https://via.placeholder.com/150);
   background-repeat:repeat;
+  /* background-color: yellow; */
 
   /* bg image stays on scrolling
   background-attachment: fixed; */
@@ -183,8 +184,13 @@ div{
 }
 
 table{
-  border-width:10px;
-  border-color: black;
-  color: white;
-  font-size: 40px;
+  border-style: solid;
+  color: black;
+  font-size: 30px;
+  width: 90%;
+  margin: auto;
+}
+td{
+  border: 1px solid black;
+  /* border-style: solid; */
 }
