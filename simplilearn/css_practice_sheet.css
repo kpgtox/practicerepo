@@ -1,17 +1,13 @@
 nav{
-  /* Margin or placement for this container called nav. */
-  margin-left: 25%;
-  margin-right: 25%;
-
   /* Size of the conatiner */
-  width: auto;
+  width: 50%;
   height: 40px;
+
+  /* Margin or placement for this container called nav. */
+  margin:auto;
 
   /* Set color for the Background of the container. */
   background-color: white;
-
-  /* Set color for the content inside this container. */
-  color: red;
 
   /* Add a border to the nav container */
   /* Shorthand command */
@@ -21,31 +17,36 @@ nav{
   border-width: 10px; */
 
   /* Padding */
-  /* Further spacing around the container before content
-  is placed inside the container*/
+  /* Spacing from content inside the container to the edges of the container. */
   padding-top: 20px;
+
+  /* Set color for the content inside this container. */
+  color: red;
 
   /* Algin content inside the container. */
   text-align: center;
+
+  /* Set Font */
+  font-family:monospace;
+  font-size: 20px;
 }
 
 header{
-  margin: 30px;
-
-  width: auto;
+  width: 80%;
   height: 150px;
+
+  margin:auto;
+
+  border-style: groove;
+  border-width: 2px;
+  border-color: white;
+
+  padding-top:20px;
 
   background-color: yellow;
 
-  border-style: groove;
-  border-width: 10px;
-  border-color: white;
-
-  /* Padding inside */
-  padding-left:10%;
-  padding-right:10%;
-
   text-align:center;
+  font-family:sans-serif;
 }
 
 /* Applying styling to entire body section.  */
@@ -112,6 +113,11 @@ div{
   /* Text color */
   color: white;
 
+  /* short hand font command */
+  font: italic bold 20px fantasy;
+  /* font-family: cursive;
+  font-size: 14px; */
+
   /* Set margin of the container */
   margin-left: 25%;
   margin-right: 25%;
@@ -135,10 +141,13 @@ div{
 .container{
   /* Container configuration */
   background-color: hotpink;
-  margin: 40px;
+  /* Set width a percentage of window's width And
+  Auto set the margin for center alignment of the container */
+  width: 50%;
+  margin: auto;
   border: 2px solid black;
   padding: 10px;
-  color: white;
   /* Content configuration */
-  text-align: center;;
+  text-align: center;
+  color: white;
 }
