@@ -1,3 +1,9 @@
+nav{
+  background-color: white;
+  padding: 10px;
+  height: 20px;
+}
+
 header{
 
   /* background-image: url(http://lorempixel.com/400/200);
@@ -46,6 +52,7 @@ body{
 a{
   color:green;
 }
+
 h1{
   color:blue;
 }
@@ -70,11 +77,30 @@ div{
   background-color:black;
   color:#df00eb;
 }
+
 .class2{
   /* rgba values for a color */
   color:rgba(219, 183, 0);
 }
+
 .class3{
   /* keyword for a color */
   color:aquamarine;
+}
+
+.tclass{
+  background-color: blue;
+  color: white;
+}
+
+/* ID's also start with a hash */
+#txt1{
+  color: white;
+  border-style: dotted;
+  border-color: yellow;
+  /* Setting size based on the percentage of the sieze of the window.
+  instead of using pixel values */
+  width: 50%;
+  max-width: 1920px;
+  padding: 20px;
 }
