@@ -3,6 +3,7 @@ header{
   /* background-image: url(http://lorempixel.com/400/200);
   background-repeat:no-repeat;
   background-size: cover; */
+  background-color: yellow;
 
   /* borders */
   /* shorthand commands */
@@ -14,7 +15,14 @@ header{
 
   /* Outline: */
   outline: purple solid 4px;
-  margin:5px;
+
+  /* Margin */
+  /* top 10 left and right 30px and bottom 20px */
+  margin:20px;
+  height: 150px;
+
+  /* Padding inside */
+  padding-left:100px;
 
 }
 
@@ -32,7 +40,7 @@ body{
 
   /* Shorthand command for above set of ops, needs a specific order of parameters */
   background: #cfcfcf url(http://lorempixel.com/400/200) no-repeat fixed center;
-  background-size: 800px 300px;
+  background-size:cover;
 }
 
 a{
