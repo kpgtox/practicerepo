@@ -273,9 +273,36 @@ span.c{
   color: white;
   display:inline-block;
 }
-/* boxing challenge */
+/* inline square challenge */
 /* Make a similar sized box for every span tag and put them all in a single div,
 Constrict the width so they fit like a grid. */
 .foobox{
   width: 300px;
+}
+
+/* Positions the content */
+.list1{
+  border: 2px solid blue;
+  padding-left: 10px;
+  position: static;
+  background-color: yellow;
+}
+
+/* Positions the container */
+.list2{
+  background-color: yellow;
+  border: 2px solid blue;
+  position: relative;
+  left: 40px;
+}
+
+/* Fixed position on the page, renders on top of everything. */
+.list3{
+  background-color: pink;
+  border: 2px solid blue;
+  width: 500px;
+
+  /* position:fixed;
+  left: 100px;
+  top: 200px; */
 }
