@@ -77,10 +77,10 @@ a{
 } */
 
 /* Anchor elements or hyperlinks settings when hovered over them */
-a:hover{
+/* a:hover{
   background-color: white;
   color: black;
-}
+} */
 
 /* link behaviour when clicked on it */
 /* a:active{
@@ -281,28 +281,68 @@ Constrict the width so they fit like a grid. */
 }
 
 /* Positions the content */
-.list1{
-  border: 2px solid blue;
-  padding-left: 10px;
+.dl_list1{
   position: static;
+  padding-left: 50px;
+
+  border: 2px solid blue;
   background-color: yellow;
 }
 
 /* Positions the container */
-.list2{
+.dl_list2{
+  width: 50%;
+  position: relative;
+  left: 50px;
+
   background-color: yellow;
   border: 2px solid blue;
-  position: relative;
-  left: 40px;
 }
 
 /* Fixed position on the page, renders on top of everything. */
-.list3{
-  background-color: pink;
-  border: 2px solid blue;
-  width: 500px;
-
+.dl_list3{
+  width: 100px;
   /* position:fixed;
   left: 100px;
   top: 200px; */
+
+  background-color: pink;
+  border: 2px solid blue;
+}
+
+/* Unordered list to nav bar challenge */
+.navbar{
+  width: 90%;
+  margin: auto;
+  /* padding = 2% of height of the view port. */
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: #D6EFFF;
+}
+ul.ul_navbar{
+  /* Brings all elements in the list in one line */
+  display: flex;
+  width: 50%;
+  margin: auto;
+
+  /* select all ul elements in the navbar class and remove bullets.*/
+  list-style-type: none;
+}
+/* style all li tags from the ul list */
+#lst_elm{
+  /* adding margin top and bottom =2vw, left and right = 2% of the width of the view port. */
+  margin: 0 2vw;
+  font-size: 25px;
+  /* if font size is set based on either width of height of the view port then,
+  the size remains fixed no matter zomed in or out which is not desired. */
+}
+/* access anchor tags from the container */
+a.at_navbar:link{
+  text-decoration: none;
+  color: black;
+  font-family: monospace;
+}
+a.at_navbar:hover{
+  background-color: white;
 }
