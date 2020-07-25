@@ -1,12 +1,13 @@
-/* layout example 1 */
-
 .container{
   width: 1080px;
   margin:0 auto;
 
   background-color:grey;
+  color: white;
 }
 
+/*
+/* layout example 1 */
 /* select compound of class and id */
 /* #block1.divy1, #block3.divy1,
 #block4.divy1, #block5.divy1,
@@ -20,7 +21,8 @@
 
   background-color: black;
   color: aliceblue;
-} */
+}
+*/
 
 /*
  .sample_container{
@@ -38,9 +40,9 @@
 
 #block1.divy2, #block3.divy2,
 #block4.divy2, #block5.divy2,
-#block6.divy2, #block7.divy2_clearfix{
+#block7.divy2_clearfix{
   height: 200px;
-  border: 1px dashed blue;
+  /* border: 1px dashed white; */
 }
 #block2.divy2{
   height: 70px;
@@ -48,13 +50,21 @@
   background-color: black;
   color: aliceblue;
 }
+#block6.divy2{
+  height: 600px;
+  /* height: 80vh; */
+  /* border: 1px dashed red; */
+  /* background-color: blue; */
+}
 .main{
   width: 60%;
   float: left;
+  background-color: blue;
 }
 .sidemenu{
   width: 40%;
   float: right;
+  background-color: red;
 }
 .divy2_clearfix{
   clear:both;
