@@ -23,7 +23,7 @@
   padding-top: 20px;
 
   /* Set color for the content inside this container. */
-  color: red;
+  color: at_navbar;
 
   /* Algin content inside the container. */
   text-align: center;
@@ -101,9 +101,10 @@ h1{
   background-color:yellow;
 } */
 
-div{
+/* Modify all div elements */
+/* div{
   color:red;
-}
+} */
 
 /* Tags are given a hash */
 #stars{
@@ -345,4 +346,32 @@ a.at_navbar:link{
 }
 a.at_navbar:hover{
   background-color: white;
+}
+
+.box1, .box2{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+.box1{
+  background-color: red;
+  color: white;
+  float: left;
+}
+.box2{
+  background-color: blue;
+  color: white;
+  float: right;
+}
+
+.img_flt1, .img_flt2{
+  /* Use padding not margin for creating space when using image tags with floats */
+  padding: 10px;
+}
+
+.img_flt1{
+  float: left;
+}
+.img_flt2{
+  float: right;
 }
