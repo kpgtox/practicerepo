@@ -1,9 +1,9 @@
 .container{
-  width: 1080px;
+  width: 100%;
   margin:0 auto;
 
   background-color:grey;
-  color: white;
+  /* color: white; */
 }
 
 /*
@@ -43,11 +43,15 @@
 #block7.divy2{
   height: 200px;
 }
+/* nav bar */
 #block2.divy2{
   height: 70px;
+  /* width: 90%;
+  margin: auto; */
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
 
-  background-color: black;
-  color: aliceblue;
+  background-color: #D6EFFF;
 }
 #block6.divy2{
   height: 600px;
@@ -67,4 +71,27 @@
 }
 #block7.divy2{
   clear:both;
+}
+/* #navigation bar */
+.ul_navbar{
+  /* reset default margin and padding of ul */
+  /* padding: 0;
+  margin: 0; */
+
+  display: flex;
+  width: 50%;
+  margin: auto;
+
+  list-style-type: none;
+}
+#lst_elm{
+  margin: 0 20px;
+
+  text-decoration: none;
+}
+a.at_navbar:link{
+  text-decoration: none;
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
 }
