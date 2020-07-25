@@ -170,17 +170,19 @@ h1{
   padding:10px;
 }
 
-.container{
+.sample_container{
   /* Container configuration */
-  background-color: hotpink;
   /* Set width a percentage of window's width And
   Auto set the margin for center alignment of the container */
   width: 50%;
   margin: auto;
-  border: 2px solid black;
   padding: 10px;
+
   /* Content configuration */
+  border: 2px solid black;
+  background-color: hotpink;
   text-align: center;
+  /* text color */
   color: white;
 }
 
