@@ -40,9 +40,8 @@
 
 #block1.divy2, #block3.divy2,
 #block4.divy2, #block5.divy2,
-#block7.divy2_clearfix{
+#block7.divy2{
   height: 200px;
-  /* border: 1px dashed white; */
 }
 #block2.divy2{
   height: 70px;
@@ -53,19 +52,19 @@
 #block6.divy2{
   height: 600px;
   /* height: 80vh; */
-  /* border: 1px dashed red; */
-  /* background-color: blue; */
 }
 .main{
   width: 60%;
-  float: left;
+  float: right;
+
   background-color: blue;
 }
 .sidemenu{
   width: 40%;
-  float: right;
+  float: left;
+
   background-color: red;
 }
-.divy2_clearfix{
+#block7.divy2{
   clear:both;
 }
