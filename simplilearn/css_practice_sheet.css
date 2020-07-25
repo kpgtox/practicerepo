@@ -366,11 +366,13 @@ a.at_navbar:hover{
 
 /* <!-- Wrap images around text using floats exaple --> */
 .img_flt1, .img_flt2{
-  border: 1px solid black;
-  margin: 5px;
-  /* Use padding not margin for creating space when using image tags with floats */
-  padding: 10px;
   max-width: 100%;
+  margin: 5px;
+  padding: 2px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px;
 }
 
 .img_flt1{
