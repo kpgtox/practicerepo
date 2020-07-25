@@ -2,7 +2,7 @@
 
 .container{
   width: 1080px;
-  margin: 0 auto;
+  margin:0 auto;
 
   background-color:grey;
 }
@@ -33,3 +33,29 @@
   text-align: center;
   color: white;
 } */
+
+/* layout example 2 */
+
+#block1.divy2, #block3.divy2,
+#block4.divy2, #block5.divy2,
+#block6.divy2, #block7.divy2_clearfix{
+  height: 200px;
+  border: 1px dashed blue;
+}
+#block2.divy2{
+  height: 70px;
+
+  background-color: black;
+  color: aliceblue;
+}
+.main{
+  width: 60%;
+  float: left;
+}
+.sidemenu{
+  width: 40%;
+  float: right;
+}
+.divy2_clearfix{
+  clear:both;
+}
