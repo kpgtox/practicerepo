@@ -1,3 +1,21 @@
+
+/* media queries for designing responsive sites */
+body{background-color: white;}
+
+/* bg turns red if width of the resolution falls b/w this range */
+/* end values 1024 and 1280 are included in the range unless theres more code below
+overriding the end values. */
+@media all and (min-width:1024px) and (max-width:1280px) {
+  body{background-color: red; }
+}
+/* 1024 hits true here because its run after the above written code */
+@media all and (min-width:900px) and (max-width:1024px) {
+  body{background-color: blue; }
+}
+@media all and (max-width:900px) {
+  body{background-color: hotpink; }
+}
+
 /* style whole content inside an element.  */
 section{
   background-color: yellow;
