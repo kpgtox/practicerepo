@@ -1,6 +1,9 @@
 
 /* media queries for designing responsive sites */
+/* default values */
 body{background-color: white;}
+/* creates divisions of every div container in html */
+div{border: 2px white solid;}
 
 /* bg turns red if width of the resolution falls b/w this range */
 /* end values 1024 and 1280 are included in the range unless theres more code below
@@ -14,6 +17,13 @@ overriding the end values. */
 }
 @media all and (max-width:900px) {
   body{background-color: hotpink; }
+  div{width: 400px; float: left; border: 2px black solid;}
+}
+
+/* media queries for screen orientation. */
+@media screen and (orientation:potrait) {
+}
+@media screen and (orientation:landscape) {
 }
 
 /* style whole content inside an element.  */
