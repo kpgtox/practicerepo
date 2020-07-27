@@ -86,3 +86,25 @@
   color: white;
 }
 */
+
+/* layout example 3 */
+body{
+  margin: 0;
+  padding: 0;
+}
+.divy3{
+  height: 200px;
+  border: 1px solid black;
+}
+#block3.divy3{
+  width: 33%;
+  float: left;
+}
+#block4.divy3{
+  width: 33%;
+  display: inline-block;
+}
+#block5.divy3{
+  width: 33%;
+  float:right;
+}
