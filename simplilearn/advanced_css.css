@@ -1,0 +1,16 @@
+/* style whole content inside an element.  */
+section{
+  background-color: yellow;
+}
+
+/* style content from all p elements within section */
+section p{
+  background-color: green;
+}
+
+/* style content inside a div element */
+/* overrides parent elements of div */
+/* gets overridden by p elements */
+section div{
+  background-color: red;
+}

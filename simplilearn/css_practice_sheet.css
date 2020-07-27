@@ -383,3 +383,7 @@ a.at_navbar:hover{
 .img_flt2{
   float: right;
 }
+
+section p{
+  background-color: yellow;
+}
