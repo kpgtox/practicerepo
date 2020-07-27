@@ -105,3 +105,55 @@ p::selection{
 p::after{
   content: "---x----"
 }
+
+/* Anchor tags satisfying a condition onan attribute */
+/* anchor tags having the attribute as "_blank" */
+a[target="_blank"]{
+  background-color: purple;
+  color: white;
+}
+
+/* anchor tags having projects in their title */
+a[title=Projects]{
+  background-color: black;
+  color: white;
+}
+
+/* anchor tags containing the word contact in their title attribute */
+a[title~=contact]{
+  background-color: blue;
+  color: white;
+}
+
+/* style an element of which its input attribute */
+input{
+  background-color: yellow;
+  color:red;
+}
+
+/* style an element of which its input attribute equals of type "email" */
+input[type="email"]{
+  background-color: pink;
+  color:black;
+}
+
+/*apply style to an element of which its title attribute containing a letter z  */
+[title*="z"]{
+  background-color: hotpink;
+}
+
+/*apply style to an element of which its title attribute containing the word status"*/
+[title~="status"]{
+  background-color: green;
+}
+
+/*apply style to an element of which its title attribute equals this value"*/
+[title="games"]{
+  background-color: red;
+  color:white;
+}
+
+/* An element having the href attribute with its value # */
+[href="#"]{
+  text-decoration: underline;
+}
