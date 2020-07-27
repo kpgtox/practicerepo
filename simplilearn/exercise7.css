@@ -43,13 +43,9 @@
 #block7.divy2{
   height: 200px;
 }
-/* nav bar */
-#block2.divy2{
+/* nav bar block */
+#block2.navbar{
   height: 70px;
-  /* width: 90%;
-  margin: auto; */
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
 
   background-color: #D6EFFF;
 }
@@ -73,25 +69,24 @@
   clear:both;
 }
 /* #navigation bar */
-.ul_navbar{
-  /* reset default margin and padding of ul */
-  /* padding: 0;
-  margin: 0; */
+.navbar ul{
+  /* scale and align the list in the center  */
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
 
   display: flex;
-  width: 50%;
-  margin: auto;
-
-  list-style-type: none;
+  list-style: none;
+  text-align: center;
 }
-#lst_elm{
-  margin: 20px 20px;
-
-  text-decoration: none;
+.navbar ul li{
+  margin: 10px 20px;
 }
-a.at_navbar:link{
+.navbar a{
   text-decoration: none;
   color: black;
-  font-family: monospace;
-  font-size: 20px;
+}
+.navbar a:hover{
+  background-color: black;
+  color: white;
 }
