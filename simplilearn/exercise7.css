@@ -1,29 +1,4 @@
-.container{
-  width: 100%;
-  margin:0 auto;
-
-  background-color:grey;
-  /* color: white; */
-}
-
-/*
-/* layout example 1 */
-/* select compound of class and id */
-/* #block1.divy1, #block3.divy1,
-#block4.divy1, #block5.divy1,
-#block6.divy1, #block7.divy1{
-  height: 200px;
-  border: 1px dashed blue;
-} */
-/* Isolate te nav bar from the same class */
-/* #block2.divy1{
-  height: 70px;
-
-  background-color: black;
-  color: aliceblue;
-}
-*/
-
+/* Sample Container */
 /*
  .sample_container{
   width: 50%;
@@ -36,14 +11,38 @@
   color: white;
 } */
 
-/* layout example 2 */
+.container{
+  width: 100%;
+  margin:0 auto;
 
+  background-color:grey;
+  /* color: white; */
+}
+
+/* layout example 1 */
+/*
+#block1.divy1, #block3.divy1,
+#block4.divy1, #block5.divy1,
+#block6.divy1, #block7.divy1{
+  height: 200px;
+  border: 1px dashed blue;
+}
+#block2.divy1{
+  height: 70px;
+
+  background-color: black;
+  color: aliceblue;
+}
+*/
+
+/* layout example 2 */
+/*
 #block1.divy2, #block3.divy2,
 #block4.divy2, #block5.divy2,
 #block7.divy2{
   height: 200px;
 }
-/* nav bar block */
+
 #block2.navbar{
   height: 70px;
 
@@ -51,7 +50,6 @@
 }
 #block6.divy2{
   height: 600px;
-  /* height: 80vh; */
 }
 .main{
   width: 60%;
@@ -68,9 +66,7 @@
 #block7.divy2{
   clear:both;
 }
-/* #navigation bar */
 .navbar ul{
-  /* scale and align the list in the center  */
   width: fit-content;
   margin: 0 auto;
   padding: 20px;
@@ -89,3 +85,4 @@
   background-color: black;
   color: white;
 }
+*/
