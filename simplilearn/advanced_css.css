@@ -8,9 +8,83 @@ section p{
   background-color: green;
 }
 
+/* style all p elements that are only the immediate children inside section element */
+section >  p{
+  background-color: purple;
+}
+
 /* style content inside a div element */
-/* overrides parent elements of div */
 /* gets overridden by p elements */
 section div{
   background-color: red;
+}
+
+/* style the one p element that immediately idle(having no parent element) adjacent to(outside) the section element.    */
+section + p{
+  background-color: blue;
+}
+
+/* footer is the adjacent element to section, so it gets ignored. */
+section + footer{
+  background-color: black;
+}
+
+/* style the div container thats right after the section element. */
+section + div{
+  background-color: hotpink;
+}
+
+/* Styles all div elements that are after section element.
+div must not be inside another element, the divs that are children outside the section element will be ignored.  */
+section ~ div{
+  background-color: grey;
+}
+
+/* Pseudo class */
+/* style to apply when hovered over a paragraph element. */
+section p:hover{
+  background-color: black;
+  color: white;
+}
+
+/* Style all p first children inside an element/container. */
+/* also applied is the hover action in combination */
+footer p:first-child:hover{
+  background-color: yellow;
+  color: red;
+}
+
+/* Stly all p first children inside div which is inside footer container. */
+/* footer div p:first-child{
+  background-color: red;
+  color: blue;
+} */
+
+/* Style all p first children inside an element/container along with further combinators. */
+footer p:first-child b{
+  background-color: yellow;
+  color: blue;
+}
+
+/* Styles all last children inside footer. */
+footer p:last-child{
+  background-color: orange;
+  color: white;
+}
+
+/* Style footer2 thirdchild. custom child number */
+footer2 p:nth-child(3){
+  background-color: black;
+  color: red;
+}
+
+/* user defined selection of b(bold) tag inside p element which is inside footer2 container.  */
+footer2 p b:nth-of-type(2){
+  background: purple;
+  color: white;
+}
+
+/* select third p manually in footer2 */
+footer2 p:nth-of-type(2){
+  color:green;
 }
