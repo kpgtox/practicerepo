@@ -77,7 +77,6 @@
 
   display: flex;
   list-style: none;
-  text-align: center;
 }
 .navbar ul li{
   margin: 10px 20px;
