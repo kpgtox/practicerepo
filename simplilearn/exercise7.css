@@ -16,7 +16,6 @@
   margin:0 auto;
 
   background-color:grey;
-  /* color: white; */
 }
 
 /* layout example 1 */
@@ -88,6 +87,7 @@
 */
 
 /* layout example 3 */
+/*
 body{
   margin: 0;
   padding: 0;
@@ -96,15 +96,51 @@ body{
   height: 200px;
   border: 1px solid black;
 }
-#block3.divy3{
-  width: 33%;
+.main{
+  background-color: white;
+}
+* {
+  box-sizing: border-box;
+}
+.col{
+  width: 33.33%;
+  height: 600px;
   float: left;
+  padding: 10px;
 }
-#block4.divy3{
-  width: 33%;
-  display: inline-block;
+.main:after{
+  content: "";
+  display: table;
+  clear: both;
 }
-#block5.divy3{
-  width: 33%;
+
+*/
+/* <!-- layout example 3 : 3 equal columns site, non-responsive -->
+<!-- another method --> */
+/*
+body{
+  margin: 0;
+  padding: 0;
+}
+.row div{
+  height: 400px;
+}
+.col1{
+  width: 33.33%;
+  float:left;
+
+  background-color:red;
+}
+.col2{
+  width: 33.33%;
+  display:inline-block;
+
+  background-color:green;
+}
+.col3{
+  width: 33.33%;
   float:right;
+
+  background-color:blue;
 }
+*/
