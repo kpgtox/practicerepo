@@ -1,0 +1,25 @@
+/* <!-- navigation bar eg1 --> */
+
+.ul_navbar1{
+  display: flex;
+  width: 50%;
+  margin: auto;
+
+  list-style-type: none;
+}
+#li_navbar1{
+  /* margin top and bottom 10, left andright 20 for each list element */
+  margin:10px 20px;
+
+  text-decoration: none;
+}
+a.at_navbar1:link{
+  text-decoration: none;
+  color: black;
+  font-family:serif;
+  font-size: 20px;
+}
+a.at_navbar1:hover{
+  background-color: black;
+  color: white;
+}
