@@ -88,3 +88,20 @@ footer2 p b:nth-of-type(2){
 footer2 p:nth-of-type(2){
   color:green;
 }
+
+.food_list::first-letter{
+  font-family: fantasy;
+  font-size: 50px;
+  background-color: yellow;
+}
+
+/* style when text is selected in p element. */
+p::selection{
+  background-color: red;
+}
+
+/* style after every p element. */
+/* same way there's p::before */
+p::after{
+  content: "---x----"
+}
