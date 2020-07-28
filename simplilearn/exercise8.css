@@ -72,7 +72,7 @@ nav ul li a:hover{
 #side_menu{
   width: 30%;
   float: right;
-  padding: 2% 0;
+  margin: 20px;
 
   color:white;
 }
