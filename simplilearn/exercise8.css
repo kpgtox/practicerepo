@@ -72,29 +72,26 @@ nav ul li a:hover{
 #side_menu{
   width: 30%;
   float: right;
-  padding-right: 3%;
   padding: 2% 0;
 
   color:white;
 }
 #side_menu ul{
-  width: 90%;
   padding: 0;
-
+  margin: 10px 0;
   background-color: black;
 }
 #side_menu ul li{
-  width: 100%;
-  padding: 2px;
+  display: block;
+  padding: 7px;
 
   list-style-type: none;
 }
+#side_menu ul li:hover{
+  background-color: white;
+}
 #side_menu ul li a{
   color:red;
-}
-#side_menu ul li a:hover{
-  background-color: black;
-  color: white;
 }
 
 .footer_container{
