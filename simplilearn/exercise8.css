@@ -30,12 +30,14 @@ nav ul{
   background-color: #333;
 }
 nav ul li{
-  margin: 1.2%;
-  /* margin-left: 50px; */
+  /* increase margin topand bottom by 20pxon every list item/cell. */
+  margin: 20px 0;
 }
 nav ul li a{
-  text-decoration: none;
+  /* increase padding for anchor links inside list cells */
+  padding: 20px 40px;
 
+  text-decoration: none;
   font-family: monospace;
   font-size: 20px;
   color: white;
@@ -55,9 +57,12 @@ nav ul li a:hover{
 }
 
 #content{
-  width: 70%;
+  /* careful with padding in a float, adjust width according to the padding. */
+  width: 62%;
   min-height: 500px;
   float: left;
+  /* top,bottom and left,right, total 8% */
+  padding:2%;
 
   text-align: justify;
   background-color: black;
@@ -67,15 +72,29 @@ nav ul li a:hover{
 #side_menu{
   width: 30%;
   float: right;
-}
-#side_menu #newsfeed{
-  padding: 10px;
+  padding-right: 3%;
+  padding: 2% 0;
+
+  color:white;
 }
 #side_menu ul{
-  padding-left: 10px;
+  width: 90%;
+  padding: 0;
+
+  background-color: black;
 }
 #side_menu ul li{
+  width: 100%;
+  padding: 2px;
+
   list-style-type: none;
+}
+#side_menu ul li a{
+  color:red;
+}
+#side_menu ul li a:hover{
+  background-color: black;
+  color: white;
 }
 
 .footer_container{
