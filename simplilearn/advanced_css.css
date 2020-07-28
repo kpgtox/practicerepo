@@ -26,6 +26,11 @@ overriding the end values. */
 @media screen and (orientation:landscape) {
 }
 
+@@keyframes myAnimation {
+  from{top:0px;}
+  to{top:500px;}
+}
+
 /* style whole content inside an element.  */
 section{
   background-color: yellow;
@@ -184,4 +189,47 @@ input[type="email"]{
 /* An element having the href attribute with its value # */
 [href="#"]{
   text-decoration: underline;
+}
+
+.container1{
+  width: 1200px;
+  height: 800px;
+  margin: auto;
+
+  /* stack multiplepng images */
+  background-image: url("images/flower2.png"),url("images/color.png");;
+  background-color: grey;
+}
+
+.container2{
+  width: 600px;
+  height: 600px;
+  margin: auto;
+
+  border-style: solid dotted;
+  /* top, right, bottom, left */
+  border-color: black white pink green;
+  /* top width 10px, left abd right 5px, bottom 20px */
+  border-width:10px 5px 20px;
+  /* right, bottom, shadow spread, shadow color  */
+  box-shadow: 20px 10px 50px white;
+  border-radius: 25px;
+}
+
+/* bg gradients */
+.container3{
+  width: 600px;
+  height: 600px;
+  margin: auto;
+
+  /* background:linear-gradient(rgba(255,0,0,0),purple,orange,blue); */
+  /* background:linear-gradient(to top left,purple,orange,blue); */
+  background:linear-gradient(to top right,purple,orange,blue);
+
+  /* safari support */
+  background:-webkit-linear-gradient(purple,orange,blue);
+  /* opera support */
+  background:-o-linear-gradient(purple,orange,blue);
+  /* firefox */
+  background:-moz-linear-gradient(purple,orange,blue);
 }
