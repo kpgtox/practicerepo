@@ -49,11 +49,15 @@ nav ul li a:hover{
   text-transform:uppercase;
 }
 
+.main{
+  /* tthis property wont take effect if container has floats in it */
+  background-color: red;
+}
+
 #content{
   width: 70%;
   min-height: 500px;
   float: left;
-  /* padding-right: */
 
   text-align: justify;
   background-color: black;
@@ -76,6 +80,9 @@ nav ul li a:hover{
 
 .footer_container{
   padding: 10px;
+}
+
+.clearfix{
   clear: both;
 }
 
