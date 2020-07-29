@@ -21,6 +21,16 @@ h1{
   font-size: 40px;
 }
 
+h2{
+  /* set h2 font size to default */
+  font-size: 2em;
+}
+
+p::first-letter{
+  font-size: 40px;
+  color:red;
+}
+
 /* nav tag contains header links. */
 /* A perfect navigation bar so far. */
 nav ul{
@@ -62,7 +72,7 @@ nav ul li a:hover{
   min-height: 500px;
   float: left;
   /* top,bottom and left,right, total 8% */
-  padding:2%;
+  padding:20px;
 
   text-align: justify;
   background-color: black;
@@ -77,8 +87,10 @@ nav ul li a:hover{
   color:white;
 }
 #side_menu ul{
-  padding: 0;
+  padding: 10px;
   margin: 10px 0;
+
+  border-radius: 10px;
   background-color: black;
 }
 #side_menu ul li{
@@ -96,6 +108,10 @@ nav ul li a:hover{
 
 .footer_container{
   padding: 10px;
+
+  text-align: center;
+  background-color: black;
+  color: white;
 }
 
 .clearfix{
