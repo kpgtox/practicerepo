@@ -27,3 +27,35 @@ console.log(typeof c);
 console.log( null == undefined )
 // check if null is of the type undefined
 console.log( null === undefined )
+
+// Multiple variable declaration
+var a =1, b=2, c=3;
+console.log(a,b,c) //print multiple numbers at once
+console.log(a+b+c)
+
+// concatanate a number and a string.
+//js converts the number to string automatically.
+var num = 10;
+console.log(num + "world")
+var str = "sesy";
+console.log(num + str)
+var res = num + str;
+console.log("res :" + res)
+console.log(typeof res) //res is of string type.
+
+var num1 = 99;
+num1 += "caller";
+console.log(num1)
+console.log(typeof num1) //gets converted from number to string type
+
+//javascript joke
+// concatnates output of type of to a string, the result is a string.
+var num2 = 8;
+console.log(typeof num2 + "ball")
+
+var crazy;
+crazy = typeof num2 + "ball";
+console.log(crazy)
+console.log(typeof crazy) //crazy variable is os string data type.
+
+console.log(typeof(num2+"ball")) //result is a string.
