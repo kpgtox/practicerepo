@@ -4,3 +4,6 @@ thirs time, testing auto saving creds
 auto save fail, trying again
 
 writing from atom editor.
+
+29.07.20
+check shit done. go.
