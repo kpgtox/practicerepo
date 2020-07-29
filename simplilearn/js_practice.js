@@ -59,3 +59,31 @@ console.log(crazy)
 console.log(typeof crazy) //crazy variable is os string data type.
 
 console.log(typeof(num2+"ball")) //result is a string.
+
+// double equals
+var abc = 10;
+//returns true because data types are not considered inthis comparision.
+console.log(abc == "10");
+
+//triple equals
+//compares data types, so returns false.
+console.log(abc === "10");
+
+//concatanate two strings with + operator.
+var s1 = "hello";
+var s2 = "world";
+console.log(s1+s2);
+
+var a = 1;
+var b = 1;
+var res = (a == b) || (a == "how"); //outputs true
+console.log(res);
+var res = (a == b) && (a == "how"); //outputs false
+console.log(res);
+
+console.log("logical:")
+console.log( true && true ) //true
+console.log( false && false ) //false
+console.log( true && true && false ) // false
+console.log( false && false && true ) // false
+console.log( false || true && true ) // true
