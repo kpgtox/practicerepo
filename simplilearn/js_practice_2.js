@@ -176,7 +176,34 @@ var nzoo = zoo.splice(2,3,99);
 
 //Slice operation
 //Actual split operation, not scooping like splice.
+//Original array stays same.
 var too = [1,2,3,4,5,6,7,8,9];
 var ntoo = too.slice(3); //too will be sliced on the third index, ntoo will include the third index value and the rest following it.
 console.log(too);
 console.log(ntoo);
+
+//Slice an array by start and end index
+//Scoop out elements in sequence.
+//Slicing ops leave original arrays as is.
+//first arg - index to slice from, second arg - index to end slice.
+var too = [1,2,3,4,5,6,7,8,9];
+var ntoo = too.slice(2,6); //ntoo contains elements from index 3 to index 6. (index 3 value included, index 6 value left out)
+
+//Sort an array - ascending.
+var soo = [33,211.2,22343,2,1,2.3,5664,222];
+var sort_soo = soo.sort();
+console.log(sort_soo);
+
+//Sort a string of arrays
+var foo = ["a","z","t","u","rage"];
+console.log(foo.sort());
+
+//Array in JS having values of multiple data types.
+var voo = [1,2,3,"t","y"];
+res = voo[0]+1; // output : 2, res is a numeric data type.
+res = voo[3]+1; // output : "t1", res is a string data type.
+
+//Sort an array indescending order.
+var soo = [33,211.2,22343,2,1,2.3,5664,222];
+//First sort in ascending order then reverse the string.
+soo.sort().reverse();
