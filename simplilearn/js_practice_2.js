@@ -227,7 +227,7 @@ console.log(narr[1][2]);//retreives value at index 2, of the second array in nar
 //This array's length is 1.
 var bosses = [{turtles: "shredder",residentevil: "wesker",yakuza: "ryuji goda",dmc: "vergil"}];
 console.log(dbz[0]); //outputs the entire object because its placed in the first index.
-console.log(dbz[0].name); //value associated with the key "name" from the object placed in the index 0 of the array bosses.
+console.log(bosses[0].dmc);
 
 //An array containing an object in each slot.
 //Array's length is 2. each index having a single object.
@@ -244,3 +244,11 @@ var bosses = [
              ];
 console.log(bosses[0].b1.turtles);
 console.log(bosses[0].b2.yakuza);
+
+//An object containing arrays
+var qoo = {
+  arr1 : [1,2,3,4],
+  arr2 : ["blaze","alex","adam"]
+};
+console.log(qoo.arr1[3]);
+console.log(qoo.arr2[0]);
