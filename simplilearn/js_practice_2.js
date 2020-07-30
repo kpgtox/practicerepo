@@ -142,10 +142,37 @@ dbz_bosses.unshift("vegeta");
 //Delete any item in the array
 delete dbz_bosses[5];
 
-//Delete multiple items in a sequence using indices and replace them with one value
-var boo = [1,2,3,4,5,6,7,8];
-//first two arguments represent starting and ending index to remove, third argument is added after remving the specified values.
-boo.splice(1,4,99);
+//Splice an array
+//Picks a scoop of the array.
+//original array is also split.
+//the resulting array will include the specified index's value.
+var moo=[1,2,3,4,5,6];
+var nmoo = moo.splice(2);
 
-//Delete a single item in an array by index
-boo.splice(2,1);
+//Splice an array by number of elements as an arg.
+//Scoop one or more elements in sequence from an array.
+//original array will have the missing index value that is spliced.
+var koo = [1,2,3,4,5,6];
+console.log("spliced koo: " + koo.splice(2,1)); //result will have the second index valuefrom koo, koo will have the same value missing in it.
+
+//Splice an array by more than one element.
+//First argument - splicing index, second arg - number of elements to include in the spliced array, starting from the index specified.
+var zoo = [1,2,3,4,5,6];
+console.log("spliced zoo: " + zoo.splice(2,2));
+
+//Splice an array so that the resulting array contains the rest of all elements form the array - Slice operation.
+var roo = [1,2,3,4,5,6,7,8];
+var nroo = roo.splice(2,(roo.length-2));
+console.log("nroo: " + nroo);
+
+//Splice and Replace in the original
+//Scoops out multiple elements from an array, a new single value is placed in place of the scooped out elements in the original array.
+var zoo = [1,2,3,4,5,6];
+var nzoo = zoo.splice(2,3,99);
+
+//Slice operation
+//Actual split operation, not scooping like splice.
+var too = [1,2,3,4,5,6,7,8,9];
+var ntoo = too.slice(3); //too will be sliced on the third index, ntoo will include the third index value and the rest following it.
+console.log(too);
+console.log(ntoo);
