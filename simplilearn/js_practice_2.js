@@ -133,14 +133,18 @@ console.log( "foo: " + foo.join("+") );
 console.log( "foo: " + foo.join("*") );
 console.log( "foo: " + foo.join("-") );
 
-//Remove the first item in the array
-dbz_bosses.shift();
+//Remove any item in the array
+//Slot is not deleted, slot gets empty, only value is taken out from the index.
+var goo = [1,2,3,4,5];
+delete goo[4]; //index 4 becomes empty but not eliminated from the array.
 
-//Add an item in the first slot in the array
-dbz_bosses.unshift("vegeta");
+//Delete only the first element along witht he index.
+//Actual delete an item in the array along with the index/slot.
+var goo = [1,2,3,4,5];
+goo.shift();
 
-//Delete any item in the array
-delete dbz_bosses[5];
+//Add a new item in the beginning of the array.
+goo.unshift(1);
 
 //Splice an array
 //Picks a scoop of the array.
