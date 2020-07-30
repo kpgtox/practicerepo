@@ -105,3 +105,47 @@ console.log(dbz_bosses[5]);
 dbz_bosses[5] = "majin boo";
 //print to see empty slots created in between the array
 console.log(dbz_bosses);
+
+//get an array's length
+console.log(dbz_bosses.length);
+
+//easy add a new item at the end of the array
+dbz_bosses[dbz_bosses.length] = "cooler";
+console.log(dbz_bosses);
+
+//add a new item at the end of the array with a built in method
+dbz_bosses.push("android 17");
+console.log(dbz_bosses);
+
+//remove last element of an array
+dbz_bosses.pop();
+
+//convert an array to a string
+var dbz_bosses_str = dbz_bosses.toString();
+
+//convert a string to an array by comma separated.
+var foo = dbz_bosses_str.split(",");
+console.log(foo);
+
+//Convert an array to a string using join method.
+console.log( "foo: " + foo.join(",") );
+console.log( "foo: " + foo.join("+") );
+console.log( "foo: " + foo.join("*") );
+console.log( "foo: " + foo.join("-") );
+
+//Remove the first item in the array
+dbz_bosses.shift();
+
+//Add an item in the first slot in the array
+dbz_bosses.unshift("vegeta");
+
+//Delete any item in the array
+delete dbz_bosses[5];
+
+//Delete multiple items in a sequence using indices and replace them with one value
+var boo = [1,2,3,4,5,6,7,8];
+//first two arguments represent starting and ending index to remove, third argument is added after remving the specified values.
+boo.splice(1,4,99);
+
+//Delete a single item in an array by index
+boo.splice(2,1);
