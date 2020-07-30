@@ -223,13 +223,13 @@ console.log(narr[0][0]); //retreives value at index 0, of the first array in nar
 console.log(narr[0][1]);//retreives value at index 1, of the first array in narr.
 console.log(narr[1][2]);//retreives value at index 2, of the second array in narr.
 
-//An array containing on object.
+//An array containing one object.
 //This array's length is 1.
 var bosses = [{turtles: "shredder",residentevil: "wesker",yakuza: "ryuji goda",dmc: "vergil"}];
 console.log(dbz[0]); //outputs the entire object because its placed in the first index.
 console.log(dbz[0].name); //value associated with the key "name" from the object placed in the index 0 of the array bosses.
 
-//An array containing two objects.
+//An array containing an object in each slot.
 //Array's length is 2. each index having a single object.
 //Still a 1D array.
 var bosses = [{turtles: "shredder",residentevil: "wesker"},
@@ -237,14 +237,10 @@ var bosses = [{turtles: "shredder",residentevil: "wesker"},
 console.log(bosses[0].turtles); //first object and value of key "turtles".
 console.log(bosses[1].yakuza); //second object and value of key "yakuza".
 
-//An Array of nested objects.
-//basically throwing nested js dictionaries in an array
-// Here the array dbz contains only one element whichis at index0, which has nested objects.
-var dbz = [
-          {e1: {name: "cooler",attack: "blast"}, e2: {name: "vegeta",attack: "raining chi"}}
-          ];
-
-//Retreive from above array
-console.log(dbz[0]); //outputs the entire nested objects because thats in index 0.
-console.log(dbz[0].e1.name); //outputs name of e1 object.
-console.log(dbz[0].e2.name); //outputs name of e2 object.
+//An array containing a nested object in a single slot.
+var bosses = [
+              {b1:{turtles: "shredder",residentevil: "wesker"},
+              b2:{yakuza: "ryuji goda",dmc: "vergil"}}
+             ];
+console.log(bosses[0].b1.turtles);
+console.log(bosses[0].b2.yakuza);
