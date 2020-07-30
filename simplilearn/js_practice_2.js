@@ -58,7 +58,7 @@ console.log(girls["name" + i]);
 i++;
 console.log(girls["name" + i]);
 
-//nested js objects
+//nested js objects (dictionaries)
 //dynamic format ds
 var dbz = {
   e1: {
@@ -78,6 +78,7 @@ var dbz = {
     }
   }
 };
+//retreiving values from nested objects.
 console.log(dbz);
 console.log(dbz.e1.name);
 
@@ -207,3 +208,43 @@ res = voo[3]+1; // output : "t1", res is a string data type.
 var soo = [33,211.2,22343,2,1,2.3,5664,222];
 //First sort in ascending order then reverse the string.
 soo.sort().reverse();
+
+//Get index of a value from an array
+var foo = ["a","z","t","u","rage"];
+console.log(foo.indexOf("rage")); //outputs -1 if value sent is not present in the array.
+
+//Check if an array exists by its name
+Array.isArray(foo); //outputs true if the array exists by this name otherwise undefined.
+
+//Nested arrays
+var narr = [["goku","vegeta","gohan","krllin"],[1,2,3,4,5,6,7,8]];
+console.log(narr[0]); //retreived the first array in narr
+console.log(narr[0][0]); //retreives value at index 0, of the first array in narr.
+console.log(narr[0][1]);//retreives value at index 1, of the first array in narr.
+console.log(narr[1][2]);//retreives value at index 2, of the second array in narr.
+
+//An array containing on object.
+//This array's length is 1.
+var bosses = [{turtles: "shredder",residentevil: "wesker",yakuza: "ryuji goda",dmc: "vergil"}];
+console.log(dbz[0]); //outputs the entire object because its placed in the first index.
+console.log(dbz[0].name); //value associated with the key "name" from the object placed in the index 0 of the array bosses.
+
+//An array containing two objects.
+//Array's length is 2. each index having a single object.
+//Still a 1D array.
+var bosses = [{turtles: "shredder",residentevil: "wesker"},
+              {yakuza: "ryuji goda",dmc: "vergil"}];
+console.log(bosses[0].turtles); //first object and value of key "turtles".
+console.log(bosses[1].yakuza); //second object and value of key "yakuza".
+
+//An Array of nested objects.
+//basically throwing nested js dictionaries in an array
+// Here the array dbz contains only one element whichis at index0, which has nested objects.
+var dbz = [
+          {e1: {name: "cooler",attack: "blast"}, e2: {name: "vegeta",attack: "raining chi"}}
+          ];
+
+//Retreive from above array
+console.log(dbz[0]); //outputs the entire nested objects because thats in index 0.
+console.log(dbz[0].e1.name); //outputs name of e1 object.
+console.log(dbz[0].e2.name); //outputs name of e2 object.
