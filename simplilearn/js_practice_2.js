@@ -4,14 +4,14 @@ var name = "your name please.";
 //window.alert(mssg);
 
 //An Alert message but with an input from the user.
-var intake = prompt(name);
+//var intake = prompt(name);
 
 //take input from user and return a message.
-var greeting = "welcome" + " " + intake;
-window.alert(greeting);
+//var greeting = "welcome" + " " + intake;
+//window.alert(greeting);
 
 //prints greeting on the web page.
-document.write(greeting);
+//document.write(greeting);
 
 //Empty js object
 var person = {};
@@ -90,3 +90,18 @@ console.log(dbz["e" + i].attack);
 
 console.log(dbz.e2.enemies.enemy1);
 console.log(dbz.e2.enemies.enemy2);
+
+//arrays
+var dbz_bosses = ["vegeta","frieza","cell"];
+console.log(dbz_bosses);
+
+//retreive from an arrays
+console.log(dbz_bosses[0]);
+console.log(dbz_bosses[2]);
+
+//value at index 5 of the array doesnt exist but can be forced upon.
+console.log(dbz_bosses[5]);
+//force add a value beyond an array's legth
+dbz_bosses[5] = "majin boo";
+//print to see empty slots created in between the array
+console.log(dbz_bosses);
