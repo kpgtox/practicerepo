@@ -12,6 +12,15 @@
       <h1>A heading for the site.</h1>
     </div>
 
+    <div id="container1"> Some stuff goes here.</div>
+    <div id="container2"> Round and round we go.</div>
+
+    <p>
+      <!-- code in onchange attribute runs when text is entered in the field. -->
+      <input type="text" id="textfield1" onchange="edit1()">
+    </p>
+
+    <!-- java script element -->
     <script>
         //View DOM document
         console.dir(document);
@@ -32,6 +41,23 @@
         //js code
         var family = {dad:"prakash", mom:"priya"};
 
+        //BOM, browser object model
+        console.dir(window);
+
+        //Edit html content through javascript
+        //Write somehting when html loads up
+        document.write("written from script element.")
+
+        //Access and edit an html id tag through js
+        var container1Id = document.getElementById("container1");
+        console.dir(container1Id);
+        container1Id.innerHTML = "cool javascript stuff";
+
+        //Make user input as content to one of the elements on page.
+        function edit1(){
+          var inputtext1 = document.getElementById("textfield1").value;
+          container1Id.innerText = inputtext1;
+        }
     </script>
 
   </body>
