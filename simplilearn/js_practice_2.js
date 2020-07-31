@@ -453,3 +453,37 @@ num.toString();
 //strings must have only numbers in it to be able to convert it to a number type.
 var aa = "99";
 aa = parseInt(aa);
+
+//Math methods
+var a = 4.9;
+console.log(Math.round(a)); //rounds to thenext number starting from .5 and above.
+console.log(Math.floor(a)); //cuts off the decimal.
+console.log(Math.ceil(a)); //rounds to the next number no matter what the decimal value is.
+
+//Generate a random number between 0 and 1
+Math.random();
+
+//Modify it to get between 0 to 100
+Math.floor(Math.random()*100);
+
+//Modify it to get between 0 to 1000
+Math.floor(Math.random()*1000);
+
+//Date
+Date(); //gives date and time.
+
+var dd = new Date();//dd is now a Date object.
+
+dd.getDate();
+dd.getDay(); //which day of the week, day starts from monday.
+dd.getFullYear();
+dd.getHours();
+dd.getMinutes();
+dd.getTime(); //returns time stamp on the moment dd was created.
+dd.getUTCMonth(); //month of the year, months begin at 0.
+dd.getMonth();
+dd.setMonth(); //allows you to set current month.
+dd.toDateString();
+dd.toJSON(); //date to json format.
+
+//Subtracting a date object from another returns the difference in milli seconds.
