@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>dom practice</title>
+    <script src="js_practice_3.js"></script>
   </head>
 
   <body>
@@ -12,6 +13,7 @@
     </div>
 
     <script>
+        //View DOM document
         console.dir(document);
 
         //Traverse through DOM:
@@ -19,10 +21,16 @@
         console.dir(document.children[0].children[1].children[0]);
 
         //Path for the DOM To access the text within the first div element(Heading Division).
-        console.dir(document.children[0].children[1].children[0].childNodes[0].nodeValue);
+        //console.dir(document.children[0].children[1].children[0].childNodes[0].nodeValue);
 
         //Path for the DOM To access the text within the h1 tag in the first div element(Heading Division).
         console.dir(document.children[0].children[1].children[0].childNodes[1].childNodes[0].nodeValue);
+
+        console.dir(document.children[0].children[1].children[0].childNodes[1].childNodes[0].nodeValue =
+        "Updated through dom");
+
+        //js code
+        var family = {dad:"prakash", mom:"priya"};
 
     </script>
 
