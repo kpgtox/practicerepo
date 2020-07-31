@@ -290,6 +290,8 @@ console.log(message);
 
 //Loops
 //Repeat a blick of code.
+
+//using a dictionaty or js object for looping
 var players = {
   p1: "alex",
   p2: "adam",
@@ -323,3 +325,131 @@ for(item in players){
   console.log(item);
   console.log(players[item]);
 }
+
+//loop within an array
+var phones = ["iphone","mi",99];
+for(i=0;i<phones.length;i++){
+  console.log(phones[i]);
+}
+
+console.log("easy loop");
+for(item in phones){
+  console.log(item);
+  console.log(typeof item);
+  console.log(phones[item]);
+}
+
+//best for loop for an array
+for(item of phones){
+  console.log(item);
+}
+
+//Create a function
+function myfun(){
+  console.log("my function");
+}
+myfun(); //call the fucntion
+
+//Take arguments and return output in a function.
+function multiply(a,b){
+  return a*b;
+}
+var product;
+product = multiply(10,10);
+console.log(product);
+
+//a function to add items in an array.
+//order of arguments is important.
+function addarray(arr,b,arrname){
+  arr.push(b);
+  console.log("added new item in " + arrname);
+}
+var phones = ["iphone","mi","samsung"];
+addarray(phones,"lg","phones");
+addarray(phones,"vivo","phones");
+
+//Global and Local variables
+var greets = "hello";
+function greeting(greets){
+  console.log(greets+" world");
+}
+console.log("local variable:");
+greeting(greets);
+console.log("global variable: " + greets);
+
+function ChangeGlobalVar(a)
+{
+  //accessing and modifying global variables within a functon.
+  greets = a;
+}
+ChangeGlobalVar("nice day");
+console.log(greets);
+
+//Self invoking function, also known an annonymous functions.
+//Useful at file startups.
+(function(){
+  console.log("i executed this code myself lol");
+})();
+
+//Best way to break out of a function is to return not break.
+function breakout(a,b){
+  if(a>b){
+    console.log("first");
+    return true;
+  }
+  else {
+    {
+      console.log("second or equal");
+      return false;
+    }
+  }
+}
+var goo = breakout(2,1);
+
+//String methods
+var str = "game changer";
+
+str.length;
+
+str.indexOf("c"); //returns index number of the letter in the string, empty spaces in the string are also counted.
+
+str.startsWith("game"); //true
+str.startsWith("g"); //true
+str.startsWith("G"); //false
+
+var site = "google.com"
+site.endsWith(".com"); //true
+site.indexOf("."); //6
+
+//same as indexof
+site.search("g"); //0
+site.search("google"); //0
+site.search("c"); //7
+site.indexOf("c"); //7
+
+site.replace(".","+");
+site.replace("google","facebook");
+//ste = site.replace("google","myspace");
+
+//String also acts like an array.
+site.slice(7);
+
+site.substr(0,4); //scoop a part of a string, here it pulls 4 letters starting from index 0/
+site.substring(0,4); //same as above
+
+site.toUpperCase();
+site.toLowerCase();
+
+//get last character from a string
+site[site.length-1];
+
+//Convert strings to arrays to have array functionality on it, then reconvet it back to a string.
+
+//number to strings
+var num = 99;
+num.toString();
+
+//String to a number
+//strings must have only numbers in it to be able to convert it to a number type.
+var aa = "99";
+aa = parseInt(aa);
