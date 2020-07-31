@@ -15,10 +15,21 @@
     <div id="container1"> Some stuff goes here.</div>
     <div id="container2"> Round and round we go.</div>
 
-    <p>
-      <!-- code in onchange attribute runs when text is entered in the field. -->
-      <input type="text" id="textfield1" onchange="edit1()">
-    </p>
+    <div>
+      <p>
+        <!-- code in onchange attribute runs when text is entered in the field. -->
+        <input type="text" id="textfield1" onchange="edit1()">
+      </p>
+    </div>
+
+    <div>
+      <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+        <li>projects</li>
+      </ul>
+    </div>
 
     <!-- java script element -->
     <script>
@@ -58,6 +69,22 @@
           var inputtext1 = document.getElementById("textfield1").value;
           container1Id.innerText = inputtext1;
         }
+
+        //Self invoking function
+        //Update content of list items.
+        (function updateList(){
+          var list_items = document.getElementsByTagName("li");
+          console.log(list_items);
+
+          //method 1:
+          // for(item of list_items){
+          //   item.innerHTML = "updated";}
+
+          //method 2;
+          for(i=0;i<list_items.length;i++){
+            list_items[i].innerHTML = "item" + i;}
+          })();
+
     </script>
 
   </body>
