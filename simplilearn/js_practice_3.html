@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>dom practice</title>
+  </head>
+
+  <body>
+
+    <div class="header"> Heading Division
+      <h1>A heading for the site.</h1>
+    </div>
+
+    <script>
+        console.dir(document);
+
+        //Traverse through DOM:
+        //Path for the DOM To display the first div element in console.
+        console.dir(document.children[0].children[1].children[0]);
+
+        //Path for the DOM To access the text within the first div element(Heading Division).
+        console.dir(document.children[0].children[1].children[0].childNodes[0].nodeValue);
+
+        //Path for the DOM To access the text within the h1 tag in the first div element(Heading Division).
+        console.dir(document.children[0].children[1].children[0].childNodes[1].childNodes[0].nodeValue);
+
+    </script>
+
+  </body>
+
+</html>
