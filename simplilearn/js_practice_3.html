@@ -31,6 +31,11 @@
       </ul>
     </div>
 
+    <div>
+        <img src="http://lorempixel.com/400/200" alt=""> <br>
+        <img src="http://lorempixel.com/400/200" alt="">
+    </div>
+
     <!-- java script element -->
     <script>
         //View DOM document
@@ -60,6 +65,7 @@
         document.write("written from script element.")
 
         //Access and edit an html id tag through js
+        //All elements or tags in html are objects having key value pairs.
         var container1Id = document.getElementById("container1");
         console.dir(container1Id);
         container1Id.innerHTML = "cool javascript stuff";
@@ -71,7 +77,7 @@
         }
 
         //Self invoking function
-        //Update content of list items.
+        //Update content of all list items.
         (function updateList(){
           var list_items = document.getElementsByTagName("li");
           console.log(list_items);
@@ -80,10 +86,23 @@
           // for(item of list_items){
           //   item.innerHTML = "updated";}
 
-          //method 2;
+          //method 2:
+          // var i=0;
+          // for(item in list_items){
+          //   list_items[item].innerHTML = "item" +i;
+          //   i++;}
+
+          //method 3;
           for(i=0;i<list_items.length;i++){
-            list_items[i].innerHTML = "item" + i;}
-          })();
+            list_items[i].innerHTML = "item" + (i+1);}
+        })();
+
+        //Access any element in html through js
+        var images = document.getElementsByTagName("img");
+        console.log("total number of images on this page: " + images.length);
+        console.log(typeof images); //images is an array of objects(dictionaries).
+        for(item in images){
+          console.log("image:" + item + ":" + images[item].src);}
 
     </script>
 
