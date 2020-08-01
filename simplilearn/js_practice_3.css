@@ -1,0 +1,6 @@
+body{background-color : grey;}
+
+/* Combinator acces - para elements in header class */
+.header p{
+  color : blue;
+}

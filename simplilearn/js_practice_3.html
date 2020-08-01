@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>dom practice</title>
+    <link rel="stylesheet" href="js_practice_3.css">
     <script src="js_practice_3.js"></script>
   </head>
 
@@ -10,6 +11,9 @@
 
     <div class="header"> Heading Division
       <h1>A heading for the site.</h1>
+      <p class="para1">
+        a paragraph text.
+      </p>
     </div>
 
     <div id="container1"> Some stuff goes here.</div>
@@ -109,6 +113,15 @@
         console.log(header1);
         console.dir(header1);
 
+
+        //Select any html element whether id or class, using the query selector method in document.
+        //Combinators also work with query selectors.
+        var selEle = document.querySelector(".para1");
+        console.log(selEle);
+        var selEle2 = document.querySelector(".header");
+        console.log(selEle2);
+        var selEle3 = document.querySelector("#container1");
+        console.log(selEle3);
 
     </script>
 
