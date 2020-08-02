@@ -11,7 +11,7 @@
 
     <div class="header"> Heading Division
       <h1>A heading for the site.</h1>
-      <p>
+      <p class="para">
         a paragraph text.
       </p>
     </div>
@@ -20,18 +20,28 @@
     <div id="container2"> Round and round we go.</div>
 
     <div>
-      <p>
+      <p class="para">
+        A textbox: <br>
         <!-- code in onchange attribute runs when text is entered in the field. -->
         <input type="text" id="textfield1" onchange="edit1()">
       </p>
     </div>
 
     <div>
-      <ul>
-        <li>home</li>
-        <li>about</li>
-        <li>contact</li>
-        <li>projects</li>
+      <ul class="navlist">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul class="dummylist">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
 
@@ -113,15 +123,26 @@
         console.log(header1);
         console.dir(header1);
 
-
         //Select any html element whether id or class, using the query selector method in document.
         //Combinators also work with query selectors.
-        var selEle = document.querySelector(".para1");
-        console.log(selEle);
         var selEle2 = document.querySelector(".header");
         console.log(selEle2);
         var selEle3 = document.querySelector("#container1");
         console.log(selEle3);
+
+        //Select all html elements having a same class or id or a combinator.
+        var selEle = document.querySelectorAll(".para");
+        console.log(selEle);
+        //Combinator selection, selecting an unordered list of class navlist.
+        var selEle4 = document.querySelectorAll("ul.navlist");
+        console.log(selEle4);
+
+        //Selecting all list items of an ul of a specific class.
+        var selEle5 = document.querySelectorAll("ul.dummylist li");
+        console.log(selEle5);
+        for(item in selEle5){
+          selEle5[item].innerHTML = "loopritten";
+        }
 
     </script>
 
