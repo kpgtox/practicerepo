@@ -24,6 +24,7 @@
         A textbox: <br>
         <!-- code in onchange attribute runs when text is entered in the field. -->
         <input type="text" id="textfield1" onchange="edit1()">
+        <input type="text" id="textfield2" value="game on bitches">
       </p>
     </div>
 
@@ -50,7 +51,7 @@
         <img src="http://lorempixel.com/400/200" alt="">
     </div>
 
-    <nav>
+    <nav class="navclass">
       <p>one para</p>
       <p>two para</p>
     </nav>
@@ -171,6 +172,47 @@
 
         //Traversing through DOM to edit the h1 tag in the first div element of this html doc.
         selEle7[0].childNodes[0].nodeValue = "Traversing through DOM to edit the children in the first div element/tag.";
+
+        //Adding styling to elements dynamically.
+        container1Id.style.color = "red";
+        container1Id.style.border = "1px solid black";
+
+        //Elements created through js will only reflect the results in the site and DOM not in html page.
+        //select nav element of class navclass using combinator syntax
+        var selEle8 = document.querySelector("nav.navclass");
+        console.log(selEle8);
+        console.dir(selEle8);
+        //Dynamically create an html element with js
+        var creEle = document.createElement("div");
+        creEle.innerHTML = "Div element created through js";
+        //Add the created div element as a last child to navclass.
+        selEle8.appendChild(creEle);
+
+        //Remove a child from an element.
+        selEle8.removeChild(selEle8.childNodes[1]);
+        console.log(selEle8);
+
+        //Adding an Event Listener to elements.
+        var selEle9 = document.querySelector("div.header h1");
+        selEle9.onclick = func1;
+        function func1(){
+          console.log("clicked on event listener");}
+
+        //onchange, evet listener example.
+        var selEle10 = document.getElementById("textfield2");
+        //console.log(selEle10);
+        selEle10.onchange = edit2;
+        function edit2(){
+          var inputtext = selEle10.value;
+          document.querySelector("div.header h1").innerText = inputtext;
+        }
+
+        //Another way to add an event listener
+        selEle10.addEventListener("change",edit3);
+        function edit3(){
+          var inputtext = selEle10.value;
+          document.querySelector("#container2").innerHTML = inputtext;
+        }
 
     </script>
 
