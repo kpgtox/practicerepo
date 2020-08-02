@@ -50,6 +50,11 @@
         <img src="http://lorempixel.com/400/200" alt="">
     </div>
 
+    <nav>
+      <p>one para</p>
+      <p>two para</p>
+    </nav>
+
     <!-- java script element -->
     <script>
         //View DOM document
@@ -143,6 +148,29 @@
         for(item in selEle5){
           selEle5[item].innerHTML = "loopritten";
         }
+
+        //Get all tags oftype p
+        var selEle6 = document.getElementsByTagName("p");
+        console.log(selEle6);
+
+        //Traversing through dom
+        //Get all tags of type div
+        var selEle7 = document.getElementsByTagName("div");
+        console.log(selEle7);
+        //Get the first tag of type div in the html document.
+        console.log(selEle7[0]);
+        //Get the first child and last child of first div in the html file.
+        console.log(selEle7[0].firstChild);
+        console.log(selEle7[0].lastChild);
+
+        //The first andlast child of a div tag are always text.
+        //Get the next sibling(next tag in div) OF first child(text) OF first div tag OF the html file.
+        console.log(selEle7[0].firstChild.nextSibling);
+        //Get the previous sibling OF last chld(text) OF first div tag OF the html file.
+        console.log(selEle7[0].lastChild.previousSibling);
+
+        //Traversing through DOM to edit the h1 tag in the first div element of this html doc.
+        selEle7[0].childNodes[0].nodeValue = "Traversing through DOM to edit the children in the first div element/tag.";
 
     </script>
 
