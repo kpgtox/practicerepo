@@ -214,6 +214,28 @@
           document.querySelector("#container2").innerHTML = inputtext;
         }
 
+        //Onmouseover event listener
+        //On mouse hover over the list element, paint it blue otherwise black.
+        selEle11 = document.getElementsByTagName("li");
+        console.log(selEle11);
+        for(i=0; i<selEle11.length; i++){
+          selEle11[i].onmouseover = function(){
+            console.log(this);
+            this.style.color = "blue";
+          }
+          selEle11[i].onmouseout = function(){
+            this.style.color = "black";
+          }
+        }
+
+        //Event listener onlick to pop up image window.
+        var selEle12 = document.getElementsByTagName("img");
+        //console.log(selEle12);
+        for(i in selEle12){
+          selEle12[i].onclick = function(){
+            window.open(this.src,"myimage","resizable=yes, scrollbars=yes,width=800,height=800");
+          }
+        }
     </script>
 
   </body>
