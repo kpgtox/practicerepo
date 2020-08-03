@@ -98,7 +98,7 @@
   <script type="text/javascript">
 
   //Update navigation bar when scrolling:
-  
+
   //select all sections, they got the same class
   var sections = document.querySelectorAll(".section");
   console.log(sections);
@@ -117,9 +117,20 @@
   //fire off a function everytime user scrolls
   window.onscroll = function(){
     // console.log("scrolling");
-    // get the page's position from the top in pixels, either of whichever works.
+
+    // get the page's y position from the top in pixels, either of whichever works.
     var scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log(scrollPos);
+    //console.log(scrollPos);
+
+    for(i in sectionsDict){
+      //console.log(sectionsDict[i]);
+      //Check if a section's y pos is less than current scroll's y pos.
+      if(sectionsDict[i] <= scrollPos){
+        //locate for .active class and set it as empty
+        document.querySelector(".active").setAttribute("class","");
+        document.querySelector("a[href*="+i+"]").setAttribute("class","active");
+      }
+    }
   }
 
   </script>
