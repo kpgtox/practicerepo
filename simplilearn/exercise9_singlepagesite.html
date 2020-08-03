@@ -128,33 +128,44 @@
     switch(true){
       case (scrollPos2 >= 0 && scrollPos2 < sectionsDict2[1]):
       console.log("in section 1");
-      setNavActive("#a1");
+      setNavActive("a1");
       break;
       case (scrollPos2 > sectionsDict2[1] && scrollPos2 < sectionsDict2[2]):
       console.log("in section 2");
-      setNavActive("#a2");
+      setNavActive("a2");
       break;
       case (scrollPos2 > sectionsDict2[2] && scrollPos2 < sectionsDict2[3]):
       console.log("in section 3");
-      setNavActive("#a3");
+      setNavActive("a3");
       break;
       case (scrollPos2 > sectionsDict2[3] && scrollPos2 < sectionsDict2[4]):
       console.log("in section 4");
-      setNavActive("#a4");
+      setNavActive("a4");
       break;
       case (scrollPos2 > sectionsDict2[4] && scrollPos2 < sectionsDict2[5]):
       console.log("in section 5");
-      setNavActive("#a5");
+      setNavActive("a5");
       break;
       default:
       console.log("in section 6");
-      setNavActive("#a6");
+      setNavActive("a6");
       break;
     }
   }
+  var navlinks = document.querySelectorAll("#nav ul li a");
+  console.log(navlinks);
   function setNavActive(x){
-    document.querySelector(x).setAttribute("class","active");
+    for(i in navlinks){
+      if(x != navlinks[i].id){
+        navlinks[i].className = "";
+      }
+      else {
+        navlinks[i].className = "active";
+      }
+    }
   }
+
+    //document.querySelector(x).setAttribute("class","active");
 
   //fire off a function everytime user scrolls
   // window.onscroll = function(){
