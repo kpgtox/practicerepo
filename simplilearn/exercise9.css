@@ -85,7 +85,7 @@ header{
   padding : 50px;
 
   /* set bg image from url */
-  background:url("https://via.placeholder.com/1200x800/FFFF00/000000?text=section1");
+  background:url("http://placeimg.com/1200/800/people");
   background-size:cover;
 }
 /* combinator selection, id and class */
@@ -95,13 +95,21 @@ header{
 }
 
 #section3{
-  background:url("https://via.placeholder.com/1200x800/00FFFF/FFFF33?text=section3");
+  background:url("http://placeimg.com/640/480/arch");
   background-size:cover;
 }
 
 #section5{
-  background:url("https://via.placeholder.com/1200x800/00FFFF/FFFF33?text=section5");
+  background:url("http://placeimg.com/1200/800/any");
   background-size:cover;
+}
+
+img{
+  float: left;
+  margin : 10px;
+  padding 5px;
+
+  border:2px solid black;
 }
 
 #footer{
