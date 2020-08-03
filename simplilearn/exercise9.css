@@ -1,0 +1,67 @@
+body{
+
+}
+.container{
+  /* setting margin top and bottom to 0 and left and right to auto. */
+    margin : 0 auto;
+    max-width: 1040px;
+    border:1px solid black;
+}
+
+header{
+  margin-top : 5px;
+  width: 100%;
+  height: 40px;
+  position :fixed;
+  background-color: #ddd;
+}
+
+/* nav bar */
+#nav{
+  margin :0;
+  /* option 1: */
+  width: 600px;
+  float:right;
+  /* option 2:
+  max-width: 1040px; */
+}
+#nav ul{
+  margin: 0 auto;
+  display: block;
+
+  list-style-type: none;
+  }
+#nav li{
+    float:left;
+    margin : 2px;
+    padding :10px;
+
+    border: 1px solid red;
+    background-color: black;
+}
+#nav ul li a{
+  text-decoration: none;
+  /* 16 px font size */
+  font-size: 1em;
+  color:white;
+}
+#nav ul li a:hover{
+  color:red;
+}
+
+.clear{
+  clear: both;;
+}
+
+.section{
+  min-height: 500px;
+  border: 1px solid #ddd;
+}
+
+#section1{
+  /* set bg image from url */
+  background:url("https://via.placeholder.com/1200x800/FFFF00/000000?text=section1");
+  background-size:cover;
+  padding : 50px;
+
+}
