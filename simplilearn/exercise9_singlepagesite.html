@@ -10,20 +10,20 @@
 
 <body>
 
-    <header>
-      <nav id="nav">
-        <ul>
-          <li><a href="#section1" class="active">Section 1</a></li>
-          <li><a href="#section2">Section 2</a></li>
-          <li><a href="#section3">Section 3</a></li>
-          <li><a href="#section4">Section 4</a></li>
-          <li><a href="#section5">Section 5</a></li>
-          <li><a href="#section6">Section 6</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <nav id="nav">
+      <ul>
+        <li><a href="#section1" id="a1" class="active">Section 1</a></li>
+        <li><a href="#section2" id="a2">Section 2</a></li>
+        <li><a href="#section3" id="a3">Section 3</a></li>
+        <li><a href="#section4" id="a4">Section 4</a></li>
+        <li><a href="#section5" id="a5">Section 5</a></li>
+        <li><a href="#section6" id="a6">Section 6</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
+  <div class="container">
     <!-- Make sure to add a clear class at the point you want floats to end -->
     <!-- an element in html can have multiple classs but only single id. -->
     <section id="section1" class="section clear">
@@ -114,24 +114,66 @@
     // console.log(e)
   });
 
-  //fire off a function everytime user scrolls
+  // rough
+  var sectionsDict2 = {};
+  sectionsDict2[0] = sectionsDict.section1;
+  sectionsDict2[1] = sectionsDict.section2;
+  sectionsDict2[2] = sectionsDict.section3;
+  sectionsDict2[3] = sectionsDict.section4;
+  sectionsDict2[4] = sectionsDict.section5;
+  sectionsDict2[5] = sectionsDict.section6;
+  console.log(sectionsDict2);
   window.onscroll = function(){
-    // console.log("scrolling");
-
-    // get the page's y position from the top in pixels, either of whichever works.
-    var scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
-    //console.log(scrollPos);
-
-    for(i in sectionsDict){
-      //console.log(sectionsDict[i]);
-      //Check if a section's y pos is less than current scroll's y pos.
-      if(sectionsDict[i] <= scrollPos){
-        //locate for .active class and set it as empty
-        document.querySelector(".active").setAttribute("class","");
-        document.querySelector("a[href*="+i+"]").setAttribute("class","active");
-      }
+    var scrollPos2 = document.documentElement.scrollTop || document.body.scrollTop;
+    switch(true){
+      case (scrollPos2 >= 0 && scrollPos2 < sectionsDict2[1]):
+      console.log("in section 1");
+      setNavActive("#a1");
+      break;
+      case (scrollPos2 > sectionsDict2[1] && scrollPos2 < sectionsDict2[2]):
+      console.log("in section 2");
+      setNavActive("#a2");
+      break;
+      case (scrollPos2 > sectionsDict2[2] && scrollPos2 < sectionsDict2[3]):
+      console.log("in section 3");
+      setNavActive("#a3");
+      break;
+      case (scrollPos2 > sectionsDict2[3] && scrollPos2 < sectionsDict2[4]):
+      console.log("in section 4");
+      setNavActive("#a4");
+      break;
+      case (scrollPos2 > sectionsDict2[4] && scrollPos2 < sectionsDict2[5]):
+      console.log("in section 5");
+      setNavActive("#a5");
+      break;
+      default:
+      console.log("in section 6");
+      setNavActive("#a6");
+      break;
     }
   }
+  function setNavActive(x){
+    document.querySelector(x).setAttribute("class","active");
+  }
+
+  //fire off a function everytime user scrolls
+  // window.onscroll = function(){
+  //   // console.log("scrolling");
+  //
+  //   // get the page's y position from the top in pixels, either of whichever works.
+  //   var scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+  //   //console.log(scrollPos);
+  //
+  //   for(i in sectionsDict){
+  //     //console.log(sectionsDict[i]);
+  //     //Check if a section's y pos is less than current scroll's y pos.
+  //     if(sectionsDict[i] <= scrollPos){
+  //       //locate for .active class and set it as empty
+  //       document.querySelector(".active").setAttribute("class","");
+  //       document.querySelector("a[href*="+i+"]").setAttribute("class","active");
+  //     }
+  //   }
+  // }
 
   </script>
 
