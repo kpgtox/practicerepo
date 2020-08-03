@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Single Page Site</title>
   <link rel="stylesheet" href="exercise9.css">
+  <!-- <script src="exercise9.js"></script> -->
 </head>
 
 <body>
@@ -78,7 +79,50 @@
       </div>
     </section>
 
+    <footer id="footer">
+      <div class="col1">
+        (c) copyrightmy website blah blah sheep. Contact us for more info.
+      </div>
+      <div class="col2">
+        <ul>
+          <li> <a href="#">Conatact</a> </li>
+          <li> <a href="#">Facebook</a> </li>
+          <li> <a href="#">Youtube</a> </li>
+          <li> <a href="#">Blachsheep</a> </li>
+        </ul>
+      </div>
+    </footer>
+
   </div>
+
+  <script type="text/javascript">
+
+  //Update navigation bar when scrolling:
+  
+  //select all sections, they got the same class
+  var sections = document.querySelectorAll(".section");
+  console.log(sections);
+
+  //an empty js object/dict.
+  var sectionsDict = {};
+
+  //Loop through and print each section stored in the sections variable.
+  sections.forEach(function(e){
+    //grab every section's id and position form top in pixels.
+    console.log(e.id, e.offsetTop);
+    sectionsDict[e.id] = e.offsetTop;
+    // console.log(e)
+  });
+
+  //fire off a function everytime user scrolls
+  window.onscroll = function(){
+    // console.log("scrolling");
+    // get the page's position from the top in pixels, either of whichever works.
+    var scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+    console.log(scrollPos);
+  }
+
+  </script>
 
 </body>
 

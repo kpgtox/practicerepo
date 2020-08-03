@@ -1,5 +1,12 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
 
+body{
+  /* set default body placement and content placement to null */
+  margin:10px 0;
+  padding:0;
+  width:100%;
+
+  font-family: 'Mulish', sans-serif;
 }
 .container{
   /* setting margin top and bottom to 0 and left and right to auto. */
@@ -48,6 +55,9 @@ header{
 #nav ul li a:hover{
   color:red;
 }
+#nav ul li a.active{
+  border-bottom: 3px solid #fff;
+}
 
 .clear{
   clear: both;;
@@ -55,13 +65,62 @@ header{
 
 .section{
   min-height: 500px;
+
   border: 1px solid #ddd;
+  background-color: #fff;
+}
+.wrap{
+  /* spacing */
+  width: 70%;
+  /* moving */
+  margin:40px auto;
+  /* moving content */
+  padding : 30px;
+
+  background-color: rgba(200,200,200,0.5);
+  border-radius: 20px;
 }
 
 #section1{
+  padding : 50px;
+
   /* set bg image from url */
   background:url("https://via.placeholder.com/1200x800/FFFF00/000000?text=section1");
   background-size:cover;
-  padding : 50px;
+}
+/* combinator selection, id and class */
+#section1 .wrap{
+  /* moving: */
+  margin-top: 100px;
+}
 
+#section3{
+  background:url("https://via.placeholder.com/1200x800/00FFFF/FFFF33?text=section3");
+  background-size:cover;
+}
+
+#section5{
+  background:url("https://via.placeholder.com/1200x800/00FFFF/FFFF33?text=section5");
+  background-size:cover;
+}
+
+#footer{
+  padding 20px;
+
+  background-color: #333;
+  color: white;
+}
+.col1{
+  /* spacing: */
+  width: 66%;
+  /* moving: */
+  margin-bottom: 60px;
+  display:inline-block;
+}
+.col2{
+  width: 33%;
+  display:inline-block;
+}
+.col2 ul a{
+  color: white;
 }
