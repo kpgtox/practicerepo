@@ -9,7 +9,8 @@
   <body>
 
     <!-- hyperlink or anchor tags -->
-    <p> a para 1. <a href="https://wikipedia.org" title="wiki">knowledge</a></p>
+    <!-- target variable letsyou open the anchor link in a new tab -->
+    <p> a para 1. <a href="https://wikipedia.org" title="wiki" target="_blank">knowledge</a></p>
 
     <!-- id and href, intrapage links. -->
     <p id="p2">some para 2.</p>
@@ -24,6 +25,84 @@
     <br><br>
 
     <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1452.jpeg" width="500px" alt="freenaturestock">
+
+    <br><br>
+
+    <!-- Embedd a website, image or a video within a frame -->
+    <iframe src="https://www.wikipedia.org" width="400px" height="400px" frameborder="1"></iframe>
+
+    <br><br>
+
+    <!-- Hyperlink and iframe combination -->
+    <iframe name="myiframe1" src="" width="1200px" height="400px"></iframe> <br>
+    <a href="https://www.deccanchronicle.com/classifieds" target="myiframe1">| Deccan Chronicle |</a>
+    <a href="https://wikipedia.org" target="myiframe1">| Wikipedia |</a>
+    <a href="https://timesofindia.indiatimes.com/defaultinterstitial.cms" target="myiframe1">| Times of India |</a>
+
+    <br><br>
+
+    <!-- an iframe with a youtube video embedded in it -->
+    <!-- Use the embed link for youtube instead of a regular one -->
+    <iframe width="806" height="453" src="https://www.youtube.com/embed/7cidUaUCb5M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!-- Unordered list -->
+    <ul>
+      <li>Berlin</li>
+      <li>UK
+        <ul>
+        <li>London</li>
+        <li>Manchester</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- <!-- Ordered list and types --> -->
+    <ol type="1"> Ordered List
+      <li>Berlin</li>
+      <li>Munich</li>
+      <li>Hyderabad</li>
+    </ol>
+    <ol type="A"> Ordered List
+      <li>Berlin</li>
+      <li>Munich</li>
+      <li>Hyderabad</li>
+    </ol>
+    <ol type="a"> Ordered List
+      <li>Berlin</li>
+      <li>Munich</li>
+      <li>Hyderabad</li>
+    </ol>
+    <ol type="I"> Ordered List
+      <li>Berlin</li>
+      <li>Munich</li>
+      <li>Hyderabad</li>
+    </ol>
+    <ol type="i"> Ordered List
+      <li>Berlin</li>
+      <li>Munich</li>
+      <li>Hyderabad</li>
+    </ol>
+
+    <!-- descriptive list -->
+    <dt>HTML</dt><dd>One of the core languages for web dev.</dd>
+    <dt>CSS</dt><dd>Used for styling the content.</dd>
+    <dt>Javascript</dt><dd>Adding interactivity to the site.</dd>
+
+    <br><br>
+
+    <!-- Tables -->
+    <!-- th table heading, tr table row, td table data -->
+    <table>
+      <tr>
+        <th>Name</th><th>ID</th><th>Company</th>
+      </tr>
+      <tr>
+        <td>Karthik</td><td>666</td><td>Pulse Star</td>
+      </tr>
+      <tr>
+        <td>Bill gates</td><td>555</td><td>Microsoft</td>
+      </tr>
+    </table>
 
 
 
