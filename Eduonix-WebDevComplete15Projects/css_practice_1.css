@@ -152,6 +152,8 @@
 }
 /* Rendering order based on z index.
 Highest z index will render first */
+/* The html element that's coded in the last will render on top if
+z index is not assigned toany elements.*/
 .d17{
   height: 100px;
   width: 200px;
@@ -180,4 +182,8 @@ Highest z index will render first */
 
   text-align: right;
   background-color: pink;
+}
+
+.s1{
+  display: block;
 }
