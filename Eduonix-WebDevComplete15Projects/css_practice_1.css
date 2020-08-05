@@ -187,3 +187,76 @@ z index is not assigned toany elements.*/
 .s1{
   display: block;
 }
+
+.p2{
+  text-decoration:underline;
+  font-weight: bold;
+  font-style: italic;
+  /* 1em is 16px. */
+  font-size: 2em;
+  letter-spacing: 4px;
+  /* horizontal, vertical shadow, bur radius, color of shadow */
+  text-shadow: 2px 2px 2px grey;
+  /* spacing from the left */
+  text-indent: 20px;
+}
+
+.p3{
+  text-align: center;
+  /* apply the next font if the first one doesnt work and so on, assign a geenric/available font in the end */
+  font-family: "Times New Roman", "Times", monospace;
+}
+
+/* Handling text overflow */
+.d20{
+  width: auto;
+  height: 100px;
+
+  border: 1px solid black;
+
+  /* method 1 (best method) */
+  /* cut off the overflowing text completely from the border end. */
+  overflow: hidden;
+
+  /* method 2 */
+  /* break all extra line ending spaces */
+  /* word-break: break-all; */
+}
+/* Hover over div to display cut off text, use this in combination with overflow:hidden
+used in the container(div) that has the overflowing text.  */
+.d20:hover{
+  /* overflow: visible; */
+}
+
+/* Grab a sprite from a sprite sheet using coordinates */
+/* sprite sheet's origin is at top left */
+#img1{
+  /* dims of the sprite you want to grab */
+  width: 185px;
+  height: 40px;
+  /* manually specify origin coods on the spritesheet to grab the sprite */
+  /* use negative sign for x and y coods if atom considers origin of the spritesheet at the bottom right  */
+  background: URL(images/amazonspritesheet.png) -0px -80px;
+}
+
+#img2{
+  width: 300px;
+  height: 100px;
+  opacity: 0.2;
+  background: URL(images/bike1.jpg);
+  background-size: 50% 100%;
+}
+#img3{
+  width: 300px;
+  height: 100px;
+  opacity: 0.5;
+  background: URL(images/bike1.jpg);
+  background-size: 50% 100%;
+}
+#img4{
+  width: 300px;
+  height: 100px;
+  opacity: 1;
+  background: URL(images/bike1.jpg);
+  background-size: 50% 100%;
+}
