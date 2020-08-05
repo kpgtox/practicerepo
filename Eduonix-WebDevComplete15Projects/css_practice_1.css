@@ -16,7 +16,7 @@
   background-color: red;
 }
 .d5{
-  height: 100px;
+  height: auto;
   width: auto;
 
   background-color: green;
@@ -35,4 +35,8 @@
   border: 10px solid black;
   padding:10px;
   background-color: #ddd;
+}
+
+.d6{
+  /* a div element has 0px default on all three, margin, border and padding. */
 }
