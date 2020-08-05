@@ -306,7 +306,7 @@ used in the container(div) that has the overflowing text.  */
   /* background: linear-gradient(rgba(0,0,255,0.5),rgba(0,255,0,0.5)); */
   /* background: radial-gradient(orange,white,green); */
   /* background: radial-gradient(orange 5%,white 10%, green 80%); */
-  /* background: radial-gradient(circle, orange 5%,white 10%, green 80%); */
+  background: radial-gradient(circle, orange 5%,white 10%, green 80%);
 
   /* gradient for safari browser
   background: -webkit-linear-gradient(orange,white,green); */
@@ -316,4 +316,33 @@ used in the container(div) that has the overflowing text.  */
 
   /* gradient for firefox browser */
   /* background: -moz-linear-gradient(orange,white,green); */
+}
+
+.d23{
+  width: 100px;
+  height: 100px;
+  margin-left: 400px;
+
+  /* rotate 30 degrees clockwise */
+  /* transform: rotate(30deg); */
+
+  /* internet explorer
+  -ms-transform: rotate(30deg);
+  other browsers
+  -webkit-transform: rotate(30deg); */
+
+  /* move element 10px right and 20px down */
+  /* transform: translate(10px, 20px); */
+
+  /* scale up or down */
+  /* transform: scale(2); */
+
+  /* skew the element */
+  /* skewing in X will pull the element in both dirs */
+  /* skew in x and y dirs. */
+  transform: skew(10deg,10deg);
+
+
+
+  background-color: hotpink;
 }
