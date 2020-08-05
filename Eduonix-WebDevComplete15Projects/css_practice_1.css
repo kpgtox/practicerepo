@@ -2,3 +2,27 @@
   color:blue;
   font-size: 200%;
 }
+
+.d3{
+  height: 100px;
+  width: auto;
+
+  background-color: orange;
+}
+.d4{
+  height: 100px;
+  width: auto;
+
+  background-color: red;
+}
+.d5{
+  height: 100px;
+  width: auto;
+
+  background-color: green;
+}
+/* coombinator selection */
+/* select span elements from multiple classes */
+.d3 span, .d4 span, .d5 span{
+  color:white;
+}

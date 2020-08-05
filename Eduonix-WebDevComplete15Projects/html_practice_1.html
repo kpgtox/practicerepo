@@ -1,183 +1,190 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="utf-8">
-    <title>html practice 1</title>
-    <link rel="stylesheet" href="css_practice_1.css">
+<head>
+  <meta charset="utf-8">
+  <title>html practice 1</title>
+  <link rel="stylesheet" href="css_practice_1.css">
 
-    <style media="screen">
-
+  <style media="screen">
     /* combinator selection */
     /* selects p elements of p1 class */
-    .d1 p{
-      color:red;
+    .d1 p {
+      color: red;
       /* 32px */
       font-size: 200%;
     }
+  </style>
 
-    </style>
+</head>
 
-  </head>
+<body>
 
-  <body>
+  <!-- hyperlink or anchor tags -->
+  <!-- target variable letsyou open the anchor link in a new tab -->
+  <p> a para 1. <a href="https://wikipedia.org" title="wiki" target="_blank">knowledge</a></p>
 
-    <!-- hyperlink or anchor tags -->
-    <!-- target variable letsyou open the anchor link in a new tab -->
-    <p> a para 1. <a href="https://wikipedia.org" title="wiki" target="_blank">knowledge</a></p>
+  <!-- id and href, intrapage links. -->
+  <p id="p2">some para 2.</p>
 
-    <!-- id and href, intrapage links. -->
-    <p id="p2">some para 2.</p>
+  <!-- image tag -->
+  <!-- <img src="images/3.jpg" width="100px" alt="heart_logo"> -->
 
-    <!-- image tag -->
-    <!-- <img src="images/3.jpg" width="100px" alt="heart_logo"> -->
+  <br><br>
 
-    <br><br>
+  <a href="#p2">para2</a>
 
-    <a href="#p2">para2</a>
+  <br><br>
 
-    <br><br>
+  <!-- <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1452.jpeg" width="500px" alt="freenaturestock"> -->
 
-    <!-- <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1452.jpeg" width="500px" alt="freenaturestock"> -->
+  <br><br>
 
-    <br><br>
+  <!-- Embedd a website, image or a video within a frame -->
+  <!-- <iframe src="https://www.wikipedia.org" width="400px" height="400px" frameborder="1"></iframe> -->
 
-    <!-- Embedd a website, image or a video within a frame -->
-    <!-- <iframe src="https://www.wikipedia.org" width="400px" height="400px" frameborder="1"></iframe> -->
+  <br><br>
 
-    <br><br>
-
-    <!-- Hyperlink and iframe combination -->
-    <!-- <iframe name="myiframe1" src="" width="1200px" height="400px"></iframe> <br>
+  <!-- Hyperlink and iframe combination -->
+  <!-- <iframe name="myiframe1" src="" width="1200px" height="400px"></iframe> <br>
     <a href="https://www.deccanchronicle.com/classifieds" target="myiframe1">| Deccan Chronicle |</a>
     <a href="https://wikipedia.org" target="myiframe1">| Wikipedia |</a>
     <a href="https://timesofindia.indiatimes.com/defaultinterstitial.cms" target="myiframe1">| Times of India |</a> -->
 
-    <br><br>
+  <br><br>
 
-    <!-- an iframe with a youtube video embedded in it -->
-    <!-- Use the embed link for youtube instead of a regular one -->
-    <!-- <iframe width="806" height="453" src="https://www.youtube.com/embed/7cidUaUCb5M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  <!-- an iframe with a youtube video embedded in it -->
+  <!-- Use the embed link for youtube instead of a regular one -->
+  <!-- <iframe width="806" height="453" src="https://www.youtube.com/embed/7cidUaUCb5M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-    <!-- Unordered list -->
-    <ul>
-      <li>Berlin</li>
-      <li>UK
-        <ul>
+  <!-- Unordered list -->
+  <ul>
+    <li>Berlin</li>
+    <li>UK
+      <ul>
         <li>London</li>
         <li>Manchester</li>
-        </ul>
-      </li>
-    </ul>
+      </ul>
+    </li>
+  </ul>
 
-    <!-- Ordered list and types -->
-    <ol type="1"> Ordered List
-      <li>Berlin</li>
-      <li>Munich</li>
-      <li>Hyderabad</li>
-    </ol>
-    <ol type="A"> Ordered List
-      <li>Berlin</li>
-      <li>Munich</li>
-      <li>Hyderabad</li>
-    </ol>
-    <ol type="a"> Ordered List
-      <li>Berlin</li>
-      <li>Munich</li>
-      <li>Hyderabad</li>
-    </ol>
-    <ol type="I"> Ordered List
-      <li>Berlin</li>
-      <li>Munich</li>
-      <li>Hyderabad</li>
-    </ol>
-    <ol type="i"> Ordered List
-      <li>Berlin</li>
-      <li>Munich</li>
-      <li>Hyderabad</li>
-    </ol>
+  <!-- Ordered list and types -->
+  <ol type="1"> Ordered List
+    <li>Berlin</li>
+    <li>Munich</li>
+    <li>Hyderabad</li>
+  </ol>
+  <ol type="A"> Ordered List
+    <li>Berlin</li>
+    <li>Munich</li>
+    <li>Hyderabad</li>
+  </ol>
+  <ol type="a"> Ordered List
+    <li>Berlin</li>
+    <li>Munich</li>
+    <li>Hyderabad</li>
+  </ol>
+  <ol type="I"> Ordered List
+    <li>Berlin</li>
+    <li>Munich</li>
+    <li>Hyderabad</li>
+  </ol>
+  <ol type="i"> Ordered List
+    <li>Berlin</li>
+    <li>Munich</li>
+    <li>Hyderabad</li>
+  </ol>
 
-    <!-- descriptive list -->
-    <dt>HTML</dt><dd>One of the core languages for web dev.</dd>
-    <dt>CSS</dt><dd>Used for styling the content.</dd>
-    <dt>Javascript</dt><dd>Adding interactivity to the site.</dd>
+  <!-- descriptive list -->
+  <dt>HTML</dt>
+  <dd>One of the core languages for web dev.</dd>
+  <dt>CSS</dt>
+  <dd>Used for styling the content.</dd>
+  <dt>Javascript</dt>
+  <dd>Adding interactivity to the site.</dd>
+
+  <br><br>
+
+  <!-- Tables -->
+  <!-- th table heading, tr table row, td table data -->
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Company</th>
+    </tr>
+    <tr>
+      <td>Karthik</td>
+      <td>666</td>
+      <td>Pulse Star</td>
+    </tr>
+    <tr>
+      <td>Bill gates</td>
+      <td>555</td>
+      <td>Microsoft</td>
+    </tr>
+  </table>
+
+  <!-- Entities -->
+  <!-- space &nbsp -->
+  <p>Lets make some &nbsp; &nbsp; space &nbsp; &nbsp; here.</p>
+  <p>now for some more &#160;&#160;&#160;&#160;&#160;space &#160; </p>
+  <p>&hearts;</p>
+
+  <!-- Form -->
+  <!-- Information from various user input options -->
+  <form method="get">
+    <label for="name">Name :</label> <input id="name" type="text" name="text" placeholder="name.." size="30px" maxlength="20">
+    <label for="password">Name :</label> <input id="pass" type="password" name="pass" placeholder="password" size="30px" maxlength="20">
+    <input type="submit" name="send" value="">
+  </form>
+
+  <br><br>
+
+  <form class="" action="index.html" method="post">
+
+    <label for="city">City :</label><input type="text" name="" value="" maxlength="100">
+    <br>
+    <label for="pin">Pincode :</label><input type="text" name="" value="" maxlength="6">
+    <br>
+    <!-- drop down menu -->
+    <label for="subject">Subject :</label><select class="" name="">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JS</option>
+    </select>
+    <br>
+
+    <!-- radio buttons -->
+    <!-- radio buttons are grouped by name variable, radio buttons belonging to one group must share a same name -->
+    <p>Shipping method :</p>
+    <label for="">Paypal<input type="radio" name="payment" value="paypal"></label>
+    <label for="">Credit Card<input type="radio" name="payment" value="credit_card"></label>
+    <label for="">Debit Card<input type="radio" name="payment" value="debit_card"></label>
+    <br>
+
+    <!-- textbox -->
+    <label for="">Message: </label> <br>
+    <textarea name="message" rows="4" cols="40"></textarea>
 
     <br><br>
+    <!-- Checkboxes -->
+    <!-- checked attribute to check the box by default -->
+    <label for="">Sign me offers :</label> <input type="checkbox" name="offers" checked="checked"> <br>
+    <label for="">Sign me Updates :</label> <input type="checkbox" name="updates"> <br>
+    <label for="">Sign me Emails :</label> <input type="checkbox" name="emails">
+    <br>
+    <input type="submit" class="submit">
 
-    <!-- Tables -->
-    <!-- th table heading, tr table row, td table data -->
-    <table>
-      <tr>
-        <th>Name</th><th>ID</th><th>Company</th>
-      </tr>
-      <tr>
-        <td>Karthik</td><td>666</td><td>Pulse Star</td>
-      </tr>
-      <tr>
-        <td>Bill gates</td><td>555</td><td>Microsoft</td>
-      </tr>
-    </table>
+  </form>
 
-    <!-- Entities -->
-    <!-- space &nbsp -->
-    <p>Lets make some &nbsp; &nbsp; space &nbsp; &nbsp; here.</p>
-    <p>now for some more &#160;&#160;&#160;&#160;&#160;space &#160; </p>
-    <p>&hearts;</p>
-
-    <!-- Form -->
-    <!-- Information from various user input options -->
-    <form method="get">
-      <label for="name">Name :</label> <input id="name" type="text" name="text" placeholder="name.." size="30px" maxlength="20">
-      <label for="password">Name :</label> <input id="pass" type="password" name="pass" placeholder="password" size="30px" maxlength="20">
-      <input type="submit" name="send" value="">
-    </form>
-
-    <br><br>
-
-    <form class="" action="index.html" method="post">
-
-      <label for="city">City :</label><input type="text" name="" value="" maxlength="100">
-      <br>
-      <label for="pin">Pincode :</label><input type="text" name="" value="" maxlength="6">
-      <br>
-      <!-- drop down menu -->
-      <label for="subject">Subject :</label><select class="" name="">
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="js">JS</option>
-      </select>
-      <br>
-
-      <!-- radio buttons -->
-      <!-- radio buttons are grouped by name variable, radio buttons belonging to one group must share a same name -->
-      <p>Shipping method :</p>
-      <label for="">Paypal<input type="radio" name="payment" value="paypal"></label>
-      <label for="">Credit Card<input type="radio" name="payment" value="credit_card"></label>
-      <label for="">Debit Card<input type="radio" name="payment" value="debit_card"></label>
-      <br>
-
-      <!-- textbox -->
-      <label for="">Message: </label> <br>
-      <textarea name="message" rows="4" cols="40"></textarea>
-
-      <br><br>
-      <!-- Checkboxes -->
-      <!-- checked attribute to check the box by default -->
-      <label for="">Sign me offers :</label> <input type="checkbox" name="offers" checked="checked"> <br>
-      <label for="">Sign me Updates :</label> <input type="checkbox" name="updates"> <br>
-      <label for="">Sign me Emails :</label> <input type="checkbox" name="emails">
-      <br>
-      <input type="submit" class="submit">
-
-    </form>
-
-    <!-- Text decoration in html  -->
-    <p>This <em>word</em> is emphasized.</p>
-    <p>This <strong>word</strong> is emphasized.</p>
-    <p>This <i>word</i> is emphasized.</p>
-    <p>This <strike>word</strike> is emphasized.</p>
-    <p>This CO<sub>2</sub> is emphasized.</p>
-    <p>This X<sup>10</sup> is emphasized.</p>
+  <!-- Text decoration in html  -->
+  <p>This <em>word</em> is emphasized.</p>
+  <p>This <strong>word</strong> is emphasized.</p>
+  <p>This <i>word</i> is emphasized.</p>
+  <p>This <strike>word</strike> is emphasized.</p>
+  <p>This CO<sub>2</sub> is emphasized.</p>
+  <p>This X<sup>10</sup> is emphasized.</p>
 
   <!-- inline css attribute -->
   <!-- font size 200 percent means 16*2, which is 32px. -->
@@ -193,6 +200,19 @@
     <p>This text contains internal css attributes.</p>
   </div>
 
-  </body>
+  <div class="d3">
+    <p>Apple</p>
+    <span>Computer Manufacturer</span>
+  </div>
+  <div class="d4">
+    <p>Intel</p>
+    <span>CPU Manufacturer</span>
+  </div>
+  <div class="d5">
+    <p>Nvidia</p>
+    <span>GPU Manufacturer</span>
+  </div>
+
+</body>
 
 </html>
