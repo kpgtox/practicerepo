@@ -26,3 +26,13 @@
 .d3 span, .d4 span, .d5 span{
   color:white;
 }
+
+/* html box model */
+.p1{
+  /* a p element has a default margin of 16px and 0px for both border and padding. */
+  /* setting 10px for all three, margin, border and padding to understand box model */
+  margin:10px;
+  border: 10px solid black;
+  padding:10px;
+  background-color: #ddd;
+}
