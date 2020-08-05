@@ -340,7 +340,14 @@ used in the container(div) that has the overflowing text.  */
   /* skew the element */
   /* skewing in X will pull the element in both dirs */
   /* skew in x and y dirs. */
-  transform: skew(10deg,10deg);
+  /* transform: skew(10deg,10deg); */
+
+  /* 3D rotation around the X axis */
+  /* transform: rotateX(60deg); */
+  /* 3D rotation around the Y axis */
+  /* transform: rotateY(60deg); */
+  /* 3D rotation around the Z axis */
+  transform: rotateZ(60deg);
 
 
 
