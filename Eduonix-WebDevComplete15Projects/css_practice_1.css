@@ -55,3 +55,129 @@
 
   background-color: #ddd;
 }
+
+.d8{
+  height: 100px;
+  width: auto;
+
+  border: 1px solid black;
+  background-image: url(images/bike1.jpg);
+
+  /* Setting width and height to 100% will fit the entire pic in the container
+  container size equal to greater than the dims of the picture return best results.
+  background-size: 100% 100%; */
+
+  /* Fit image in 10% width and 100% height of the container */
+  background-size: 10% 100%;
+  /* repeat img if theres space left in the container on x axis */
+  background-repeat:repeat-x;
+  /* repeat img if theres space left in the container on y axis
+  background-repeat:repeat-y; */
+
+  /* Fills up the container with the image provided, just fill, not fit. */
+  /* background-size: 100%; */
+}
+.d9{
+  height: 100px;
+  width: auto;
+
+  border: 1px solid black;
+  background-image: url(images/stripebg.jpg);
+  background-size:100%;
+}
+
+.d10 p{
+  width: 600px;
+  height: 100px;
+  padding: 40px;
+
+  border: 1px solid black;
+  background-image: url(images/stripebg.jpg);
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  /* Fit an image only in the p element which is a child of div */
+  background-origin: content-box;
+  backgrou
+}
+
+.d11{
+  height: 100px;
+  width: 100px;
+  float:left;
+
+  background-color: #ddd;
+}
+.d12{
+  height: 100px;
+  width: 100px;
+  float: right;
+
+  background-color: red;
+}
+.d13{
+  height: 100px;
+  width: auto;
+  /* clear floating elements on both sides, left and right from this element's pos. */
+  clear: both;
+  background-color: orange;
+}
+
+/* Positioned With respect to body */
+.d14{
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top : 30px;
+  right : 30px;
+
+  background-color: purple;
+}
+/* Positioned With respect to its original position */
+.d15{
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left : 200px;
+
+  background-color: yellow;
+}
+/* Positioned with respect to page only, doesnt consider body's position. */
+.d16{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: 0px;
+  /* top: 0px; */
+  background-color: pink;
+}
+/* Rendering order based on z index.
+Highest z index will render first */
+.d17{
+  height: 100px;
+  width: 200px;
+  position:absolute;
+  left: 0;
+  z-index: 2;
+
+  text-align: right;
+  background-color: yellow;
+}
+.d18{
+  height: 100px;
+  width: 200px;
+  position:absolute;
+  left: 50px;
+  z-index: 1;
+
+  text-align: right;
+  background-color: red;
+}
+.d19{
+  height: 100px;
+  width: 200px;
+  position:absolute;
+  left: 100px;
+
+  text-align: right;
+  background-color: pink;
+}
