@@ -40,3 +40,18 @@
 .d6{
   /* a div element has 0px default on all three, margin, border and padding. */
 }
+
+.d7{
+  /* For a border and outline to be drawn, its style must be defined.*/
+  margin:10px;
+
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;
+
+  outline-width:medium;
+  outline-style: dashed;
+  outline-color: pink;
+
+  background-color: #ddd;
+}
