@@ -390,3 +390,23 @@ used in the container(div) that has the overflowing text.  */
   height: 100px;
   transform: rotateX(20deg);
 }
+
+.d27{
+  width: 50px;
+  height: 50px;
+
+  background-color: orange;
+
+  /* assign an animation to this element */
+  /* animation: myanim1 3s; */
+  animation: myanim2 3s;
+}
+/* define an animation */
+/* @keyframes myanim1{
+  from{background:green}
+  to{background:blue}
+} */
+@keyframes myanim2 {
+  0%{left:0px}
+  100%{left:200px}
+}
