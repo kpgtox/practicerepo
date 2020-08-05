@@ -3,13 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>html practice 1</title>
+    <link rel="stylesheet" href="css_practice_1.css">
 
     <style media="screen">
 
     /* combinator selection */
     /* selects p elements of p1 class */
-    .p1 p{
+    .d1 p{
       color:red;
       /* 32px */
       font-size: 200%;
@@ -182,8 +183,13 @@
   <!-- font size 200 percent means 16*2, which is 32px. -->
   <p style="color:green; font-size:200%">This text contains an inline css attributes.</p>
 
-  <!-- this class has a internal css attribute. -->
-  <div class="p1">
+  <!-- this class has an internal css attribute. -->
+  <div class="d1">
+    <p>This text contains internal css attributes.</p>
+  </div>
+
+  <!-- this html element has an external css attribute. -->
+  <div class="d2">
     <p>This text contains internal css attributes.</p>
   </div>
 
