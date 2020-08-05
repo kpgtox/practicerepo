@@ -239,6 +239,7 @@ used in the container(div) that has the overflowing text.  */
   background: URL(images/amazonspritesheet.png) -0px -80px;
 }
 
+/* image opacity */
 #img2{
   width: 300px;
   height: 100px;
@@ -259,4 +260,60 @@ used in the container(div) that has the overflowing text.  */
   opacity: 1;
   background: URL(images/bike1.jpg);
   background-size: 50% 100%;
+}
+
+/* styling lists */
+.ul1{
+  /* list-style-type: circle; */ß
+}
+.ul1 li{
+  background-image: url(images/bike1.jpg);
+  background-repeat: no-repeat;
+}
+
+/* styling links */
+#a1{
+  color: orange;
+}
+#a1:visited{
+  color: black;
+}
+
+#a2:hover{
+  color:red;
+  font-size: 1.2em;
+}
+
+.d21 #a3{
+  color:pink;
+}
+/* styling during the mouse click hold on the link */
+.d21 #a3:active{
+  color:red;
+}
+
+.d22{
+  width: auto;
+  height: 200px;
+
+  /* examples: */
+  /* background: linear-gradient(blue,white); */
+  /* background: linear-gradient(blue,white,orange); */
+  /* background: linear-gradient(orange,white,green); */
+  /* background: linear-gradient(to left,orange,white,green); */
+  /* background: linear-gradient(to bottom left,orange,white,green); */
+  /* background: linear-gradient(45deg,orange,white,green); */
+  /* background: linear-gradient(rgba(0,0,255,0.5),rgba(0,255,0,0.5)); */
+  /* background: radial-gradient(orange,white,green); */
+  /* background: radial-gradient(orange 5%,white 10%, green 80%); */
+  /* background: radial-gradient(circle, orange 5%,white 10%, green 80%); */
+
+  /* gradient for safari browser
+  background: -webkit-linear-gradient(orange,white,green); */
+
+  /* gradient for opera browser */
+  /* background: -o-linear-gradient(orange,white,green); */
+
+  /* gradient for firefox browser */
+  /* background: -moz-linear-gradient(orange,white,green); */
 }
