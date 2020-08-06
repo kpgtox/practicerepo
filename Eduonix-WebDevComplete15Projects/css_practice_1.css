@@ -397,16 +397,35 @@ used in the container(div) that has the overflowing text.  */
 
   background-color: orange;
 
+  /* Important to set the position attribute to relative when moving the element */
+  /* meaning the element will move relative to its original positions */
+  position: relative;
+
   /* assign an animation to this element */
   /* animation: myanim1 3s; */
-  animation: myanim2 3s;
+
+  /* animation-name: myanim2;
+  animation-duration: 3s; */
+
+  animation: myanim3 3s;
 }
+
 /* define an animation */
 /* @keyframes myanim1{
   from{background:green}
   to{background:blue}
 } */
-@keyframes myanim2 {
-  0%{left:0px}
-  100%{left:200px}
+
+/* what percentage of animation time to do what */
+/* @keyframes myanim2 {
+  0%   {background-color:red; left:0px; bottom:0px;}
+  25%  {background-color:yellow; left:200px; bottom:0px;}
+  50%  {background-color:blue; left:200px; bottom:200px;}
+  75%  {background-color:green; left:0px; bottom:200px;}
+  100% {background-color:red; left:0px; bottom:0px;}
+} */
+
+@keyframes myanim3 {
+  from{left:0px;}
+    to{left:800px;}
 }

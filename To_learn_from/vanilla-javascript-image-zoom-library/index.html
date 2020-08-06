@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Creating an Image Zoom Library With Vanilla JavaScript</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="vanilla-zoom/vanilla-zoom.css">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+        <h1>Vanilla JS Image Zoom Plugin</h1>
+        <h3><a href="https://tutorialzine.com/2017/08/image-zoom-library-with-vanilla-javascript">Read the full article on Tutorialzine &raquo;</a></h3>
+             
+        <p>Select an image by clicking on the previews. Hover on the large image to inspect it in detail.</p> 
+                
+        <div id="my-gallery" class="vanilla-zoom">
+            <div class="sidebar">
+                <img src="images/speaker-closeup.jpg" class="small-preview">
+                <img src="images/speaker-touch.jpg" class="small-preview">
+                <img src="images/speaker-lemons.jpg" class="small-preview">
+            </div>
+            <div class="zoomed-image"></div>
+        </div>
+
+    </div>
+            
+    <script src="vanilla-zoom/vanilla-zoom.js"></script>
+    <script>
+        vanillaZoom.init('#my-gallery');
+    </script>
+
+    <!-- Only used for the demos ads. Please ignore and remove. --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.tutorialzine.com/misc/enhance/v3.js" async></script>
+  </body>
+</html>
