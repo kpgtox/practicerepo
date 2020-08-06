@@ -3,22 +3,23 @@ body {}
 /* enite content sits in the div element of class contianer */
 #container {
   width: 1050px;
+  height: 1440px;
   /* o for top and down, auto fr left and right, sets the element in center of the page */
   margin: 0 auto;
-  border: 2px dashed grey;
+  /* border: 2px dashed grey; */
 }
 
 #header {
   height: 100px;
   padding: 10px 5px;
-  border: 2px dashed grey;
+  /* border: 2px dashed grey; */
 }
 /* Contains a  block element, so its gonna take the entire horizontal space*/
 /* make it act like an inline element by floating ir to the left */
 #brand {
   float: left;
 
-  border: 2px dashed grey;
+  /* border: 2px dashed grey; */
 }
 /* site heading */
 h1 a {
@@ -36,8 +37,12 @@ h1 a {
   /* top,bottom,left,right */
   padding:10px 10px 0 10px;
 
-  border: 2px dashed grey;
+  /* border: 2px dashed grey; */
   background:linear-gradient(#E4F2B9,#B7E953);
+  background:-webkit-linear-gradient(#E4F2B9,#B7E953);
+  background:-o-linear-gradient(#E4F2B9,#B7E953);
+  background:-moz-linear-gradient(#E4F2B9,#B7E953);
+  background:-ms-linear-gradient(#E4F2B9,#B7E953);
 }
 .text{
   float: left;
@@ -45,6 +50,7 @@ h1 a {
   padding: 5px;
   font-size: 15px;
   color: orange;
+  border: 1px solid #C8D03E;
   /* set bg color to white, insert an image, on the X axis place it to the right, On Y place it at the center. */
   background: white url(images/search.png) right center no-repeat;
 }
@@ -66,7 +72,7 @@ h1 a {
   /* top,right,bottom,left */
   padding: 10px 0 0 80px;
 
-  border: 2px solid grey;
+  /* border: 2px solid grey; */
   background: linear-gradient(#F8F594,#D5D533);
 }
 ul{
@@ -112,7 +118,7 @@ ul{
   margin: 15px 0;
   padding: 30px;
 
-  border:2px dashed grey;
+  /* border:2px dashed grey; */
   background: linear-gradient(#E5F2BB,#B7E952);
 }
 #introduction h2{
@@ -121,14 +127,14 @@ ul{
   font-weight: normal;
   color:#316901;
 
-  border:2px dashed grey;
+  /* border:2px dashed grey; */
 }
 #introduction p{
   font-size: 1.3em;
   text-align: justify;
   color: #629a59;
 
-  border:2px dashed grey;
+  /* border:2px dashed grey; */
 }
 
 .sidebar{
@@ -142,29 +148,37 @@ ul{
 #leftsidebar{
   float: left;
 
-  border:2px dashed grey;
+  /* border:2px dashed grey; */
+}
+#leftsidebar ul li{
+  list-style-image: url(images/bullet.png);
+
+  /* border:2px dashed grey; */
 }
 #rightsidebar{
   float: right;
 
-  border:2px dashed grey;
+  /* border:2px dashed grey; */
+}
+#rightsidebar ul li{
+  padding-left: 60px;
+  background: url(images/tick2.png) no-repeat left;
+  /* border:2px dashed grey; */
 }
 .sidebar h3{
   color: #B314DB;
   font-size: 2em;
 
-  border:2px dashed grey;
-
+  /* border:2px dashed grey; */
 }
 .sidebar ul{
   padding-top: 20px;
 
-  border:2px dashed grey;
+  /* border:2px dashed grey; */
 }
 .sidebar ul li{
   margin: 20px 0;
   padding: 0 0 10px 5px;
-  list-style-image: url(images/bullet.png);
 }
 .sidebar ul li a{
   text-decoration: none;
@@ -186,4 +200,30 @@ ul{
   color:#B314DB;
   font-size:1.41em;
   font-weight: bold;
+}
+
+#footer{
+  height: 100px;
+  margin: 20px 0;
+  padding-top: 10px;
+  text-align: center;
+
+  background: linear-gradient(#F8F594,#D5D533);
+}
+
+
+
+/* Developer assistance */
+body{
+  border:2px dashed red;
+  /* border-style: groove; */
+}
+div{
+  border:2px dashed green;
+}
+a{
+  border:2px dashed blue;
+}
+ul,li,h1,h2,h3,p{
+  border:2px dashed grey;
 }
