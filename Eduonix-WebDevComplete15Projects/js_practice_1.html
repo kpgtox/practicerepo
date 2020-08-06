@@ -10,6 +10,51 @@
 
 <body>
 
+  <div class="d1">
+    <!-- Add JS code as an attribute to an html element. -->
+    <!-- <button type="button" name="button" onclick="alert('hellow')">Press me.</button> -->
+    <button id="b1" type="button" name="button">Press here.</button>
+    <button id="b2" type="button" name="button">Hover here.</button>
+    <button id="b3" type="button" name="button">Double click here.</button>
+  </div>
+
+  <div id="d1">Something to replace.</div>
+  <div id="d2">change html style through js.</div>
+
+  <!-- Add JS in a script tag in an html file. -->
+  <script type="text/javascript">
+    // on click event listener
+    document.getElementById("b1").onclick = function() {
+      alert("used document selector.")
+    };
+
+    // on double click event listener
+    document.getElementById("b3").ondblclick = function() {
+      alert("you've double clicked!damn!")
+    };
+
+    // on hover event listener
+    document.getElementById("b2").onmouseover = function() {
+      alert("another method")
+    };
+
+    // Access html element through js
+
+    // Access content of an html element
+    // innerHTML lets us modify anything thats present in an element.
+    document.getElementById("d1").innerHTML = "I'm new here.";
+
+    // Change an html element's style
+    document.getElementById("d2").style.width = "600px";
+    document.getElementById("d2").style.height = "100px";
+    document.getElementById("d2").style.backgroundColor = "#ddd";
+    document.getElementById("d2").style.fontSize = "1.2em";
+    document.getElementById("d2").style.fontFamily = "monospace";
+
+
+
+  </script>
+
 </body>
 
 </html>
