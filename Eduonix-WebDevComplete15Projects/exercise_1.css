@@ -5,20 +5,20 @@ body {}
   width: 1050px;
   /* o for top and down, auto fr left and right, sets the element in center of the page */
   margin: 0 auto;
-  border: 2px solid black;
+  border: 2px dashed grey;
 }
 
 #header {
   height: 100px;
   padding: 10px 5px;
-  border: 2px solid black;
+  border: 2px dashed grey;
 }
 /* Contains a  block element, so its gonna take the entire horizontal space*/
 /* make it act like an inline element by floating ir to the left */
 #brand {
   float: left;
 
-  border: 2px solid black;
+  border: 2px dashed grey;
 }
 /* site heading */
 h1 a {
@@ -36,7 +36,7 @@ h1 a {
   /* top,bottom,left,right */
   padding:10px 10px 0 10px;
 
-  border: 2px solid black;
+  border: 2px dashed grey;
   background:linear-gradient(#E4F2B9,#B7E953);
 }
 .text{
@@ -66,7 +66,7 @@ h1 a {
   /* top,right,bottom,left */
   padding: 10px 0 0 80px;
 
-  border: 2px solid black;
+  border: 2px solid grey;
   background: linear-gradient(#F8F594,#D5D533);
 }
 ul{
@@ -112,7 +112,7 @@ ul{
   margin: 15px 0;
   padding: 30px;
 
-  border:2px solid black;
+  border:2px dashed grey;
   background: linear-gradient(#E5F2BB,#B7E952);
 }
 #introduction h2{
@@ -120,10 +120,70 @@ ul{
   font-size: 2em;
   font-weight: normal;
   color:#316901;
+
+  border:2px dashed grey;
 }
 #introduction p{
   font-size: 1.3em;
   text-align: justify;
   color: #629a59;
 
+  border:2px dashed grey;
+}
+
+.sidebar{
+  width: 450px;
+  height: 700px;
+  padding: 10px 30px;
+
+  border: 1px solid green;
+  border-radius: 10px;
+}
+#leftsidebar{
+  float: left;
+
+  border:2px dashed grey;
+}
+#rightsidebar{
+  float: right;
+
+  border:2px dashed grey;
+}
+.sidebar h3{
+  color: #B314DB;
+  font-size: 2em;
+
+  border:2px dashed grey;
+
+}
+.sidebar ul{
+  padding-top: 20px;
+
+  border:2px dashed grey;
+}
+.sidebar ul li{
+  margin: 20px 0;
+  padding: 0 0 10px 5px;
+  list-style-image: url(images/bullet.png);
+}
+.sidebar ul li a{
+  text-decoration: none;
+  font-size: 1.4em;
+  color:#5d12e7;
+
+  transition: font-size 0.3s ease;
+  /* safari */
+  -webkit-transition: font-size 0.3s ease;
+  /* firefox */
+  -moz-transition: font-size 0.3s ease;
+  /* opera */
+  -o-transition: font-size 0.3s ease;
+  /* internet explorer */
+  -ms-transition: font-size 0.3s ease;
+}
+.sidebar ul li a:hover, .sidebar ul li a.active{
+  text-decoration: none;
+  color:#B314DB;
+  font-size:1.41em;
+  font-weight: bold;
 }
