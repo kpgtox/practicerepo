@@ -1,0 +1,56 @@
+body {}
+
+/* enite content sits in the div element of class contianer */
+#container {
+  width: 1050px;
+  /* o for top and down, auto fr left and right, sets the element in center of the page */
+  margin: 0 auto;
+  border: 1px solid grey;
+}
+
+#header {
+  height: 100px;
+  padding: 10px 5px;
+}
+
+/* Contains a  block element, so its gonna take the entire horizontal space*/
+/* make it act like an inline element by floating ir to the left */
+#brand {
+  float: left;
+}
+
+/* site heading */
+h1 a {
+  font-size: 2.2em;
+  font-weight: strong;
+  color: #861BBF;
+  text-decoration: none;
+}
+
+/* contains form which is an inline element. */
+#searchbox {
+  float: right;
+  width: 350px;
+  height: 50px;
+  margin-top:30px;
+  /* top,bottom,left,right */
+  padding:10px 10px 0 10px;
+  background:linear-gradient(#E4F2B9,#B7E953);
+}
+.text{
+  float: left;
+  width: 200px;
+  padding: 5px;
+  font-size: 15px;
+  color: orange;
+  /* set bg color to white, insert an image, on the X axis place it to the right, On Y place it at the center. */
+  background: white url(images/search.png) right center no-repeat;
+}
+.submit{
+  float: right;
+  padding:5px;
+  background:#A751D6;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
