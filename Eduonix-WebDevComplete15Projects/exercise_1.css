@@ -59,3 +59,48 @@ h1 a {
 .clear{
   clear: both;
 }
+
+#menu{
+  height: 70px;
+  /* top,right,bottom,left */
+  padding: 10px 0 0 80px;
+  background: linear-gradient(#F8F594,#D5D533);
+}
+ul{
+  list-style:none;
+}
+#menu ul li{
+  /* lists are block elements, make it inline here */
+  float: left;
+  padding:0 30px;
+  height: 30px;
+  border-right: 1px solid #5d12e7;
+}
+#menu ul li:last-child{
+  border-right: none;
+}
+#menu ul li a{
+  line-height: 30px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color:#5d12e7;
+  
+  /* Smooth out transitions for font-seize attribute for this element.  */
+  transition: font-size 0.3s ease;
+  /* safari */
+  -webkit-transition: font-size 0.3s ease;
+  /* firefox */
+  -moz-transition: font-size 0.3s ease;
+  /* opera */
+  -o-transition: font-size 0.3s ease;
+  /* internet explorer */
+  -ms-transition: font-size 0.3s ease;
+}
+/* change link appearance when hover */
+#menu ul li a:hover, #menu ul li a.active{
+  font-size: 1.6em;
+  font-weight: bold;
+  color:#5d12e7;
+}
