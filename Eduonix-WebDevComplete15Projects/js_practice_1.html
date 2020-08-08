@@ -20,6 +20,7 @@
 
   <div id="d1">Something to replace.</div>
   <div id="d2">change html style through js.</div>
+  <div id="d3">div element 3</div>
 
   <!-- Add JS in a script tag in an html file. -->
   <script type="text/javascript">
@@ -38,6 +39,13 @@
       alert("another method")
     };
 
+    // variables
+    var arr1 = [1,2,3,4];
+    console.log(arr1);
+    // both arrays and dictionaries are objects in js.
+    window.console.log(typeof(arr1));
+
+
     // Access html element through js
 
     // Access content of an html element
@@ -51,7 +59,14 @@
     document.getElementById("d2").style.fontSize = "1.2em";
     document.getElementById("d2").style.fontFamily = "monospace";
 
-
+    // set a random geenrated color to a div.
+    var x, y, z;
+    x = Math.round(Math.random()*256);
+    y = Math.round(Math.random()*256);
+    z = Math.round(Math.random()*256);
+    var mycol = 'rgb('+x+','+y+','+z+')';
+    console.log(mycol + "," + typeof(mycol));
+    document.getElementById("d3").style.color = mycol;
 
   </script>
 
