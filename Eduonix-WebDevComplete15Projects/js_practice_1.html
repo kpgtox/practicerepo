@@ -59,14 +59,64 @@
     document.getElementById("d2").style.fontSize = "1.2em";
     document.getElementById("d2").style.fontFamily = "monospace";
 
-    // set a random geenrated color to a div.
+    // Funtions
+    // geenrate a random color.
+    function generate_random_col(){
     var x, y, z;
     x = Math.round(Math.random()*256);
     y = Math.round(Math.random()*256);
     z = Math.round(Math.random()*256);
     var mycol = 'rgb('+x+','+y+','+z+')';
-    console.log(mycol + "," + typeof(mycol));
-    document.getElementById("d3").style.color = mycol;
+    return mycol;
+    }
+    console.log(generate_random_col() + "," + typeof(mycol));
+    document.getElementById("d3").innerHTML = generate_random_col();
+    document.getElementById("d3").style.color = generate_random_col();
+
+    // js object/dictionary
+
+    // Declare and define a js
+    var phones = {
+      make:"apple", model:10, year:2020, location:"china"
+    };
+    console.log("phones:");
+    console.log(phones);
+    console.log("phone type :" + typeof(phones));
+
+    // Two js objects when equalized become ci-existent lol
+    // changing one affects the other.
+    var phones2 = phones;
+    console.log("phones2");
+    console.log(phones2);
+    phones.model = 99;
+    console.log("phones:");
+    console.log(phones);
+    console.log("phones2");
+    console.log(phones2);
+
+    // creating js objects in another way.
+    // Declaring/Initialize an emtpy object then ater defining it i.e giving it key value pairs.
+    var cars = new Object();
+    cars.model = "ford";
+    cars.year = 1990;
+    console.log(cars);
+
+    //Create a  js object using a constructor
+    // Create a constructor then make instances of it, just like a class.
+    function bikes(model, year, color, brand){
+      this.model = model;
+      this.year = year;
+      this.color = color;
+      this.brand = brand;
+    }
+    // instance/object 1
+    var mybike = new bikes("R15",2009,"Black","Yamaha");
+    console.log("mybike :");
+    console.log(mybike);
+    // instance/object 2
+    var hisbike = new bikes("Dominar",2019,"White","Bajaj");
+    console.log("hisbike :");
+    console.log(hisbike);
 
   </script>
 
