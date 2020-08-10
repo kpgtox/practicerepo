@@ -282,25 +282,27 @@
 
     //Password Verification
 
-    var pass_submit = document.getElementById("pass_submit");
+    var pass_submit = document.getElementById("pass_submit"); //grab submit button
     pass_submit.onclick = function(){pass_check();}
 
     function pass_check(){
-      var password = document.getElementById("password").value;
+      var password = document.getElementById("password").value; //grab password input
       var password2 = document.getElementById("password2").value;
-      var error_msg = document.getElementById("error_msg");
-      var error="";
-      var pass_pattern = /[A-Z]/g;
-      var pass_pattern2 = /\d/g;
-      var pass_pattern3 = /\W/g;
+      var error_msg = document.getElementById("error_msg"); //grab p element to print error message;
+      var error=""; //empty string
+      error_msg.innerHTML = ""; //nullify p element's content every time submit is hit
+      var pass_pattern = /[A-Z]/g; //uppercase
+      var pass_pattern2 = /\d/g; //numbers
+      var pass_pattern3 = /\W/g; //special characters
 
       try {
-        if(password.length<6){error="password too short."; throw error;}
-        if(!pass_pattern.test(password)){error="password must have atleast 1 upper case"; throw error;}
-        if(!pass_pattern2.test(password)){error="password must have atleast 1 number"; throw error;}
-        if(!pass_pattern3.test(password)){error="password must have atleast 1 special character"; throw error;}
-        if(!(password===password2)){error="passwords do not match"; throw error;}
-      } catch (e) {
+        if(password.length<6){error="password too short.";}
+        if(!pass_pattern.test(password)){error += "<br>password must have atleast 1 upper case";}
+        if(!pass_pattern2.test(password)){error += "<br>password must have atleast 1 number";}
+        if(!pass_pattern3.test(password)){error += "<br>password must have atleast 1 special character";}
+        if(!(password===password2)){error += "<br>passwords do not match";}
+        throw error; //throw an error
+      } catch (e) { //error stored in e
         error_msg.innerHTML = e;
         error_msg.style.color = "red";
       }
