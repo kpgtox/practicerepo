@@ -25,6 +25,11 @@
   <div class="d4">
     Enter Speed : <input type="number" id="speed"> <button type="button" id="speedchecker">Check</button>
   </div>
+  <br>
+  <div>
+    <button type="button" name="button" id="buy">Buy</button>
+    <p id="p1"></p>
+  </div>
 
   <!-- Add JS in a script tag in an html file. -->
   <script type="text/javascript">
@@ -126,13 +131,15 @@
     console.log(hisbike);
 
     // Adding a method to inside a constructor.
-    function laptops(brand, warranty){
+    function laptops(brand, warranty) {
       this.brand = brand;
       this.warranty = warranty;
       // define a new method in a constructor
-      this.extend_warranty = function(x){this.warranty += x;}
+      this.extend_warranty = function(x) {
+        this.warranty += x;
+      }
     }
-    var mylaptop = new laptops("apple",2);
+    var mylaptop = new laptops("apple", 2);
     console.log("mylaptop :");
     console.log(mylaptop);
     mylaptop.extend_warranty(3);
@@ -148,7 +155,7 @@
     console.log("mylaptop :");
     console.log(mylaptop);
 
-    var hislaptop = new laptops("dell",1,90000);
+    var hislaptop = new laptops("dell", 1, 90000);
     console.log("hislaptop :");
     console.log(hislaptop);
     //adding new variables to the constructor along with default values
@@ -161,13 +168,12 @@
     // console.log(hislaptop.condition);
 
     // Condiitons
-    function check_speed(x){
-      if(x>=100){
+    function check_speed(x) {
+      if (x >= 100) {
         window.alert("too fast");
-      }
-      else{
-        switch(true){
-          case (x>=50)&&(x<100):
+      } else {
+        switch (true) {
+          case (x >= 50) && (x < 100):
             window.alert("perfect");
             break;
           default:
@@ -175,13 +181,40 @@
         }
       }
     }
-    document.getElementById("speedchecker").onclick = function(){
+    document.getElementById("speedchecker").onclick = function() {
       var speed = document.getElementById("speed").value;
       check_speed(speed);
     }
 
+    //While loop
+    // Update shopping list on site.ß
+    document.getElementById("buy").onclick = function(){buy_now();}
 
+    function buy_now() {
+      var balance = 100;
+      var items_bought = 0;
+      document.getElementById("p1").innerHTML = "Initial Balance : " + balance + "<br>";
 
+      while (balance > 0) {
+        var item_price = Math.floor(Math.random() * 10);
+        if (item_price <= balance) {
+          items_bought += 1;
+          balance -= item_price;
+          updateSite(item_price, balance);
+          console.log("item price : $" + item_price + " balance : $" + balance);
+        }
+        else {break;}
+      }
+      console.log("total items bought : " + items_bought);
+      document.getElementById("p1").innerHTML += "total items bought : " + items_bought;
+    }
+    function updateSite(price, bal) {
+      var msg = "item price : $" + price + " | " + "balance : $" + bal;
+      document.getElementById("p1").innerHTML += msg + "<br>";
+    }
+
+    //Regular Expressions
+    // RegEx used to find patterns.
 
 
   </script>
