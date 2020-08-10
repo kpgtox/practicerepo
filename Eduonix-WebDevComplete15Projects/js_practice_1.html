@@ -348,6 +348,30 @@
     // To remove timeout methods from the script.
     clearTimeout(timeout_eg);
 
+    //Get browser window's dimensions.
+    var window_height = window.innerHeight;
+    var window_height2 = document.documentElement.clientHeight;
+    var window_width = window.innerWidth;
+    var window_width2 = document.documentElement.clientWidth;
+    window.alert("window width :" + window_width);
+    window.alert("window width :" + window_width2);
+    window.alert("window height :" + window_height);
+    window.alert("window height :" + window_height2);
+
+    //Get Body element's dimensions
+    var body_width = document.body.clientWidth;
+    var body_height = document.body.clientHeight;
+    window.alert("body width :" + body_width);
+    window.alert("body height :" + body_height);
+
+    //Get screen's(monitor) dimensions
+    var screen_width = window.screen.width;
+    var screen_height = window.screen.height;
+    window.alert("screen width :" + screen_width);
+    window.alert("screen height :" + screen_height);
+    //Available screen's dimensions. same as sabove.
+    window.alert(window.screen.availWidth);
+    window.alert(window.screen.availHeight);
 
 
 

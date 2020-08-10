@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Screen Dim Exercise</title>
+
+  <style media="screen">
+
+    #d1{
+      background-color : #d9a962;
+    }
+    #d2{
+      background-color : #4a80ed;
+    }
+    #d3{
+      background-color : #6dbf8c;
+    }
+    #d4{
+      background-color : #dbee5c;
+    }
+    .equalBox{
+      float:left;
+      margin-left: 5px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="d1" class="equalBox">Div1</div>
+  <div id="d2" class="equalBox">Div2</div>
+  <div id="d3" class="equalBox">Div3</div>
+  <div id="d4" class="equalBox">Div4</div>
+
+  <script type="text/javascript">
+
+    <!-- set each div element a quarter of browser window's width and height to window's height -->
+
+    <!-- remove 10 pixels from window's width and add some left margin to fit all divs in a row. -->
+    for(i=1;i<=4;i++){
+      document.getElementById("d"+i).style.width = ((window.innerWidth/4)-10) + "px";
+      document.getElementById("d"+i).style.height = window.innerHeight + "px";
+    }
+
+  <!-- JS lets you concatanate a string and a number without explicit converison. -->
+  var x = "oi" + 1;
+  console.log(typeof(x));
+
+  </script>
+
+</body>
+
+</html>
