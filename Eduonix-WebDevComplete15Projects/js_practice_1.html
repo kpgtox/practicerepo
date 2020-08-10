@@ -317,23 +317,23 @@
 
     //Stop watch :
 
-    var p2 = document.getElementById("p2");
+    var p2 = document.getElementById("p2"); //grab p element and stopwatch buttons
     var start = document.getElementById("start");
     var stop = document.getElementById("stop");
     var reset = document.getElementById("reset");
-    var x =0;
-    p2.innerHTML = "0";
-    start.onclick = function(){start_stopwatch()}
-    reset.onclick = function(){reset_stopwatch()}
+    var x =0; //nullify stopwatch counter.
+    p2.innerHTML = "0"; //display 0
+    start.onclick = function(){start_stopwatch()} //start button code
+    reset.onclick = function(){reset_stopwatch()} //reset button code
 
     function start_stopwatch(){
       // js method setInterval used to run code for every specific amount of time.
       var my_counter = setInterval(function(){stopwatch()},1000); //arguments - a function, 1000 milliseconds.
       function stopwatch(){
-        x++;
-        p2.innerHTML = x;
+        x++; //increment x by 1 for eevry 1000 milliseconds i.e 1 second
+        p2.innerHTML = x; //print stopwatch counter
       }
-      stop.onclick = function(){clearInterval(my_counter)};
+      stop.onclick = function(){clearInterval(my_counter)}; //stop button code
     }
     function reset_stopwatch(){
       x = 0;
