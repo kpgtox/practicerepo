@@ -37,6 +37,13 @@
     <button type="button" id="pass_submit">Submit</button>
     <p id="error_msg"></p>
   </div>
+  <div>
+    Stopwatch:
+    <p id="p2"></p>
+    <button type="button" id="start">Start</button>
+    <button type="button"id="stop">Stop</button>
+    <button type="button"id="reset">Reset</button>
+  </div>
 
   <!-- Add JS in a script tag in an html file. -->
   <script type="text/javascript">
@@ -280,7 +287,7 @@
       console.log(err.message);
     }
 
-    //Password Verification
+    //Password Verification :
 
     var pass_submit = document.getElementById("pass_submit"); //grab submit button
     pass_submit.onclick = function(){pass_check();}
@@ -301,12 +308,43 @@
         if(!pass_pattern2.test(password)){error += "<br>password must have atleast 1 number";}
         if(!pass_pattern3.test(password)){error += "<br>password must have atleast 1 special character";}
         if(!(password===password2)){error += "<br>passwords do not match";}
-        throw error; //throw an error
+        throw error; //throw the error message, or empty error message if no conditions are met above.
       } catch (e) { //error stored in e
         error_msg.innerHTML = e;
         error_msg.style.color = "red";
       }
     }
+
+    //Stop watch :
+
+    var p2 = document.getElementById("p2");
+    var start = document.getElementById("start");
+    var stop = document.getElementById("stop");
+    var reset = document.getElementById("reset");
+    var x =0;
+    p2.innerHTML = "0";
+    start.onclick = function(){start_stopwatch()}
+    reset.onclick = function(){reset_stopwatch()}
+
+    function start_stopwatch(){
+      // js method setInterval used to run code for every specific amount of time.
+      var my_counter = setInterval(function(){stopwatch()},1000); //arguments - a function, 1000 milliseconds.
+      function stopwatch(){
+        x++;
+        p2.innerHTML = x;
+      }
+      stop.onclick = function(){clearInterval(my_counter)};
+    }
+    function reset_stopwatch(){
+      x = 0;
+      p2.innerHTML = "0";
+    }
+
+
+
+
+
+
 
 
 
