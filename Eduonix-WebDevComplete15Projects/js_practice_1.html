@@ -317,6 +317,7 @@
 
     //Stop watch :
 
+    //JS method to run code every specific interval of time.
     var p2 = document.getElementById("p2"); //grab p element and stopwatch buttons
     var start = document.getElementById("start");
     var stop = document.getElementById("stop");
@@ -339,6 +340,13 @@
       x = 0;
       p2.innerHTML = "0";
     }
+
+    //JS method to run code after certain amount of time.
+    var mssg = "time out babay. gimme a break!"
+    var timeout_eg = setTimeout(function(){print_something(mssg)}, 3000);
+    function print_something(x){window.alert(x);}
+    // To remove timeout methods from the script.
+    clearTimeout(timeout_eg);
 
 
 
