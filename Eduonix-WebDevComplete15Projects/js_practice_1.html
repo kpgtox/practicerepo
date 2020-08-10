@@ -30,6 +30,13 @@
     <button type="button" name="button" id="buy">Buy</button>
     <p id="p1"></p>
   </div>
+  <br><br>
+  <div class="d5">
+    <label>Enter Password :</label> <input type="password" id="password">
+    <label>Re-Enter Password :</label> <input type="password" id="password2">
+    <button type="button" id="pass_submit">Submit</button>
+    <p id="error_msg"></p>
+  </div>
 
   <!-- Add JS in a script tag in an html file. -->
   <script type="text/javascript">
@@ -188,6 +195,7 @@
 
     //While loop
     // Update shopping list on site.ß
+
     document.getElementById("buy").onclick = function(){buy_now();}
 
     function buy_now() {
@@ -215,6 +223,89 @@
 
     //Regular Expressions
     // RegEx used to find patterns.
+
+    // Look for letter a in the str string.
+    var str = "Atlanta";
+    //patterns always start and end with a forward slash.
+    //the i (modifier) used to consider both upper and lower case letters.
+    var pattern = /a/i;
+    // output is the index of the first encounter of the letter a either lower or upper case.
+    console.log(str.search(pattern));
+    //Output is the letter that is matched.
+    console.log(str.match(pattern));
+    // Return a bool, true if the pattern exists in the string.
+    console.log(pattern.test(str));
+
+    // here, we're looking for exact match, using the g modifier.
+    var pattern2 = /a/g;
+    console.log(str.search(pattern2));
+    console.log(str.match(pattern2));
+    console.log(pattern2.test(str));
+
+    // looffor multiple letters in a string.
+    var pattern3 = /[atn]/g;
+    console.log(pattern3.test(str));
+    console.log(str.search(pattern3));
+    console.log(str.match(pattern3));
+
+    // check if any digits are present in a string.
+    var str2 = "ON787878";
+    var pattern4 = /\d/g;
+    console.log(pattern4.test(str2));
+    console.log(str2.search(pattern4)); //index of the first digit in the string
+    console.log(str2.match(pattern4)); //outputs all exact matches.
+
+    // check if there is an alpha numeric.
+    var str3 = "ON787878$%%#@@@";
+    var pattern5 = /\w/g;
+    console.log(pattern5.test(str3));
+    console.log(str3.search(pattern5)); //index of the first digit in the string
+    console.log(str3.match(pattern5)); //outputs all exact matches.
+
+    // other patterns
+    //  \s for space
+    //  /\w/g (uppercase) for non-alpha numeric.
+    // \d{4} four digits
+    // \d{10} ten digits
+    // ^A capital A as first character
+    // \n line breaks
+
+    // Error Testing in js.
+    // Try and Catch statements.
+
+    try{
+      // sum(5,5);
+    }
+    catch(err){
+      console.log(err.message);
+    }
+
+    //Password Verification
+
+    var pass_submit = document.getElementById("pass_submit");
+    pass_submit.onclick = function(){pass_check();}
+
+    function pass_check(){
+      var password = document.getElementById("password").value;
+      var password2 = document.getElementById("password2").value;
+      var error_msg = document.getElementById("error_msg");
+      var error="";
+      var pass_pattern = /[A-Z]/g;
+      var pass_pattern2 = /\d/g;
+      var pass_pattern3 = /\W/g;
+
+      try {
+        if(password.length<6){error="password too short."; throw error;}
+        if(!pass_pattern.test(password)){error="password must have atleast 1 upper case"; throw error;}
+        if(!pass_pattern2.test(password)){error="password must have atleast 1 number"; throw error;}
+        if(!pass_pattern3.test(password)){error="password must have atleast 1 special character"; throw error;}
+        if(!(password===password2)){error="passwords do not match"; throw error;}
+      } catch (e) {
+        error_msg.innerHTML = e;
+        error_msg.style.color = "red";
+      }
+    }
+
 
 
   </script>
