@@ -1,0 +1,118 @@
+html{
+  height: 100%;
+  background: radial-gradient(circle, #fff, #ccc);
+}
+
+#container{
+  width: 550px;
+  height:400px;
+  margin:100px auto;
+  padding:20px;
+  /* need to do this before giving absolute position to its children elements. */
+  position: relative;
+
+  background-color: #9DD2EA;
+  border-radius: 10px;
+  /* shadow on right and bottom of the element, followed by blur, strength of the shadow and color of the shadow. */
+  box-shadow : 0px 4px 2px 2px #009de4;
+}
+
+#score{
+  /* if parent has relative position, children must have absolute pos. */
+  position: absolute;
+  padding:10px;
+  left:500px;
+
+  background-color: #F1FF92;
+  color: #888E5F;
+  box-shadow : 0px 4px 0 0 #9da853;
+}
+
+#correct{
+  /* if parent has relative position, children must have absolute pos. */
+  position: absolute;
+  left:260px;
+  padding:11px;
+
+  background-color: #42e252;
+  color: white;
+  display: none;
+}
+
+#wrong{
+  /* if parent has relative position, children must have absolute pos. */
+  position: absolute;
+  left:250px;
+  padding:11px;
+
+  background-color: #de401a;
+  color: white;
+  display: none;
+}
+
+#question{
+  /* this element will behave as if its siblings with absolute position doesent exist. */
+  width: 450px;
+  height: 150px;
+  /* top, right, bottom, left */
+  margin: 50px auto 10px auto;
+
+  background-color: #9DA0EA;
+  /* horizontal, vertical, color. */
+  box-shadow: 0 4px #535aa8;
+  font-size: 100px;
+  /* horizontal text alignment */
+  text-align: center;
+  /* vertical text alignment */
+  line-height: 120px;
+  font-family: cursive, sans-serif;
+  color:black;
+}
+
+#instruction{
+  /* this element will behave as if its siblings with absolute position doesent exist. */
+  width: 450px;
+  height: 50px;
+
+  background-color: #B481D9;
+  box-shadow: 0 4px #8153a8;
+  margin: 10px auto;
+  /* horizontal text alignment */
+  text-align: center;
+  /* vertical text alignment */
+  line-height: 50px;
+}
+
+#choices{
+  width: 450px;
+  height: 100px;
+  margin: 5px auto;
+}
+
+.box{
+  width: 85px;
+  height: 85px;
+  float: left;
+  margin-right: 36px;
+
+  background-color: white;
+  border-radius: 3px;
+  /* horizontal, vertical, color. */
+  box-shadow: 0 4px rgba(0,0,0,0.2);
+  text-align: center;
+  line-height: 80px;
+
+  /* change cursor to pointer when hovered over the boxes */
+  cursor: pointer;
+}
+
+#box4{
+  /* override margin right for the last box. */
+  margin-right: 0;
+}
+
+.box:hover{
+  background-color: #9c89F6;
+  color: white;
+  box-shadow: 0 4px #6b5483; 
+}
