@@ -1,27 +1,37 @@
 // grab elements and declare global variables
 var start_button = document.getElementById("startreset");
-var score = document.getElementById("score_val");
+var score_span = document.getElementById("score_val");
 var time_div = document.getElementById("time_remaining");
 var time_val = document.getElementById("time_remaining_val");
-var game_state = ["playing","game_over"];
 var quest = document.getElementById("question");
+var correct = document.getElementById("correct");
+var wrong = document.getElementById("wrong");
+
+var score = 0;
 var time = 60;
 var correct_ans = 0;
+var right_input = false;
 
 start_button.onclick = function(){startGame();}
 
 function startGame(){
   resetScoreTime();
+  hideCards();
   setTimer();
   gen_quest();
-  getInput();
-}
+  getInput();}
 
 function resetScoreTime(){
-  score.innerHTML = 0;
+  score = 0;
   time = 60;
+  score_span.innerHTML = score;
   time_div.style.display = "block";
   time_val.innerHTML = time;}
+
+function hideCards(){
+  correct.style.display = "none";
+  wrong.style.display = "none";
+}
 
 function setTimer(){
 setInterval(function(){
@@ -42,7 +52,24 @@ var i=1;
 while(i<5){
   document.getElementById("box"+i).onclick = function(){
     if(this.innerHTML == correct_ans){
-      console.log("right answer");}
+      right_input = true;
+      checkInput();}
     else {
-      console.log("wrong answer");}}
+      right_input = false;
+      checkInput();}}
   i++;}}
+
+function checkInput(){
+  if(right_input){
+    updateScore();
+    correct.style.display = "block";
+  }
+  else{
+    wrong.style.display = "block";
+  }
+}
+
+function updateScore(){
+  score++;
+  score_span.innerHTML = score;
+}
