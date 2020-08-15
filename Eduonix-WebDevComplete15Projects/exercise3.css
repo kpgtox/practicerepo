@@ -193,7 +193,7 @@ html{
 
   text-align: center;
 
-  display: none;
+  display:none;
   /* this property will make the element still exist and interact in the page despite it being hidden. */
   /* visibility: hidden; */
 }
