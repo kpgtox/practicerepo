@@ -1,13 +1,20 @@
 
 var score = document.getElementById("score_val");
 var time_div = document.getElementById("time_remaining");
-var time_sec = document.getElementById("time_remaining_val");
+var time_val = document.getElementById("time_remaining_val");
 var game_state = ["playing","game_over"];
 var quest = document.getElementById("question");
+var time = 60;
 
-score.innerHTML = 60;
+score.innerHTML = 0;
 time_div.style.display = "block";
-time_sec.innerHTML = 60;
+time_val.innerHTML = time;
+
+
+setInterval(function(){
+  time -=  1;
+  time_val.innerHTML = time;
+}, 1000);
 
 var x = (1 + Math.round(9*Math.random()));
 var y = (1 + Math.round(9*Math.random()));
