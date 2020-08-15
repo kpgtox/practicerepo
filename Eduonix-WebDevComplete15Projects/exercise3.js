@@ -19,6 +19,7 @@ function startGame(){
 
 function resetScoreTime(){
   score.innerHTML = 0;
+  time = 60;
   time_div.style.display = "block";
   time_val.innerHTML = time;}
 
@@ -41,12 +42,7 @@ var i=1;
 while(i<5){
   document.getElementById("box"+i).onclick = function(){
     if(this.innerHTML == correct_ans){
-      console.log("right answer");
-    }
+      console.log("right answer");}
     else {
-      console.log("wrong answer");
-    }
-    // console.log(this.innerHTML);
-  }
-  i++;
-}}
+      console.log("wrong answer");}}
+  i++;}}
