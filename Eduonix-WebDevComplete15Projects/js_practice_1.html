@@ -332,10 +332,10 @@
       var my_counter = setInterval(function(){stopwatch()},1000); //arguments - a function, 1000 milliseconds.
       function stopwatch(){
         x++; //increment x by 1 for eevry 1000 milliseconds i.e 1 second
-        p2.innerHTML = x; //print stopwatch counter
-      }
+        p2.innerHTML = x;} //print stopwatch counter
       stop.onclick = function(){clearInterval(my_counter)}; //stop button code
     }
+
     function reset_stopwatch(){
       x = 0;
       p2.innerHTML = "0";
