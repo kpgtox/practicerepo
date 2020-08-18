@@ -305,7 +305,7 @@ while (i <= 3) {
   i++;
 }
 
-//dow while Loop
+//do while Loop
 console.log("do while loop");
 i = 1;
 do {

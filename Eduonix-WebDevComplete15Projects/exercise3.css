@@ -119,12 +119,11 @@ html{
   -moz-box-shadow: 0 4px rgba(0,0,0,0.2);
 
   text-align: center;
+  font-size: 1.2em;
   line-height: 80px;
 
   /* change cursor to pointer when hovered over the boxes */
   cursor: pointer;
-
-
 }
 
 #box4{
