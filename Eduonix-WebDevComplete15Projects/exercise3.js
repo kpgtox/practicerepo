@@ -22,7 +22,6 @@ function startGame(){
   startTimer();
   gen_quest();
   getInput();
-  trackTime();
 }
 
 function resetScoreTime(){
