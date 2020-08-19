@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jquery practice</title>
+
+  <!-- linking jquery file -->
+  <script src="jquery-3.5.1.min.js">
+  </script>
+
+</head>
+
+<body>
+
+<p>A sample para.</p>
+<p>A sample para 2.</p>
+
+<!-- scripting -->
+<script>
+
+  <!-- get all p elements using jq, $ is selctor, replacing getElementById -->
+  var paras = $("p");
+  console.log(paras);
+  paras[1].innerHTML = "edit through js code along with jq lib.";
+
+  <!-- a good practice is putting js code when page loads. -->
+  $(document).ready(function(){
+    console.log($("p"));
+    $("p").hide();
+  })
+  <!-- OR -->
+  $(function(){
+    console.log($("p"));
+    $("p").show();
+  })
+
+</script>
+
+</body>
+
+</html>
