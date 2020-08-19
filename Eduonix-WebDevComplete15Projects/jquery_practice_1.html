@@ -8,8 +8,9 @@
   <title>jquery practice</title>
 
   <!-- linking jquery file -->
-  <script src="jquery-3.5.1.min.js">
-  </script>
+  <!-- <script src="jquery-3.5.1.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -17,6 +18,34 @@
 
 <p>A sample para.</p>
 <p>A sample para 2.</p>
+
+<div>
+  <p>a direct p child of a div</p>
+  <p>second p child of div, also direct child</p>
+  <div>
+    <p>a direct p child of a div, also a last p child of a div</p>
+  </div>
+</div>
+<p>a sibling for the div above</p>
+
+<div>
+  <p>first p child</p>
+  <p>second and last p child</p>
+</div>
+
+<div id="d1">div with tag d1</div>
+<div class="d2">div with class d2</div>
+
+<div class="box">
+  box1 <br>
+  <a href="#">home</a>
+  <a href="#">call us</a>
+ </div>
+<div class="box">
+  box2 <br>
+  <a href="#">games</a>
+  <a href="#">ping us</a>
+</div>
 
 <!-- scripting -->
 <script>
@@ -35,7 +64,52 @@
   $(function(){
     console.log($("p"));
     $("p").show();
-  })
+  });
+
+  <!-- Access all html elements using * -->
+  <!-- when page loads: -->
+  $(function(){
+
+    <!-- change styling (font size) of all elements -->
+    $("*").css("font-size", "1.2em");
+
+    <!-- change styling (text align) of all elements -->
+    $("p").css("text-align","center");
+
+    <!-- Access all direct children of div that are p elements -->
+    $("div > p").css("color","red");
+
+    <!-- Access siblings of div. (elements that are placed right before or after div) -->
+    $("div ~ p").css("color", "blue");
+
+    <!-- Access all p elements that are desecndants of div (same as direct children) -->
+    $("div p").css("text-align","left");
+
+    <!-- Access elements by their ID -->
+    $("#d1").css("background-color","rgb(193, 173, 20)");
+
+    <!-- Access elements by their Class -->
+    $(".d2").css("background-color","rgb(25, 246, 104)");
+
+    <!-- Combinators to access specific html elements -->
+    <!-- accessing all divs of class "box" -->
+    $("div.box").css("background-color","rgb(71, 10, 47)");
+    $("div.box").css("color","white");
+
+    <!-- Access all p elements that are the first child and also those p elements who have no parent element. -->
+    $("p:first-child").css("text-decoration","underline");
+
+    <!-- Access all p elements that are the last child. -->
+    $("p:last-child").css("color","hotpink");
+
+    <!-- Access all anchor elements -->
+    $("a").css("color","yellow");
+
+    <!-- Access multiple elements at once -->
+    <!-- access all divs of class box, and all anchor or hyperlink elemnts. -->
+    $("div.box, a").css("color","yellow");
+
+  });
 
 </script>
 
