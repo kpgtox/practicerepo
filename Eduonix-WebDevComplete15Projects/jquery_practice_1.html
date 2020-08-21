@@ -47,15 +47,48 @@
   <a href="#">ping us</a>
 </div>
 
+<div>
+  <ul>
+    <li>audi</li>
+    <li>auto</li>
+    <li>rickshaw</li>
+  </ul>
+</div>
+
+<div>
+  <table>
+    <tr>
+    <th>Name</th> <th>ID</th>
+  </tr>
+  <tr>
+    <td>Vegeta</td> <td>7</td>
+  </tr>
+  <tr>
+    <td>Goku</td> <td>11</td>
+  </tr>
+  <tr>
+    <td>Broly</td> <td>1</td>
+  </tr>
+  <tr>
+    <td>Gohan</td> <td>6</td>
+  </tr>
+  </table>
+</div>
+
+<div>
+  <p>Type your name : <input> <button type="submit">Submit</button></p>
+
+</div>
+
 <!-- scripting -->
 <script>
 
-  <!-- get all p elements using jq, $ is selctor, replacing getElementById -->
+  // <!-- get all p elements using jq, $ is selctor, replacing getElementById -->
   var paras = $("p");
   console.log(paras);
   paras[1].innerHTML = "edit through js code along with jq lib.";
 
-  <!-- a good practice is putting js code when page loads. -->
+  // <!-- a good practice is putting js code when page loads. -->
   $(document).ready(function(){
     console.log($("p"));
     $("p").hide();
@@ -66,48 +99,71 @@
     $("p").show();
   });
 
-  <!-- Access all html elements using * -->
-  <!-- when page loads: -->
+  // <!-- Access all html elements using * -->
+  // <!-- when page loads: -->
   $(function(){
 
-    <!-- change styling (font size) of all elements -->
+    // <!-- change styling (font size) of all elements -->
     $("*").css("font-size", "1.2em");
 
-    <!-- change styling (text align) of all elements -->
+    // <!-- change styling (text align) of all elements -->
     $("p").css("text-align","center");
 
-    <!-- Access all direct children of div that are p elements -->
+    // <!-- Access all direct children of div that are p elements -->
     $("div > p").css("color","red");
 
-    <!-- Access siblings of div. (elements that are placed right before or after div) -->
+    // <!-- Access siblings of div. (elements that are placed right before or after div) -->
     $("div ~ p").css("color", "blue");
 
-    <!-- Access all p elements that are desecndants of div (same as direct children) -->
+    // <!-- Access all p elements that are desecndants of div (same as direct children) -->
     $("div p").css("text-align","left");
 
-    <!-- Access elements by their ID -->
+    // <!-- Access elements by their ID -->
     $("#d1").css("background-color","rgb(193, 173, 20)");
 
-    <!-- Access elements by their Class -->
+    // <!-- Access elements by their Class -->
     $(".d2").css("background-color","rgb(25, 246, 104)");
 
-    <!-- Combinators to access specific html elements -->
-    <!-- accessing all divs of class "box" -->
+    // <!-- Combinators to access specific html elements -->
+    // <!-- accessing all divs of class "box" -->
     $("div.box").css("background-color","rgb(71, 10, 47)");
     $("div.box").css("color","white");
 
-    <!-- Access all p elements that are the first child and also those p elements who have no parent element. -->
+    // <!-- Access all p elements that are the first child and also those p elements who have no parent element. -->
     $("p:first-child").css("text-decoration","underline");
 
-    <!-- Access all p elements that are the last child. -->
+    // <!-- Access all p elements that are the last child. -->
     $("p:last-child").css("color","hotpink");
 
-    <!-- Access all anchor elements -->
+    // <!-- Access all anchor elements -->
     $("a").css("color","yellow");
 
-    <!-- Access multiple elements at once -->
-    <!-- access all divs of class box, and all anchor or hyperlink elemnts. -->
+    // <!-- Access multiple elements at once -->
+    // <!-- access all divs of class box, and all anchor or hyperlink elemnts. -->
     $("div.box, a").css("color","yellow");
+
+    // Access elements with href attributes ( such as achor elements)
+    $("[href]").css("color","blue");
+
+    // Access the first child of the list item.
+    $("li:first-child").css("background-color","grey");
+
+    // Access even and odd rows of a table.
+    $("tr:even").css("background-color","rgb(193, 173, 20)");
+    $("tr:odd").css("background-color","rgb(25, 246, 104)");
+
+    // Access input element and submit button
+    $(":input").css("background-color","rgb(97, 184, 129)");
+    $(":Submit").css("background-color","rgb(193, 173, 20)");
+
+    // jquery unique Combinators
+    // Select all divs with a table in them.
+    $("div:has(table)").css("background-color","rgb(81, 148, 217)");
+
+
+
+
+
 
   });
 
