@@ -77,8 +77,11 @@
 </div>
 
 <div>
-  <p>Type your name : <input> <button type="submit">Submit</button></p>
+  <p>Type your name : <input id="name_input"> <button type="submit" id="submit">Submit</button></p>
+</div>
 
+<div class="d3">
+  <p> nothing remarkable nothing remarkable nothing remarkable nothing remarkable  nothing remarkable nothing remarkable</p>
 </div>
 
 <!-- scripting -->
@@ -93,7 +96,7 @@
   $(document).ready(function(){
     console.log($("p"));
     $("p").hide();
-  })
+  });
   <!-- OR -->
   $(function(){
     console.log($("p"));
@@ -160,6 +163,51 @@
     // jquery unique Combinators
     // Select all divs with a table in them.
     $("div:has(table)").css("background-color","rgb(81, 148, 217)");
+
+
+    //Responding to events.
+    // onclick method.
+    $(":Submit").click(function(){
+      // affect all input elements:
+      // $(":input").css("background-color","white");
+      // affect only submit button:
+      $(this).css("background-color","red");
+    });
+
+    // hover on method.
+    $(".d3").mouseover(function(){
+      $(this).css("background-color","black");
+    })
+    // hover off method
+    $(".d3").mouseout(function(){
+      $(this).css("background-color","");
+    })
+
+    // When all inputs are tapped
+    $("input").focus(function(){
+      $(this).css("background-color","yellow");
+    });
+    // when tapped outside of all inputs
+    $("input").blur(function(){
+      $(this).css("background-color","hotpink");
+    });
+
+    // when a key is released
+    $("input").keyup(function(){
+      $(this).css("background-color","");
+    });
+
+    // After clicking the submit button.
+    // submit button tagged submit, the input text field tagged name_input
+    $("#submit").click(function(){
+      $("#name_input").val("");
+    })
+
+
+
+
+
+
 
 
 
