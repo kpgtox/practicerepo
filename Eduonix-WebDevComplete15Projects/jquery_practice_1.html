@@ -84,9 +84,10 @@
   <p> nothing remarkable nothing remarkable nothing remarkable nothing remarkable  nothing remarkable nothing remarkable</p>
 </div>
 
-<div>
+<div id="d4">
   Another text box :<input> <br>
-  <a href="https://www.google.in" id="google" target="_blank">Google it Babe</a>
+  <a href="https://www.google.in" id="google" target="_blank">Google it Babe</a> <br>
+  <button type="button" id="listie">List up</button>
 </div>
 
 <!-- scripting -->
@@ -217,6 +218,17 @@
     // Access attributes of an anchor element
     // href for link and title for hover text.
     $("#google").attr({"href":"https://www.youtube.com", "title":"youtube it now"});
+
+    // Append a list to a div.
+    $("#listie").click(function(){
+      $("#d4").append("<ul><li>games</li><li>cars</li><li>sex</li>");
+      // adds the list at the beginning of the div d4
+      // $("#d4").prepend("<ul><li>games</li><li>cars</li><li>sex</li>");
+    });
+
+    // Adding a para element after and before div4
+    // $("#d4").after("<p>a new para</p>");
+    $("#d4").before("<p>a new para</p>");
 
 
 
