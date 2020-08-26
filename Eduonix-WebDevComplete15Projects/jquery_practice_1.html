@@ -84,6 +84,11 @@
   <p> nothing remarkable nothing remarkable nothing remarkable nothing remarkable  nothing remarkable nothing remarkable</p>
 </div>
 
+<div>
+  Another text box :<input> <br>
+  <a href="https://www.google.in" id="google" target="_blank">Google it Babe</a>
+</div>
+
 <!-- scripting -->
 <script>
 
@@ -202,6 +207,18 @@
     $("#submit").click(function(){
       $("#name_input").val("");
     })
+
+    // Access text inside a div regardless of it being inside a para element or not.
+    $(".d3").text("pararara");
+
+    // Access all text boxes(input element).
+    $("input").val("random text");
+
+    // Access attributes of an anchor element
+    // href for link and title for hover text.
+    $("#google").attr({"href":"https://www.youtube.com", "title":"youtube it now"});
+
+
 
 
 
