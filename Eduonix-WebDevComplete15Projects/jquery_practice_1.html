@@ -90,6 +90,16 @@
   <button type="button" id="listie">List up</button>
 </div>
 
+<div id="d5">
+  just another div in the wall.
+</div>
+
+<div id="d6">
+  <button type="button" id="toggle_class">Toggle Class</button>
+  wrapping content <span id="span_eg">inside span elements.</span>
+</div>
+
+
 <!-- scripting -->
 <script>
 
@@ -108,6 +118,11 @@
     console.log($("p"));
     $("p").show();
   });
+
+  function randomColor(){
+    var x = Math.floor(256*Math.random());
+    return x;
+  }
 
   // <!-- Access all html elements using * -->
   // <!-- when page loads: -->
@@ -229,6 +244,52 @@
     // Adding a para element after and before div4
     // $("#d4").after("<p>a new para</p>");
     $("#d4").before("<p>a new para</p>");
+
+    // Access css styling through jquery
+    $("#d5").append("game over");
+    // getting original width of d5 div and subtracting half from it.
+    $("#d5").css("width", $("#d5").width() - ($("#d5").width()/2) );
+    $("#d5").css("color","red");
+    $("#d5").css("background-color","grey");
+    // Add a class to the div element.
+    $("#d5").addClass("d5box");
+    window.console.log(document.getElementById("d5"));
+
+    window.console.log($("#d5").innerHeight());
+    window.console.log($("#d5").outerHeight());
+    window.console.log($("#d5").innerWidth());
+    // remove a class.
+    $("#d5").removeClass("d5box");
+    window.console.log(document.getElementById("d5"));
+
+    // Place the div wrt to the web page. (aboslute posiiton)
+    $("#d5").css("position","absolute");
+    // $("#d5").css({"top":30,"left":30});
+    // chose values from 0 to 100 from top and left of the page.
+    $("#d5").css({"top": 100*Math.random(),"left":100*Math.random()});
+    // Randomize bg color, "+" used to represent numbers when written in a string cuz rgb takes in numbers separated by commas.
+    $("#d5").css( "background-color", "rgb("+randomColor()+","+randomColor()+","+randomColor()+")" );
+
+    // Toggle a class on and off of an element.
+    $("#d6").addClass("box");
+    // $("#toggle_class").click(function(){
+    //   $("#d6").toggleClass("box");
+    //   console.log($("#d6"));
+    // });
+
+    // Same with double click
+    $("#toggle_class").dblclick(function(){
+      $("#d6").toggleClass("box");
+      // hide and show element:
+      // $(this).hide();
+      // $(this).show();
+      console.log($("#d6"));
+    });
+
+    // Wrapping span elements.
+    $("#span_eg").wrap("<div></div>");
+
+
 
 
 
