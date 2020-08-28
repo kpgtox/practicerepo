@@ -99,6 +99,18 @@
   wrapping content <span id="span_eg">inside span elements.</span>
 </div>
 
+<div id="d7">
+  <p id="fade_content">Fade out or fade in palo alto.</p>
+  <button type="button" id="fade_out">Fade out</button>
+  <button type="button" id="fade_in">Fade in</button>
+  <button type="button" id="fade_toggle">Fade toggle</button>
+  <button type="button" id="anim_d7">animate</button>
+</div>
+
+<div id="d8">
+<p>dummydummydummydummydummydummydummydummydummydummydummydummydummy <br> dummydummydummydummydummydummydummydummy </p>
+</div>
+
 
 <!-- scripting -->
 <script>
@@ -288,6 +300,45 @@
 
     // Wrapping span elements.
     $("#span_eg").wrap("<div></div>");
+
+    // jQuery Effects
+
+    // fade out and disappear.
+    $("#fade_out").click(function(){
+      // $("#d7").fadeOut();
+      $("#fade_content").fadeOut(3000); //fade out in 3000 milli seconds.
+    });
+
+    // fade in.
+    $("#fade_in").click(function(){
+      // $("#d7").fadeIn();
+      $("#fade_content").fadeIn(3000); //fade out in 3000 milli seconds.
+    });
+
+    // fade toggle in and out.
+    $("#fade_toggle").click(function(){
+      // $("#d7").fadeIn();
+      $("#fade_content").fadeToggle(3000); //fade out in 3000 milli seconds.
+    });
+
+    $("#d7").css("background-color","grey");
+
+    // animations using jquery.
+    // $("#anim_d7").click(function(){
+    //   $("#d7").animate({width:"400px", opacity:"0.5"},2000);
+    // });
+
+    //Series of animations with custome delay in between
+    $("#anim_d7").click(function(){
+      $("#d7").animate({width:"400px"},"slow");
+      $("#d7").animate({width:"1000px"},"fast");
+      $("#d7").animate({height:"500px"},"slow");
+      $("#d7").delay(3000).animate({height:"200px"},"slow");
+    });
+
+
+
+
 
 
 
