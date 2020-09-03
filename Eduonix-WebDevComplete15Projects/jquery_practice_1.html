@@ -12,6 +12,10 @@
   <!-- OR -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+  <!-- linking jquryui library -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
 
 </head>
 
@@ -113,6 +117,10 @@
 
 <div id="d9">
 Yo yo
+</div>
+
+<div class="bluebox ui-corner-all" id="d10">
+  Applied jquery ui to this element.
 </div>
 
 
@@ -358,6 +366,13 @@ Yo yo
     $.ajax({url:"ajax/sampletext.txt"}).done(
         function(data){
         $("#d9").html(data);})
+
+    // Applied jquery ui to the element d10.
+    $("#d10").css("width",800);
+    $("#d10").css("height",200);
+    $("#d10").css("background-color","blue");
+    $("#d10").css("color","white");
+
 
 
 
