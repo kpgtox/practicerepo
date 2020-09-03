@@ -111,6 +111,10 @@
 <p>dummydummydummydummydummydummydummydummydummydummydummydummydummy <br> dummydummydummydummydummydummydummydummy </p>
 </div>
 
+<div id="d9">
+Yo yo
+</div>
+
 
 <!-- scripting -->
 <script>
@@ -336,6 +340,24 @@
       $("#d7").delay(3000).animate({height:"200px"},"slow");
     });
 
+    // load content from the text file into the div element.
+    // make sure to disable web security in chrome before trying to access local files through ajax calls.
+    // $("#d9").load("ajax/sampletext.txt #pp2");
+
+    // Another way of doing it.
+    // access only elements with tag pp1
+    // $.ajax({
+    //   url:"ajax/sampletext.txt",
+    //   success: function(data){
+    //     $("#d9").html(data);
+    //     // console.log(data);
+    //   }
+    // });
+
+    // Yet another way of loading content from an external file.
+    $.ajax({url:"ajax/sampletext.txt"}).done(
+        function(data){
+        $("#d9").html(data);})
 
 
 
