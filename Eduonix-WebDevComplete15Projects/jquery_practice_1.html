@@ -17,6 +17,14 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
+  <style>
+    #d15{
+      margin-top : 10px;
+      height : 400px; width = auto;
+      background-color : rgb(237, 109, 144);
+      color:rgb(4, 34, 33);
+    }
+  </style>
 
 </head>
 
@@ -137,6 +145,18 @@ Yo yo
   <p>d12 div.</p>
 </div>
 
+<div id="d13" style="height:100px; margin-top:20px; border:1px solid black;">
+  <p>d13 div.</p>
+</div>
+
+<div id="d14" style="height:100px; margin-top:20px; border:1px solid black;">
+  <p>d14 div.</p>
+</div>
+
+<div id="d15">
+  d15, a droppable element
+</div>
+
 
 <!-- scripting -->
 <script>
@@ -162,10 +182,12 @@ Yo yo
     return x;
   }
 
-  // <!-- Access all html elements using * -->
+  var pain_mssg = ["please","for fucks sake","god damn it","aaaaarrraaaahh"];
+
   // <!-- when page loads: -->
   $(function(){
 
+    // <!-- Access all html elements using * -->
     // <!-- change styling (font size) of all elements -->
     $("*").css("font-size", "1.2em");
 
@@ -389,7 +411,43 @@ Yo yo
 
     // Make elements draggable.
     $("#d11").draggable();
-    $("#d12").draggable();
+
+    // Make elements draggable only on y axis.
+    $("#d12").draggable({axis:"y"});
+
+    // Drag and revert to original position.
+    // $("#d13").draggable({revert:true});
+
+    // run code when dragging
+    $("#d13").draggable({
+      revert : true,
+      // start of drag
+      start : function(){$("#d13").css("background-color","red");},
+      // during drag
+      drag : function(){$("#d13").css("background-color","pink");},
+      // after drag
+      stop : function(){$("#d13").css("background-color","white");}
+    });
+
+    // print something in the p element of the div when dragging.
+    $("#d14").draggable({
+      revert : true,
+      drag : function(){$("#d14").find("p").html(pain_mssg[ Math.floor(4*Math.random()) ])},
+      stop : function(){
+        $("#d14").css("background-color","white");
+        $("#d14").html("<p>finally!</p>");
+      }
+    });
+
+    // make d15 droppable, meaning other elements can be dropped on it.
+    $("#d15").droppable({
+      // when dopped a element on this i.e d15
+      drop : function(){
+        $(this).html("<p>something hs been dropped</p>");
+      },
+      // only d12 elements can be dropped, the function above runs only for the accepted elements.
+      accept : "#d12"
+    });
 
 
 
