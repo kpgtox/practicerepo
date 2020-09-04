@@ -7,13 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>jquery practice</title>
 
-  <!-- linking jquery file -->
+  <!-- linking jquery file locally -->
   <!-- <script src="jquery-3.5.1.min.js"></script> -->
-  <!-- OR -->
+  <!-- OR from the web -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- linking jquryui library -->
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <!-- just type in the name of the pre made themes from the jqueryui site in the url below, just sfter themes. -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 
@@ -119,8 +120,21 @@
 Yo yo
 </div>
 
+<!-- jquery ui class applied -->
 <div class="bluebox ui-corner-all" id="d10">
   Applied jquery ui to this element.
+</div>
+
+<div class="ui-state-error" style="height:100px; margin-top:20px;">
+  Error message :
+</div>
+
+<div id="d11" style="height:100px; margin-top:20px; border:1px solid black;">
+  <p>d11 div.</p>
+</div>
+
+<div id="d12" style="height:100px; margin-top:20px; border:1px solid black;">
+  <p>d12 div.</p>
 </div>
 
 
@@ -372,6 +386,10 @@ Yo yo
     $("#d10").css("height",200);
     $("#d10").css("background-color","blue");
     $("#d10").css("color","white");
+
+    // Make elements draggable.
+    $("#d11").draggable();
+    $("#d12").draggable();
 
 
 
