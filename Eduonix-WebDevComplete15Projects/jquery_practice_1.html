@@ -18,7 +18,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <style>
-    #d15, #d16{
+    #d15, #d16, #d17{
       margin-top : 10px;
       height : 400px; width = auto;
       background-color : rgb(237, 109, 144);
@@ -168,6 +168,10 @@ Yo yo
 <div id="d16">
   d16, a droppable element
   <p id="d16p1">a rara</p>
+</div>
+
+<div id="d17">
+  <p>d17, a droppable element</p>
 </div>
 
 
@@ -466,10 +470,10 @@ Yo yo
     });
 
     //First make the list items draggable
-    $("#l1").find("li").draggable();
+    // $("#l1").find("li").draggable();
 
     // drag on y axis only, and make a clone when dragged.
-    // $("#l1").find("li").draggable({axis:"y", helper:"clone"});
+    $("#l1").find("li").draggable({axis:"y", helper:"clone"});
 
     // append list item to all para elements in the documnt
     // $("#l1").find("li").draggable({axis:"y", helper:"clone", appendTo:"p"});
@@ -491,6 +495,19 @@ Yo yo
       },
       accept : "#l1 li"
     });
+
+    // drop list elements into a div and append them.
+    $("#d17").droppable({
+      drop : function(event, ui){
+        //removes all p elements in d17 div
+        $(this).find("p").remove();
+        //create a new div in d17 and append the text of every list item to this new div
+        $("<div></div>").text(ui.draggable.text()).appendTo(this);
+      },
+      accept : "#l1 li"
+    });
+
+
 
 
 
