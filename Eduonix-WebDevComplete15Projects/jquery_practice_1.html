@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- linking jquryui library -->
-  <!-- just type in the name of the pre made themes from the jqueryui site in the url below, just sfter themes. -->
+  <!-- just type in the name of the pre made themes from the jqueryui site in the url below, just after themes. -->
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
@@ -34,6 +34,26 @@
       width: 50px;
       height: 50px;
       background-color: green;
+    }
+    /* #oslist{
+    text-align: center;
+    font-size: 1.4em;
+    } */
+    /* adding jquery ui to css code */
+    /* while holding an item */
+    #oslist,#corplist .ui-selecting{
+      background: purple;
+    }
+    /* after selecting an item */
+    #oslist,#corplist .ui-selected{
+      background: #953ebb;
+      color: white;
+    }
+    #d23{
+      width: 400px;
+      height : 400px;
+      background-color: yellow;
+      color: red;
     }
   </style>
 
@@ -195,6 +215,27 @@ Yo yo
 </div>
 
 <div id="d20">
+</div>
+
+<!-- add jquery ui class to list items for better visual-->
+<div id="d21">
+  <ul id="oslist">
+    <li class="ui-state-default">macos</li>
+    <li class="ui-state-default">windows</li>
+    <li class="ui-state-default">linux</li>
+  </ul>
+</div>
+
+<!-- add jquery ui class to list items for better visual-->
+<div id="d22">
+  <ul id="corplist">
+    <li class="ui-state-default">apple</li>
+    <li class="ui-state-default">google</li>
+    <li class="ui-state-default">facebook</li>
+  </ul>
+</div>
+
+<div id="d23">
 
 </div>
 
@@ -551,6 +592,20 @@ Yo yo
         // animate : true,
         // also resizes d20 element, when this one is resized.
         alsoResize : "#d20"
+    });
+
+    // make list items in a list selectable
+    $("#oslist").selectable();
+
+    $("#corplist").selectable({
+      // runs the code belowe after an item is selected
+      stop : function(){
+        // code to run for each selected item which has jquery ui css applied
+        $(".ui-selected").each(function(){
+          // create an empty para element and put the text of the list item in this new p element and then append it to a div.
+          $("<p></p>").text($(this).text()).appendTo("#d23");
+        });
+      }
     });
 
 
