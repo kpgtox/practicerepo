@@ -18,7 +18,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <style>
-    #d15{
+    #d15, #d16{
       margin-top : 10px;
       height : 400px; width = auto;
       background-color : rgb(237, 109, 144);
@@ -156,6 +156,21 @@ Yo yo
 <div id="d15">
   d15, a droppable element
 </div>
+
+<div>
+  <ul id="l1">
+    <li>vader</li>
+    <li>vomitory</li>
+    <li>demonical</li>
+  </ul>
+</div>
+
+<div id="d16">
+  d16, a droppable element
+  <p id="d16p1">a rara</p>
+</div>
+
+
 
 
 <!-- scripting -->
@@ -447,7 +462,37 @@ Yo yo
       },
       // only d12 elements can be dropped, the function above runs only for the accepted elements.
       accept : "#d12"
+      // accept : "#l1 li"
     });
+
+    //First make the list items draggable
+    $("#l1").find("li").draggable();
+
+    // drag on y axis only, and make a clone when dragged.
+    // $("#l1").find("li").draggable({axis:"y", helper:"clone"});
+
+    // append list item to all para elements in the documnt
+    // $("#l1").find("li").draggable({axis:"y", helper:"clone", appendTo:"p"});
+
+    //append the list item to the same place
+    //$("#l1").find("li").draggable({axis:"y", helper:"clone", appendTo:"body"});
+
+    //Drop list items on a div
+    $("#d16").droppable({
+      drop:function(){
+        //find and remove a specific tag in this divby its id
+        // $(this).find("#d16p1").remove();
+        // OR
+        // $("#d16p1").remove();
+        // replaces all html code inside the d16 tag with this function.
+        $(this).html("<p>list item dropped</p>");
+        //also change bg color when items listed as accepted below are dropped.
+        $(this).css("background-color","#21dd85");
+      },
+      accept : "#l1 li"
+    });
+
+
 
 
 
