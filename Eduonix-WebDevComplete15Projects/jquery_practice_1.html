@@ -18,11 +18,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <style>
-    #d15, #d16, #d17{
+    #d15, #d16, #d17, #d18{
       margin-top : 10px;
       height : 400px; width = auto;
       background-color : rgb(237, 109, 144);
       color:rgb(4, 34, 33);
+    }
+    #dcontainer{
+      width: 200px;
+      height: 200px;
+      /* background-color: green; */
+      border-style: dashed;
+    }
+    #d19, #d20{
+      width: 50px;
+      height: 50px;
+      background-color: green;
     }
   </style>
 
@@ -172,6 +183,19 @@ Yo yo
 
 <div id="d17">
   <p>d17, a droppable element</p>
+</div>
+
+<div id="d18">
+  <p>resizable div element/tag</p>
+</div>
+
+<div id="dcontainer">
+  <div id="d19">
+  </div>
+</div>
+
+<div id="d20">
+
 </div>
 
 
@@ -505,6 +529,28 @@ Yo yo
         $("<div></div>").text(ui.draggable.text()).appendTo(this);
       },
       accept : "#l1 li"
+    });
+
+    // jquery cool effect, resizable element.
+    $("#d18").resizable({
+      maxWidth : 2000,
+      maxHeight: 500,
+      // maintain aspect ratio
+      // aspectRatio : 4/5,
+      // aspectRatio : 16/9,
+      // Add ghost effect when dragging
+      ghost : true
+    });
+
+    // resizable yet constrained div element.
+    // put a div inside another div, call the resizable function on the child div.
+    $("#d19").resizable({
+      // the css properties of the dcontainer div will act as max dimensional values to d19 when resized.
+        containment : "#dcontainer",
+        // extra animation effect
+        // animate : true,
+        // also resizes d20 element, when this one is resized.
+        alsoResize : "#d20"
     });
 
 
