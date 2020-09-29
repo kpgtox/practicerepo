@@ -55,6 +55,10 @@
       background-color: yellow;
       color: red;
     }
+    .connectedList{
+      border : 1px solid black;
+      min-height: 20px;
+    }
   </style>
 
 </head>
@@ -236,7 +240,22 @@ Yo yo
 </div>
 
 <div id="d23">
+</div>
 
+<div id="d24">
+  <ul id="mechlist" class="connectedList">
+    <li class="ui-state-default">chrome</li>
+    <li class="ui-state-default">armored</li>
+    <li class="ui-state-default">nuclear</li>
+  </ul>
+</div>
+
+<div id="d25">
+  <ul id="carslist" class="connectedList">
+    <li class="ui-state-default">ferrari</li>
+    <li class="ui-state-default">audi</li>
+    <li class="ui-state-default notSortable">bmw</li>
+  </ul>
 </div>
 
 
@@ -607,6 +626,30 @@ Yo yo
         });
       }
     });
+
+    //create a sortable list.
+    // A list can either have sortable or selectable only function called on it.
+    $("#mechlist").sortable();
+
+    // a sortable list with more features
+    $("#carslist").sortable({
+      // placeholder when dragging an item :
+      // placeholder : "ui-state-highlight"
+      // show error visual when item is dragged :
+      placeholder : "ui-state-error",
+      // diable sorting for an item with this class :
+      // cancel : ".notSortable"
+    });
+
+    // Allow list items to sort from multiple lists :
+    // both the lists must have a common class
+    // make sure to have a minimum height to both the lists in css so the list doesnt collapse.
+    $("#mechlist, #carslist").sortable({
+      connectWith : ".connectedList"
+    });
+
+
+
 
 
 
