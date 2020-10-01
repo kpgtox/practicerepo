@@ -15,7 +15,7 @@
 
   <!-- linking jquryui library -->
   <!-- just type in the name of the pre made themes from the jqueryui site in the url below, just after themes. -->
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <style>
@@ -366,6 +366,34 @@ Yo yo
   <p>Departure date: <input id="dep"></p>
   <p>Arrival date: <input id="arr"></p>
 </div>
+
+<!-- dialog -->
+<div id="d34" title="This is a dialog">
+  <p>
+    Welcome to our bitch.
+  </p>
+</div>
+
+<div id="d35" title="This is another dialog">
+  <p>
+    This was opened with a button click.
+  </p>
+</div>
+<button id="dialogButton">Open Dialog</button>
+
+<!-- approval dialog box-->
+<div id="d36" title="Are you sure?">
+  <p>
+    <!-- jquery two classes assigned to this span. -->
+    <!-- https://jqueryui.com/themeroller/ -->
+    <span class="ui-icon ui-icon-alert" style="float:left"></span>
+    You will lose all unsaved work, continue?
+  </p>
+</div>
+<button id="exit_button">Exit Page</button>
+
+
+
 
 <!-- scripting -->
 <script>
@@ -766,14 +794,14 @@ Yo yo
     // select an icon, copy its class name and paste it in the code below without the dot.
     $("#d27").accordion({
       collapsible : true,
-      // icons for the accordion
+      // icons for the accordion:
       icons:{
         // standby icon:
         header: "ui-icon-circle-arrow-e",
         // icon when active:
         activeHeader: "ui-icon-circle-arrow-s"
       },
-      // setting sections inthe accordion to take as much space as Content in it
+      // setting sections inthe accordion to take as much space as Content in it:
       heightStyle : "content"
     });
 
@@ -884,6 +912,47 @@ Yo yo
     $("#arr").datepicker({
       dateFormat: "d/M/y",
     });
+
+    // Dialog boxes in jquery:
+    // used for alerts, prompts, approvals.
+    // simple dialog that shows on screen:
+    // converts the div d34 to a dialog box.
+    $("#d34").dialog();
+
+    // Convert d35 divto a dialog and Open dialog box with a click:
+    $("#d35").dialog({
+      // prevent dialog to show on page loads automatically:
+      autoOpen: false
+    });
+    $("#dialogButton").click(function(){
+      $("#d35").dialog("open");
+    });
+    // apply jquery ui button theme to all buttons:
+    $("button").button();
+
+    // confitmational dialog box:
+    $("#d36").dialog({
+      autoOpen: false,
+      // make this dialog confirmational dialog:
+      modal: true,
+      buttons:{
+        "Go Back" : function(){
+          // goes previous page when clicked this button:
+          window.history.back();
+        },
+        "Cancel": function(){
+          // closes dialog:
+          $(this).dialog("close");
+        }
+      }
+    });
+    // Open confirmational dialog box when clicked exit button:
+    $("#exit_button").click(function(){
+      $("#d36").dialog("open");
+    });
+
+
+
 
 
 
