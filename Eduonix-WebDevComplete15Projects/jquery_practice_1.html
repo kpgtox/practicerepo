@@ -356,6 +356,17 @@ Yo yo
   <label for="rdbx3">Audi</label>
 </div>
 
+<!-- jquery date picker -->
+<div id="d32">
+  <p>Departure date: <input id="departure"></p>
+  <p>Arrival date: <input id="arrival"></p>
+</div>
+
+<div id="d33">
+  <p>Departure date: <input id="dep"></p>
+  <p>Arrival date: <input id="arr"></p>
+</div>
+
 <!-- scripting -->
 <script>
 
@@ -812,11 +823,65 @@ Yo yo
     // turns checkbox into a cool button.
     $("#ckbx1").button();
 
-    // applying jquery button theme to a container of checkboxes
+    // applying jquery button theme to a container of checkboxes:
     $("#d30").buttonset();
 
-    // applying jquery button theme to a container of radioboxes
+    // applying jquery button theme to a container of radioboxes:
     $("#d31").buttonset();
+
+    // jquery date picker:
+    $("#departure").datepicker();
+
+    // jquery date picker with more features:
+    $("#arrival").datepicker({
+      // button to open date picker:
+      showOn: "button",
+      // put a image on the button:
+      buttonImage: "images/calender.png",
+      // hide the button, show only image:
+      buttonImageOnly: true,
+      // button hover text:
+      buttonText: "Choose Date",
+      // able to choose date only from today:
+      minDate: 0,
+      // able to choose date only from tomorrow:
+      // minDate: +1,
+      // able to choose date only from specified days:
+      // minDate: +2,
+      // max display date will be 12months starting from min date mentioned above:
+      maxDate: "+12M",
+      // max display date will be 12months and 10days starting from min date mentioned above:
+      // maxDate: "+12M +10D",
+      // animations when opening and closing date picker:
+      // showAnim : "slideDown",
+      // showAnim : "drop",
+      showAnim : "fadeIn",
+      // able to change year fast:
+      changeYear: true,
+      // display more months:
+      numberOfMonths: 2,
+      // change date format to remove 0 for single digits and two digits for year:
+      // dateFormat: "d/m/y",
+      //display short month name:
+      // dateFormat: "d/M/y",
+      //display full month name:
+      // dateFormat: "d/MM/y",
+      //display full month name in custom format:
+      dateFormat: "d MM, yy",
+      // Also Change day format to D or DD to display the day in short or full name.
+    });
+
+    // Make arrival date show dates ahead of selected departure date:
+    $("#dep").datepicker({
+      minDate: 0,
+      dateFormat: "d/M/y",
+      onClose: function(selectedDate){
+        $("#arr").datepicker("option","minDate",selectedDate)
+      }
+    });
+    $("#arr").datepicker({
+      dateFormat: "d/M/y",
+    });
 
 
 
