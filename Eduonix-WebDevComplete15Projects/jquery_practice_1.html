@@ -68,6 +68,19 @@
       /* color when section is highlighted */
       color: red;
     }
+    /* styling for autocomplete boxes: */
+    .ui-autocomplete{
+      /* height and width of dropdown box containing suggestions: */
+      max-height: 100px;
+      max-width: 200px;
+      /* overflow feature, puts a scroll bar in the drop down: */
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+    /* input box */
+    #city{
+      width: 200px;
+    }
   </style>
 
 </head>
@@ -301,6 +314,13 @@ Yo yo
   <h3>Header 3</h3>
   <div>Content 3</div>
 </div>
+</div>
+
+<!-- Text box with suggestions -->
+<div id="d29">
+  <p>
+    Input your City : <input id="city">
+  </p>
 </div>
 
 
@@ -729,6 +749,14 @@ Yo yo
         $("#d28").accordion("refresh");
       }
     });
+
+    // Textbox with autocomplete
+    $("#city").autocomplete({
+      // set the source property to an array of strings for autocomplete suggestions
+      source: ["hyderabad","bangalore","delhi","amritsar","berlin","calcutta","chicago","chennai","longestcitynameintheworldbabyfuckyeah"]
+    });
+
+
 
 
 
