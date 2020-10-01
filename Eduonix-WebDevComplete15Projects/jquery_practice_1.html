@@ -323,8 +323,38 @@ Yo yo
   </p>
 </div>
 
+<!-- buttons with jquery themes: -->
+<button id="button1">button 1</button>
+<button id="button2">button 2</button>
+<button id="button3">button 3</button>
+<button id="button4">button 4</button>
 
+<!-- checkbox -->
+<input type="checkbox" id="ckbx1">
+<label for="ckbx1">Cool?</label>
 
+<!-- container for checkboxes, jquery ui theme applied to all checkboxes at once. -->
+<div id="d30">
+  <input type="checkbox" id="ckbx2">
+  <label for="ckbx2">Heat</label>
+  <input type="checkbox" id="ckbx3">
+  <label for="ckbx3">Wind</label>
+  <input type="checkbox" id="ckbx4">
+  <label for="ckbx4">Food</label>
+  <input type="checkbox" id="ckbx5">
+  <label for="ckbx5">Fuel</label>
+</div>
+
+<!-- container of raido boxes -->
+<!-- assign every radio box's name as same as the container, so only one radiobox can be selected by the user. -->
+<div id="d31">
+  <input type="radio" id="rdbx1" name="d31">
+  <label for="rdbx1">Ford</label>
+  <input type="radio" id="rdbx2" name="d31">
+  <label for="rdbx2">Porsche</label>
+  <input type="radio" id="rdbx3" name="d31">
+  <label for="rdbx3">Audi</label>
+</div>
 
 <!-- scripting -->
 <script>
@@ -755,6 +785,38 @@ Yo yo
       // set the source property to an array of strings for autocomplete suggestions
       source: ["hyderabad","bangalore","delhi","amritsar","berlin","calcutta","chicago","chennai","longestcitynameintheworldbabyfuckyeah"]
     });
+
+    //Simple jquery theme button:
+    $("#button1").button();
+
+    // adding jQuery features to buttons:
+    // https://jqueryui.com/themeroller/
+    // copy paste the name of the class of the icons from the above site. (found under framework icons)
+    $("#button2, #button3").button({
+      icons:{
+        // icon at left side of the button
+        primary: "ui-icon-folder-open",
+      },
+      // remove text on the button
+      text: false
+    });
+
+    $("#button4").button({
+      icons:{
+        primary: "ui-icon-mail-closed",
+        secondary: "ui-icon-mail-closed"
+      }
+    });
+
+    // checkbox with jquery ui theme:
+    // turns checkbox into a cool button.
+    $("#ckbx1").button();
+
+    // applying jquery button theme to a container of checkboxes
+    $("#d30").buttonset();
+
+    // applying jquery button theme to a container of radioboxes
+    $("#d31").buttonset();
 
 
 
