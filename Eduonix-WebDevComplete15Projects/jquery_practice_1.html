@@ -7,9 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>jquery practice</title>
 
-  <!-- linking jquery file locally -->
+  <!-- linking jquery file locally: -->
   <!-- <script src="jquery-3.5.1.min.js"></script> -->
-  <!-- OR from the web -->
+
+  <!-- OR from the web: -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- linking jquryui library -->
@@ -58,6 +59,14 @@
     .connectedList{
       border : 1px solid black;
       min-height: 20px;
+    }
+    #d26,#d27{
+      width: auto;
+      height: auto;
+      /* background-color: #3A5795; */
+      background-color: #31af37;
+      /* color when section is highlighted */
+      color: red;
     }
   </style>
 
@@ -256,6 +265,42 @@ Yo yo
     <li class="ui-state-default">audi</li>
     <li class="ui-state-default notSortable">bmw</li>
   </ul>
+</div>
+
+<!-- Accordions -->
+<div id="d26">
+  <h3>Header 1</h3>
+  <div>Content 1</div>
+  <h3>Header 2</h3>
+  <div>Content 2</div>
+  <h3>Header 3</h3>
+  <div>Content 3</div>
+</div>
+
+<!-- Accordion with features -->
+<div id="d27">
+  <h3>Section 1</h3>
+  <div>
+    Content 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+  <h3>Section 2</h3>
+  <div>Content 2</div>
+  <h3>Section 3</h3>
+  <div>Content 3</div>
+</div>
+
+<!-- Placing an accordian inside another div to resize it. -->
+<!-- find the list of styling classes to use for elements here: --> <!-- https://api.jqueryui.com/theming/css-framework/ -->
+<!-- assign that class to this container containing an accordion -->
+<div id="acc_resizer" class="ui-widget-content">
+<div id="d28">
+  <h3>Header 1</h3>
+  <div>Content 1</div>
+  <h3>Header 2</h3>
+  <div>Content 2</div>
+  <h3>Header 3</h3>
+  <div>Content 3</div>
+</div>
 </div>
 
 
@@ -647,6 +692,46 @@ Yo yo
     $("#mechlist, #carslist").sortable({
       connectWith : ".connectedList"
     });
+
+    //jquery Accordins
+    //collapsable sections
+    //accordin needs to be contained inside a div.
+
+    // Create a simple accordian
+    $("#d26").accordion();
+
+    // accordion with features:
+    //for icons, goto https://jqueryui.com/themeroller/ and seelect a theme, under frameworkicons,
+    // select an icon, copy its class name and paste it in the code below without the dot.
+    $("#d27").accordion({
+      collapsible : true,
+      // icons for the accordion
+      icons:{
+        // standby icon:
+        header: "ui-icon-circle-arrow-e",
+        // icon when active:
+        activeHeader: "ui-icon-circle-arrow-s"
+      },
+      // setting sections inthe accordion to take as much space as Content in it
+      heightStyle : "content"
+    });
+
+    // This accordion is inside a container
+    // Call accordian method to only one div.
+    $("#d28").accordion({
+      heightStyle: "fill"
+    });
+    // Make the container div resizable
+    $("#acc_resizer").resizable({
+      // code that runs once you resize the container:
+      resize: function(){
+        // send refresh as a parameter, so dims are changed accordingly.
+        $("#d28").accordion("refresh");
+      }
+    });
+
+
+
 
 
 
