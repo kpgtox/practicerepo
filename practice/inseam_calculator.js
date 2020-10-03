@@ -1,8 +1,6 @@
-// calculate inseam length range based on the bicycle size present in the bike's product page:
+// calculate range of inseam length based on the bicycle size present in the bike's product page:
 
 $(document).ready(function(){
-
-  var inseam_min_cm, inseam_max_cm, inseam_min_in, inseam_max_in;
 
   function getInseamRange(min, max){
     // given formula to calculate inseam length based on bike size:
@@ -20,12 +18,21 @@ $(document).ready(function(){
 
   function printInseamOnPage(){
     var inseam_range = getInseamRange(size_min, size_max);
-    console.log(inseam_range);
+    // console.log(inseam_range);
     var inseam_msg = `Recommended for inseam height of ${inseam_range[0]} - ${inseam_range[1]} cm (${inseam_range[2]} - ${inseam_range[3]} inches).`;
-    size_table.tBodies[0].innerHTML += '<tr><td><b>Inseam:</b></td><td>' + inseam_msg + '</td></tr>';
-    // table.tBodies[0].innerHTML += '<tr><td><b>Inseam:</b></td><td>'+ inseamStr +'</td></tr>';
+    // place recommended message in the table:
+    // size_table.tBodies[0].innerHTML += '<tr><td><b>Inseam:</b></td><td>' + inseam_msg + '</td></tr>';
+    //place receommended message in the area requested:
+    var inseam_tag = document.createElement("h3");
+    inseam_tag.style.float = 'right';
+    inseam_tag.style.padding = '10px 35% 0px 0px';
+    var inseam_txtNode = document.createTextNode(inseam_msg);
+    inseam_tag.appendChild(inseam_txtNode);
+    var div_bikesize = document.getElementById('bikesize');
+    div_bikesize.insertBefore(inseam_tag, div_bikesize.children[1]);
   }
 
+  var inseam_min_cm, inseam_max_cm, inseam_min_in, inseam_max_in;
   // given bike sizes and their respective ranges:
   var sizes = { 47: '47-47.5-48', 48: '47-47.5-48-48.5-49', 49: '48-48.5-49-49.5-50-50.5', 50: '49-49.5-50-50.5-51-51.5',
   51: '50-50.5-51-51.5-52-52.5', 52: '51-51.5-52-52.5-53-53.5', 53: '52-52.5-53-53.5-54-54.5', 54: '53-53.5-54-54.5-55-55.5',
@@ -45,6 +52,7 @@ $(document).ready(function(){
   // get recommended minimum and maximum bicycle size from the range:
   var size_min = parseFloat(size_range[0]);
   var size_max = parseFloat(size_range[size_range.length - 1]);
+  // display recommended inseam range:
   printInseamOnPage();
 
 });
