@@ -22,6 +22,7 @@ $(document).ready(function(){
     var inseam_msg = `Recommended for inseam height of ${inseam_range[0]}min - ${inseam_range[1]}max cm (${inseam_range[2]}min - ${inseam_range[3]}max inches).`;
     // place recommended message in the table:
     // size_table.tBodies[0].innerHTML += '<tr><td><b>Inseam:</b></td><td>' + inseam_msg + '</td></tr>';
+    //OR
     //place receommended message in the area requested:
     var inseam_tag = document.createElement("h3");
     inseam_tag.style.float = 'right';
