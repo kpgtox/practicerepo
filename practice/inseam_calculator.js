@@ -19,13 +19,13 @@ $(document).ready(function(){
   function printInseamOnPage(){
     var inseam_range = getInseamRange(size_min, size_max);
     // console.log(inseam_range);
-    var inseam_msg = `Recommended for inseam height of ${inseam_range[0]} - ${inseam_range[1]} cm (${inseam_range[2]} - ${inseam_range[3]} inches).`;
+    var inseam_msg = `Recommended for inseam height of ${inseam_range[0]}min - ${inseam_range[1]}max cm (${inseam_range[2]}min - ${inseam_range[3]}max inches).`;
     // place recommended message in the table:
     // size_table.tBodies[0].innerHTML += '<tr><td><b>Inseam:</b></td><td>' + inseam_msg + '</td></tr>';
     //place receommended message in the area requested:
     var inseam_tag = document.createElement("h3");
     inseam_tag.style.float = 'right';
-    inseam_tag.style.padding = '10px 35% 0px 0px';
+    inseam_tag.style.padding = '10px 25% 0px 0px';
     var inseam_txtNode = document.createTextNode(inseam_msg);
     inseam_tag.appendChild(inseam_txtNode);
     var div_bikesize = document.getElementById('bikesize');
