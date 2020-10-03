@@ -32,6 +32,7 @@ $(document).ready(function(){
     div_bikesize.insertBefore(inseam_tag, div_bikesize.children[1]);
   }
 
+
   var inseam_min_cm, inseam_max_cm, inseam_min_in, inseam_max_in;
   // given bike sizes and their respective ranges:
   var sizes = { 47: '47-47.5-48', 48: '47-47.5-48-48.5-49', 49: '48-48.5-49-49.5-50-50.5', 50: '49-49.5-50-50.5-51-51.5',
@@ -39,7 +40,7 @@ $(document).ready(function(){
   55: '54-54.5-55-55.5-56-56.5', 56: '55-55.5-56-56.5-57-57.5', 57: '56-56.5-57-57.5-58-58.5', 58: '57-57.5-58-58.5-59-59.5',
   59: '58-58.5-59-59.5-60-60.5', 60: '59-59.5-60-60.5-61-61.5', 61: '60-60.5-61-61.5-62-62.5', 62: '61-61.5-62-62.5-63-63.5',
   63: '62-62.5-63-63.5-64-64.5', 64: '63-63.5-64', 65: '64-65', 66: '65-66-67', 67: '66-67' };
-  // grab bike size from the product's page:
+  // grab bike size from the product page:
   var size_table = document.getElementById('bikesize').getElementsByTagName('table')[0];
   var bike_size_str = size_table.rows[0].cells[1].innerText;
   var bike_size = parseInt(bike_size_str.split(' ')[0]);
