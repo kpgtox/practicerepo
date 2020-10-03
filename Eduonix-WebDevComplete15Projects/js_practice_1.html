@@ -45,8 +45,10 @@
     <button type="button"id="reset">Reset</button>
   </div>
 
+  <!-- //js code: -->
   <!-- Add JS in a script tag in an html file. -->
   <script type="text/javascript">
+
     // on click event listener
     document.getElementById("b1").onclick = function() {
       alert("used document selector.")
@@ -82,7 +84,14 @@
     document.getElementById("d2").style.fontSize = "1.2em";
     document.getElementById("d2").style.fontFamily = "monospace";
 
-    // Funtions
+    //strings
+
+    // Find whether or not something's present in a string
+    var bike_size = '60 cm';
+    var boo = bike_size.includes('cm');
+    console.log(boo);
+
+    // Functions
     // geenrate a random color.
     function generate_random_col() {
       var x, y, z;
@@ -342,7 +351,7 @@
     }
 
     //Timing code (unity coroutines):
-    
+
     //JS method to run code after certain amount of time.
     var mssg = "time out babay. gimme a break!"
     var timeout_eg = setTimeout(function(){print_something(mssg)}, 3000);
