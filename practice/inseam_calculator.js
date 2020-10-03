@@ -25,10 +25,10 @@ $(document).ready(function(){
     //OR
     //place receommended message in the area requested:
     var inseam_tag = document.createElement("h3");
-    inseam_tag.style.float = 'right';
-    inseam_tag.style.padding = '10px 25% 0px 0px';
     var inseam_txtNode = document.createTextNode(inseam_msg);
     inseam_tag.appendChild(inseam_txtNode);
+    inseam_tag.style.float = 'right';
+    inseam_tag.style.padding = '10px 25% 0px 0px';
     var div_bikesize = document.getElementById('bikesize');
     div_bikesize.insertBefore(inseam_tag, div_bikesize.children[1]);
   }
