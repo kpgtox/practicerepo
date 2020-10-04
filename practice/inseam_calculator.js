@@ -34,10 +34,6 @@ $(document).ready(function(){
     var calc_link = document.getElementsByClassName('calculate-size-btn')[0];
     calc_link.setAttribute('style', 'display:inline-block');
     calc_link.after(inseam_tag);
-    // inseam_tag.style.float = 'right';
-    // inseam_tag.style.padding = '10px 25% 0px 0px';
-    // var div_bikesize = document.getElementById('bikesize');
-    // div_bikesize.insertBefore(inseam_tag, div_bikesize.children[1]);
   }
 
 

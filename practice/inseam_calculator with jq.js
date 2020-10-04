@@ -19,25 +19,15 @@ $(document).ready(function(){
   function printInseamOnPage(){
     var inseam_range = getInseamRange(size_min, size_max);
     // console.log(inseam_range);
-    // var inseam_msg = `Recommended for inseam height of ${inseam_range[0]}min - ${inseam_range[1]}max cm (${inseam_range[2]}min - ${inseam_range[3]}max inches).`;
     var inseam_msg = 'Recommended for inseam height of '+inseam_range[0]+'min - '+inseam_range[1]+'max cm ('+inseam_range[2]+'min - '+inseam_range[3]+'max inches).';
-    // place recommended message in the table:
-    // size_table.tBodies[0].innerHTML += '<tr><td><b>Inseam:</b></td><td>' + inseam_msg + '</td></tr>';
-    //OR
-    //place receommended message in the area requested:
-    // create a new p element and append the recommended message to it:
-    var inseam_tag = document.createElement("p");
-    var inseam_txtNode = document.createTextNode(inseam_msg);
-    inseam_tag.appendChild(inseam_txtNode);
-    inseam_tag.setAttribute('style', 'display:inline-block; float:right; font-size:medium; padding:30px 30% 0px 0px;');
-    // apply inline block style to both calculate link and p element and place p element after the calculate anchor tag:
-    var calc_link = document.getElementsByClassName('calculate-size-btn')[0];
-    calc_link.setAttribute('style', 'display:inline-block');
+    // create a new p element for the inseam message:
+    var inseam_tag = $("<p></p>").text(inseam_msg);
+    inseam_tag.attr('style', 'display:inline-block; float:right; font-size:medium; padding:30px 30% 0px 0px;');
+    //access the calculate link and change its display property:
+    var calc_link = $(".calculate-size-btn");
+    calc_link.attr('style', 'display:inline-block');
+    // add the new p element after calculate link:
     calc_link.after(inseam_tag);
-    // inseam_tag.style.float = 'right';
-    // inseam_tag.style.padding = '10px 25% 0px 0px';
-    // var div_bikesize = document.getElementById('bikesize');
-    // div_bikesize.insertBefore(inseam_tag, div_bikesize.children[1]);
   }
 
 
@@ -48,15 +38,9 @@ $(document).ready(function(){
   55: '54-54.5-55-55.5-56-56.5', 56: '55-55.5-56-56.5-57-57.5', 57: '56-56.5-57-57.5-58-58.5', 58: '57-57.5-58-58.5-59-59.5',
   59: '58-58.5-59-59.5-60-60.5', 60: '59-59.5-60-60.5-61-61.5', 61: '60-60.5-61-61.5-62-62.5', 62: '61-61.5-62-62.5-63-63.5',
   63: '62-62.5-63-63.5-64-64.5', 64: '63-63.5-64', 65: '64-65', 66: '65-66-67', 67: '66-67' };
-
   // grab bike size from the product page:
-  // var size_table = document.getElementById('bikesize').getElementsByTagName('table')[0];
-  // var bike_size_str = size_table.rows[0].cells[1].innerText;
-
   var bike_size_str = $("#bikesize #product_tab_table tr:eq(0) td:eq(1)").text(); //jq
-
   var bike_size = parseInt(bike_size_str.split(' ')[0]);
-
   // convert bike size to cm if needed:
   if(!bike_size_str.includes('cm')){
     bike_size *= 2.54;
