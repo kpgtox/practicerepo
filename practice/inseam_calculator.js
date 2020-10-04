@@ -24,13 +24,19 @@ $(document).ready(function(){
     // size_table.tBodies[0].innerHTML += '<tr><td><b>Inseam:</b></td><td>' + inseam_msg + '</td></tr>';
     //OR
     //place receommended message in the area requested:
-    var inseam_tag = document.createElement("h3");
+    // create a new p element and append the recommended message to it:
+    var inseam_tag = document.createElement("p");
     var inseam_txtNode = document.createTextNode(inseam_msg);
     inseam_tag.appendChild(inseam_txtNode);
-    inseam_tag.style.float = 'right';
-    inseam_tag.style.padding = '10px 25% 0px 0px';
-    var div_bikesize = document.getElementById('bikesize');
-    div_bikesize.insertBefore(inseam_tag, div_bikesize.children[1]);
+    inseam_tag.setAttribute('style', 'display:inline-block; float:right; font-size:medium; padding:30px 30% 0px 0px;');
+    // apply inline block style to both calculate link and p element and place p element after the calculate anchor tag: 
+    var calc_link = document.getElementsByClassName('calculate-size-btn')[0];
+    calc_link.setAttribute('style', 'display:inline-block');
+    calc_link.after(inseam_tag);
+    // inseam_tag.style.float = 'right';
+    // inseam_tag.style.padding = '10px 25% 0px 0px';
+    // var div_bikesize = document.getElementById('bikesize');
+    // div_bikesize.insertBefore(inseam_tag, div_bikesize.children[1]);
   }
 
 
