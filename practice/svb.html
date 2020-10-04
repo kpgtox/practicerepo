@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+
+
+    $(document).ready(function(){
+
+      <!-- access table elements using jq -->
+      console.log($("#t1 tr:eq(0) td:eq(0)").text());
+      console.log($("#t1 tr:eq(0) td:eq(1)").text());
+      console.log($("#t1 tr:eq(1) td:eq(0)").text());
+      console.log($("#t1 tr:eq(1) td:eq(1)").text());
+
+      <!-- access elements of table which is a child ofa div using jq -->
+      console.log( $("#d1 #t2 tr:eq(0) td:eq(0)").text() );
+      console.log( $("#d1 #t2 tr:eq(0) td:eq(1)").text() );
+      console.log( $("#d1 #t2 tr:eq(1) td:eq(0)").text() );
+      console.log( $("#d1 #t2 tr:eq(0) td:eq(1)").text() );
+
+    });
+
+
+  </script>
+</head>
+
+
+<body>
+
+  <table id="t1">
+    <tr>
+      <td>size</td>
+      <td>50 cm</td>
+    </tr>
+    <tr>
+      <td>Tube</td>
+      <td>20 cm</td>
+    </tr>
+  </table>
+
+  <div id="d1">
+    <table id="t2">
+      <tr>
+        <td>frame</td>
+        <td>500 cm</td>
+      </tr>
+      <tr>
+        <td>fork height</td>
+        <td>200 cm</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
