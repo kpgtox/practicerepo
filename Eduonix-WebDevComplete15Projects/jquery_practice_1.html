@@ -505,7 +505,7 @@ Yo yo
   <!-- a label tag, use the for property to assign the label to another tag: -->
   <label for="spinner_input">Spinner :</label>
   <!-- input tag, a textfield basically: -->
-  <input id="spinner_input" value="10">
+  <input id="spinner_input" value="10" title="Enter value for Spinner">
 </div>
 
 <!-- spinner 2-->
@@ -513,7 +513,35 @@ Yo yo
   <!-- a label tag, use the for property to assign the label to another tag: -->
   <label for="spinner_input2">Spinner2 :</label>
   <!-- input tag, a textfield basically: -->
-  <input id="spinner_input2" value="20">
+  <input id="spinner_input2" value="20" title="Enter value for Spinner2">
+</div>
+
+<!-- tabs in jq: -->
+<div id="d47">
+  <!-- anchor tags in a list will be turned into tabs in jq: -->
+  <ul>
+    <li> <a href="#tab1">Tab 1</a> </li>
+    <li> <a href="#tab2">Tab 2</a> </li>
+    <li> <a href="#tab3">Tab 3</a> </li>
+  </ul>
+  <!-- every link in anchor tags above are linked to the divs below:  -->
+  <div id="tab1">Content 1</div>
+  <div id="tab2">Content 2</div>
+  <div id="tab3">Content 3</div>
+</div>
+
+<!-- tabs in jq with more features: -->
+<div id="d48">
+  <!-- anchor tags in a list will be turned into tabs in jq: -->
+  <ul>
+    <li> <a href="#tab1">Tab 1</a> </li>
+    <li> <a href="#tab2">Tab 2</a> </li>
+    <li> <a href="#tab3">Tab 3</a> </li>
+  </ul>
+  <!-- every link in anchor tags above are linked to the divs below:  -->
+  <div id="tab1">Content 1</div>
+  <div id="tab2">Content 2</div>
+  <div id="tab3">Content 3</div>
 </div>
 
 
@@ -1172,15 +1200,48 @@ Yo yo
       }
     });
 
+    // more widgets in jq:
+
     // jq spinner:
     // a simple jq spinner
     $("#spinner_input").spinner();
+
+    // Show tooltip when hovered on the text field:
+    // displays the value of title property from the input tag.
+    $("#spinner_input").tooltip();
 
     // spinner with more features:
     $("#spinner_input2").spinner({
       min:0,
       max:100,
       step:2,
+    });
+
+    // tooltip with properties:
+    $("#spinner_input2").tooltip({
+      // show: {effect: "slideDown"},
+      show: {effect: "explode"},
+    });
+
+    // Enable tooltip feature for all tags with a title property:
+    // $(document).tooltip();
+
+    // tabs in jq:
+    // a simple layout of tabs:
+    // convert the div (containing list of anchor tags that link to other divs in the page) to jq tabs:
+    $("#d47").tabs();
+
+    // jq tabs with properties added:
+    $("#d48").tabs({
+      // make tabs collapsible:
+      // collapsible: true,
+      // activate highlights at mousehovers:
+      // works only when collapsible is set to false.
+      event: "mouseover",
+    });
+    // add sortable feature to above tabs:
+    $("#d48").tabs().find(".ui-tabs-nav").sortable({
+      axis:"x",
     });
 
 
