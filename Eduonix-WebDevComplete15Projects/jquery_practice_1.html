@@ -95,9 +95,20 @@
       position: absolute;
       left: 45%;
     }
-    #select_country{
-      width: 200px;
+    #d42, #d43, #d44{
+      margin: 50px 20px;
+      /* OR:
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 20px;
+      margin-right: 20px; */
     }
+    #slider_vaule{
+      color: purple;
+      border: 0;
+      font-weight: bold;
+    }
+
   </style>
 
 </head>
@@ -472,11 +483,22 @@ Yo yo
       <option>Netherlands</option>
     </optgroup>
   </select>
-</form>
+  </form>
 </div>
 
+<!-- a simple slider: -->
+<div id="d42"></div>
 
+<!-- a functioning slider: -->
+<div id="d43"></div>
+<label for="d43">Value :</label>
+<!-- make a readonly input field: -->
+<input type="text" id="slider_vaule" readonly>
 
+<!-- range slider: -->
+<div id="d44"></div>
+<label for="d44">Range :</label>
+<input type="text" id="range_value" readonly>
 
 
 
@@ -610,7 +632,7 @@ Yo yo
     $(".d3").text("pararara");
 
     // Access all text boxes(input element).
-    $("input").val("random text");
+    // $("input").val("random text");
 
     // Access attributes of an anchor element
     // href for link and title for hover text.
@@ -1082,8 +1104,9 @@ Yo yo
           $("#d39").progressbar("option", "value", x);
           // condition to stop running this code after looping this method 100 times:
           if(x>99){clearInterval(progress);}
+        },1000);
       },1000);
-    },1000);
+    });
 
     // jq select menu:
 
@@ -1091,8 +1114,51 @@ Yo yo
     $("#select_country").selectmenu();
     $("#select_country2").selectmenu();
 
+    // jq sliders:
+
+    // convert a div to a simple slider:
+    $("#d42").slider();
+
+    // a functioning slider:
+    // convert a div to a slider:
+    $("#d43").slider({
+      // adding a method to slide parameter:
+      slide: function(event,ui){
+        // ui.vaue gives the value of the slider, by defualt the range is 0 to 100:
+        $("#slider_vaule").val(ui.value);
+      },
+      //assign a range to the slider
+      min:0,
+      max:50
+    });
+    // set the input read only textfield's valueto 0 in the beginnig:
+    $("#slider_vaule").val(0);
+
+    //a range slider:
+    $("#d44").slider({
+      // range property makes the slider a range type of slider:
+      range: true,
+      // the min and max values of the slider:
+      min: 0,
+      max: 1000,
+      // step property, increment or decrement only by the step value:
+      step: 100,
+      // min and max values array used to access it for rendering, basically output of the slider:
+      values: [0,1000],
+      // accessing slider values when used, method 1:
+      // slide: function(event,ui){
+      //   // ui.values array contains the slider's two values-min and max which are fed to the values variable above:
+      //   $("#range_value").val("min: " + ui.values[0] + ", max: " + ui.values[1]);
+      // }
+      // accessing slider values when used, method 2:
+      slide: function(){
+        $("#range_value").val("min: " + $("#d44").slider("values",0) + ", max: " + $("#d44").slider("values",1));
+      }
 
     });
+
+
+
 
 
 
