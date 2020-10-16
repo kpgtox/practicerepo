@@ -90,6 +90,11 @@
     .ui-menu{
       width: 300px;
     }
+    /* progress bar for d39 div */
+    #loading_label{
+      position: absolute;
+      left: 45%;
+    }
   </style>
 
 </head>
@@ -418,6 +423,15 @@ Yo yo
   <li class="ui-widget-header">Australia</li>
 </ul>
 </div>
+
+<div id="d38"></div>
+
+<div id="d39">
+  <label id="loading_label"></label>
+</div>
+<button id="progressbar_bttn">Run</button>
+
+
 
 
 
@@ -982,6 +996,55 @@ Yo yo
     // Convert a list into a jq menu:
     //
     $("#continents_list").menu();
+
+    //Progess bar in jq:
+
+    // Simpleprogress bar:
+    $("#d38").progressbar({
+      // put 25% in progress bar.
+      value: 25,
+    });
+
+    // Access any button in jq:
+    $("button").click(function(){});
+
+    // Delayer, run something after specific amount of time:
+    // here after 1000 milliseconds(1second):
+    // setTimeout(function(){},1000);
+
+    //A functioning Progress bar :
+    $("#d39").progressbar({
+      value: 0,
+    });
+    var x = 0;
+    //run something after clicking the button:
+    $("#progressbar_bttn").click(function(){
+      // put text in the label tag:
+      $("#loading_label").text("in progress..");
+
+      // Timed looper,(coroutine), run something for every 1000 milli seconds(1second):
+      // var progress = setInterval(function(){},1000);
+
+      //Put the entire code in a delayer:
+      setTimeout(function(){
+        //create a new variable and assign the setinterval method to it:
+        var progress = setInterval(function(){
+          // code that runs every 1000 milli seconds:
+          // increment x by 1 every 100 milliseconds:
+          x++;
+          // update the label with x value:
+          $("#loading_label").text( x + '%' );
+          // finally, render the progress bar by setting its value property to x's value:
+          $("#d39").progressbar("option", "value", x);
+          // condition to stop running this code after looping this method 100 times:
+          if(x>99){clearInterval(progress);}
+      },1000);
+    },1000);
+
+
+    });
+
+
 
 
 
