@@ -95,6 +95,9 @@
       position: absolute;
       left: 45%;
     }
+    #select_country{
+      width: 200px;
+    }
   </style>
 
 </head>
@@ -424,12 +427,53 @@ Yo yo
 </ul>
 </div>
 
+<!-- jq simple progress bar -->
 <div id="d38"></div>
 
+<!-- jq, a functioning progress bar -->
 <div id="d39">
   <label id="loading_label"></label>
 </div>
 <button id="progressbar_bttn">Run</button>
+
+<!-- jq drop down box  -->
+<div id="d40">
+  <!-- assign the for property to id of the select tag: -->
+  <label for="select_country">Select your home country:</label> <br>
+  <!-- place the select tag inside a form tag because its right: -->
+  <form>
+  <select id="select_country">
+    <option>USA</option>
+    <option>UK</option>
+    <option>Canada</option>
+    <option>Australia</option>
+    <!-- make thisoption selected by default: -->
+    <option selected="selected">Germany</option>
+  </select>
+  </form>
+</div>
+
+<!-- jq drop down box with groups:  -->
+<div id="d41">
+  <!-- assign the for property to id of the select tag: -->
+  <label for="select_country2">Select your home country:</label> <br>
+  <!-- place the select tag inside a form tag because its right: -->
+  <form>
+  <select id="select_country2">
+    <optgroup label="Group 1">
+      <option>USA</option>
+      <option>UK</option>
+      <option>Canada</option>
+      <option>Australia</option>
+    </optgroup>
+    <optgroup label="Group 2">
+      <!-- make thisoption selected by default: -->
+      <option selected="selected">Germany</option>
+      <option>Netherlands</option>
+    </optgroup>
+  </select>
+</form>
+</div>
 
 
 
@@ -1040,6 +1084,12 @@ Yo yo
           if(x>99){clearInterval(progress);}
       },1000);
     },1000);
+
+    // jq select menu:
+
+    // convert a regular select menu to jq select menu:
+    $("#select_country").selectmenu();
+    $("#select_country2").selectmenu();
 
 
     });
