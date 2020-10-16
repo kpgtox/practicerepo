@@ -500,6 +500,22 @@ Yo yo
 <label for="d44">Range :</label>
 <input type="text" id="range_value" readonly>
 
+<!-- spinner -->
+<div id="d45">
+  <!-- a label tag, use the for property to assign the label to another tag: -->
+  <label for="spinner_input">Spinner :</label>
+  <!-- input tag, a textfield basically: -->
+  <input id="spinner_input" value="10">
+</div>
+
+<!-- spinner 2-->
+<div id="d46">
+  <!-- a label tag, use the for property to assign the label to another tag: -->
+  <label for="spinner_input2">Spinner2 :</label>
+  <!-- input tag, a textfield basically: -->
+  <input id="spinner_input2" value="20">
+</div>
+
 
 
 <!-- scripting -->
@@ -1154,8 +1170,24 @@ Yo yo
       slide: function(){
         $("#range_value").val("min: " + $("#d44").slider("values",0) + ", max: " + $("#d44").slider("values",1));
       }
-
     });
+
+    // jq spinner:
+    // a simple jq spinner
+    $("#spinner_input").spinner();
+
+    // spinner with more features:
+    $("#spinner_input2").spinner({
+      min:0,
+      max:100,
+      step:2,
+    });
+
+
+
+
+
+
 
 
 
