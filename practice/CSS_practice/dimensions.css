@@ -1,0 +1,21 @@
+/* by default the margin is 10px on body */
+body{
+  /* can manually remove all margin on body. */
+  /* margin: 0px; */
+}
+
+/* Width can set to Auto but not height. */
+#d1{
+  height: 400px;
+  width: auto;
+
+  background-color: green;
+}
+/* wrong: */
+/* height must be defined, height cannot be auto. */
+/* #d1{
+  width: 400px;
+  height: auto;
+
+  background-color: green;
+} */
