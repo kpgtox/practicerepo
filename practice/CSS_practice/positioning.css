@@ -1,0 +1,71 @@
+
+/* 1. Parent-Child positioning relationship: */
+
+/* parent div: */
+/* position of this div is relative to the body */
+#d1{
+  /* positioning: */
+  position: relative;
+  /* align the d1 to center of the page. */
+  /* margin: auto; */
+  /* dimensions: */
+  width: 700px;
+  height: 500px;
+  /* looks: */
+  border: 2px solid black;
+}
+
+/* children div of d1: */
+
+/* relative position of the child div: occupies entire horizontal space, next sibling will not sit next to it. */
+/* aboslute position of the child div: does not occupy entire horizontal space, next sibling can be placed next to it. */
+
+#d2{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid blue;
+}
+
+/* d3 child of d1, is placed 200pixels to the right of the left edge of its parent(d1):  */
+/* this div does not occupies entire horizontal space
+because its position is set to absolute to its parent.  */
+#d3{
+  position: absolute;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+}
+
+/* d4, child of d1, is placed 400 px to the right of the left edge of its parent(d1): */
+/* this div will sit on the same line or height of d3
+because d3's (previous div) position was set absolute so it does not occupy entire horizontal space. */
+#d4{
+  position: relative;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid green;
+}
+
+/* d5, child of d1, is placed 400 px to the right of the left edge of its parent(d1): */
+/* this div will not sit on the same line or height of d4,
+  it sits on the next line because d4's position was set relative so it occupies entire horizontal space. */
+#d5{
+  position: relative;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid orange;
+}
+
+/* this div will sit on the new because previous div occupies entire horizontal space:*/
+/* in order to make the left property work, the position must either be set to relative or absolute. */
+#d6{
+  position: absolute;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid pink;
+}
