@@ -1,8 +1,10 @@
+/* body{margin: 0px;} */
 #container{
-  margin: 20px;
-  height: 500px;
-  width: 600px;
-  /* width: auto; */
-  /* height: auto; */
+  margin: 10px auto;
+  padding: 20px;
+
+  width: 750px;
+  height: 600px;
+
   background-color: #9DD2EA;
 }

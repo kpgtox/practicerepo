@@ -1,21 +1,48 @@
+
+/* 1. Remove all Margin on all sides of the web page: */
 /* by default the margin is 10px on body */
-body{
-  /* can manually remove all margin on body. */
-  /* margin: 0px; */
-}
+/* body{
+  margin: 0px;
+} */
 
-/* Width can set to Auto but not height. */
+/* 2. Setting dims of a div element, height and width: */
+
+/* 2.1. manual size of the div: */
 #d1{
+  width: 600px;
   height: 400px;
-  width: auto;
-
-  background-color: green;
 }
+
+/* 2.2. Auto adjust width: */
+/* Width can set to Auto but not height. */
+/* #d1{
+  width: auto;
+  height: 400px;
+} */
 /* wrong: */
 /* height must be defined, height cannot be auto. */
 /* #d1{
   width: 400px;
   height: auto;
+} */
 
+/* 3. BG Color of the div element: */
+#d1{
   background-color: green;
+}
+
+/* 4.Aligning the div element on the web page: */
+/* placing the element on center of the web page: */
+#d1{
+  margin: auto;
+}
+
+/* 5. Adding a margin on to the div on all sides: */
+/* #d1{
+  margin: 20px;
+} */
+
+/* 6. Add margin on all sides and align the div on the center of the web page: */
+/* #d1{
+  margin: 20px auto;
 } */
