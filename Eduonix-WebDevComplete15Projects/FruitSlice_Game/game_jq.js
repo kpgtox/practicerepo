@@ -12,9 +12,20 @@ console.log("hellllo");
 // click method takes a method as a parameter.
 // $("#button_id").click(function(){});
 
+// jq syntax to replace the content of an html tag:
+// $("#element_id").html([value/text]);
+
+// jq, draw an html element:
+// $("#element_id").show();
+
+// jq, add content to the end of an html element:
+// $("#element_id").append();
+
 // --*--
 
 var playing = false;
+var score = 0;
+var lives = 3;
 
 $(function(){
   $("#start_button").click(function(){
@@ -23,7 +34,17 @@ $(function(){
     }
     else{
       playing = true;
-      
+      score = 0;
+      $("#score_val").html(score);
+      $("#lives").show();
+      lives = 3;
+      Add_Lives();
     }
   });
 });
+
+function Add_Lives(){
+  for(i=0; i<lives; i++){
+    $("#lives").append(" X ");
+  }
+}
