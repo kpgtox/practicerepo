@@ -18,20 +18,42 @@ console.log("hellllo");
 // jq, draw an html element:
 // $("#element_id").show();
 
-// jq, add content to the end of an html element:
+// jq, (append)add content to the end of an html element:
 // $("#element_id").append();
+
+// jq, append (include) an image element to another element.
+//$("#element_id").append('<img src="[folder address]/[img name].png">');
+
+// edit the attribute or property of an html element/tag:
+// $("#element_id").attr('[attribute_name]','[value]');
+
+// return a random number strictly between 0 and 1, (excluding 0 and 1):
+// Math.random()
+
+// to return a random number between 0 and a specified number, simply multiply:
+// 6*Math.random()
+
+//Round up a decimal number:
+// Math.round()
+
+// Resourceful actions:
+// Adding a new element to the html page dynamically through javascript costs more memory.
+
 
 // --*--
 
 var playing = false;
 var score = 0;
 var lives = 3;
+var fruits = ['apple','banana','grapes','watermelon','orange','pineapple'];
 
 $(function(){
   $("#start_button").click(function(){
+    // while playing:
     if(playing){
       location.reload();
     }
+    // when game over / page reload:
     else{
       playing = true;
       score = 0;
@@ -39,12 +61,25 @@ $(function(){
       $("#lives").show();
       lives = 3;
       Add_Lives();
+      $("#start_button").html("Reset Game");
+      Start_Action();
     }
   });
 });
 
 function Add_Lives(){
   for(i=0; i<lives; i++){
-    $("#lives").append(" X ");
+    $("#lives").append(' <img src="images/heart.png" class="hearts">');
   }
+}
+
+function Start_Action(){
+  Choose_Fruit();
+  $("#fruit1").show();
+}
+
+function Choose_Fruit(){
+  var x = Math.round(5*Math.random());
+  $("#fruit1").attr('src','images/' + fruits[x] + '.png');
+  console.log("x: " + x);
 }
