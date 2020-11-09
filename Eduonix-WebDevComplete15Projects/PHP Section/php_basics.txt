@@ -1,0 +1,8 @@
+-All php code goes inside the php tag:
+<?php
+?>
+
+-php generates an html page dynamically.
+
+-print something on page:
+echo "hello world";
