@@ -10,3 +10,25 @@ echo "hello world";
 -You can embed php code independently within a php tag inside a html file without affecting the html code.
 
 -Creating a para element using php:
+
+-Variables in php:
+Syntax is $variablename or $_variablename.
+variable name must start either with a letter or an underscore.
+use $ sign while declaring and also when using a variable.
+
+-Concatenating strings in php
+$name = "karthik";
+$age = 31;
+$message = "hi, my name is " . $name . " and i am " . $age . " years old.";
+The age variable is automatically turned into a string when concatenated with a string.
+To print:
+echo $message;
+
+-Constants
+Variables whose values cannot be changed in the script.
+These variables must always be in uppercase.
+Declaring a constant variable:
+define("COUNTRY", "INDIA");
+define("PRICE", 99);
+No need to use dollar sign to constant variables anywhere.
+echo "Landing in: " . COUNTRY;
