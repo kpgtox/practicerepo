@@ -47,6 +47,8 @@ $f = 3.5;
 echo '<br/>';
 var_dump($f);
 
+//--
+
 // Test a condition:
 $boo = (5<6);
 // prints datatype and value of boo:

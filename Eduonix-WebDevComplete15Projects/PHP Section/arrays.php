@@ -12,6 +12,8 @@ print_r($cars);
 echo '<p>First Element:</p>'
 echo $cars[0];
 
+//--
+
 /*Assciative Array:
 Arrays that have key value pairs:*/
 $bikes = array("road"=>"yamaha",
@@ -21,6 +23,8 @@ $bikes = array("road"=>"yamaha",
 print_r($bikes);
 //get information:
 var_dump($bikes);
+
+//--
 
 //Two arrays are considered same if they have same elements even if the order is different:
 
@@ -44,6 +48,8 @@ var_dump($bikes === $mopeds);
 echo "<p>bikes<>mopeds:</p>";
 var_dump($bikes <> $mopeds);
 
+//--
+
 //Adding two associative arrays:
 //combines elements of both the arrays:
 $twowheelers = $bikes + $mopeds;
@@ -51,7 +57,7 @@ echo "<p>bikes + mopeds :</p>";
 var_dump($twowheelers);
 print_r($twowheelers);
 
-
+//--
 
 
 
