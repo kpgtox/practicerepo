@@ -6,3 +6,7 @@
 
 -print something on page:
 echo "hello world";
+
+-You can embed php code independently within a php tag inside a html file without affecting the html code.
+
+-Creating a para element using php:

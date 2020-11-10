@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>php in html</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+
+  <h1>Embedding php in html</h1>
+  <p>
+    <!-- does not work:-->
+    <?php
+    echo "hello world inside a para tag";
+    ?>
+    <!-- does not work:-->
+    <?php
+    echo "<p>hello world inside a para tag that is created by php code.</p>";
+    ?>
+  </p>
+
+</body>
+
+</html>
