@@ -27,7 +27,7 @@ foreach ($bikes as $x => $y) {
 }
 
 //while loop:
-// print 1 to 10:
+// print 1 to 10:ß
 $i = 1;
 while($i<=10){
   echo $i . "\n";
