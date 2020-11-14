@@ -39,3 +39,7 @@ the method attribute is either get or post.
 Example - something sent to the web server via a search bar: https://www.apple.com/search/?q=iphone, here
 https://www.apple.com/search/ is where the input is being sent to, q is the name of the input field the user types in,
 the information typed by user is "iphone".
+GET method wont be used to send passwords and sensitive information.
+By default, the information from the form will be sent to the same file, if the action attribute is left emmpty.
+Information from forms sent using POST method will not be shown in the url like how GET does.
+POST method is used to send sensitive information.
