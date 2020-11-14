@@ -16,4 +16,11 @@ $email_filtered = filter_var($user_email, FILTER_SANITIZE_EMAIL);
 echo "<br/>";
 echo $email_filtered;
 
+//filter an url, removes spaces:
+$url = "https://www.  google.  com ";
+$url_filtered = filter_var($url, FILTER_SANITIZE_URL);
+echo "<br/>";
+echo $url;
+
+
 ?>
