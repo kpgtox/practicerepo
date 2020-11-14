@@ -32,3 +32,10 @@ define("COUNTRY", "INDIA");
 define("PRICE", 99);
 No need to use dollar sign to constant variables anywhere.
 echo "Landing in: " . COUNTRY;
+
+- Send information to a web server using php:
+In the form tag in html, the action attribute contains the directory of the file we want to send our input to,
+the method attribute is either get or post.
+Example - something sent to the web server via a search bar: https://www.apple.com/search/?q=iphone, here
+https://www.apple.com/search/ is where the input is being sent to, q is the name of the input field the user types in,
+the information typed by user is "iphone".
