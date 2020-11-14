@@ -50,7 +50,7 @@ var_dump($bikes <> $mopeds);
 
 //--
 
-//Adding two associative arrays:
+//Adding two associative arrays (merging):
 //combines elements of both the arrays:
 $twowheelers = $bikes + $mopeds;
 echo "<p>bikes + mopeds :</p>";
@@ -58,6 +58,61 @@ var_dump($twowheelers);
 print_r($twowheelers);
 
 //--
+
+//Merging two index arrays:
+$b1 = array("apples","kiwi");
+$b2 = array("bananas","dates");
+$b3 = array_merge($b1,$b2);
+print_r($b3);
+
+//--
+
+// get and print no. of elements in an array (length of the array):
+echo count($b3);
+
+//--
+
+// get number of occurances of every element in an array:
+//the method below returns an array, with keys as elements and values as number of its occurances in the array.
+$foo = array("milk","milk","cheese","cheese","cheese","bread","eggs");
+$foo_occ = array_count_values($foo);
+print_r($foo_occ);
+echo "milk occures " . $foo_occ["milk"] . " times."
+//--
+
+// Check if an element exists in an array:
+if(in_array("milk",$foo)){
+  echo "present";
+}
+else {
+  echo "nope";
+}
+//--
+
+//append an element to an array:
+$goo = array("one","two");
+array_push($goo, "three");
+print_r($goo);
+//--
+
+// push item into cart after clicking submit:
+$cart;
+// check if submit button (with its name attribute as submit) is pressed:
+if($_GET["submit"]){
+  //check if user has selected an item from an input field (with its name attribute as item):
+  if($_GET["item"]){
+    //push that item to the cart array:
+    array_push($cart,$_GET["item"]);
+  }
+}
+print_r($cart);
+//--
+
+
+
+
+
+
 
 
 
