@@ -75,7 +75,8 @@ function Reset_game(){
   score = 0;
   lives = 3;
   step = 0;
-  Show_Lives();
+  Draw_lives();
+  $("#gameover").hide();
   $("#score_val").html(score);
   $("#start_button").html("Reset Game");
   Start_Action();
@@ -86,7 +87,7 @@ function Loadup(){
   $("#gameover").hide();
 }
 
-function Show_Lives(){
+function Draw_lives(){
   $("#lives").empty();
   for(i=0; i<lives; i++){
     $("#lives").append(' <img src="images/heart.png" class="hearts">');
@@ -135,21 +136,21 @@ function Check_fruit_pos(){
   var x = $("#fruit1").position().top;
   var y = $("#main").height();
   if(x>y){
-    Update_lives();
+    Check_lives();
     Choose_Fruit();
     Position_fruit();
     Generate_step();
   }
 }
 
-function Update_lives(){
+function Check_lives(){
   if(lives > 1){
     lives--;
-    Show_Lives();
+    Draw_lives();
   }
   else{
     lives = 0;
-    Show_Lives();
+    Draw_lives();
     End_game();
   }
 }
