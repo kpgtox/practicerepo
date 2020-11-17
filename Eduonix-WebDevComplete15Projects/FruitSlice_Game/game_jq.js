@@ -83,6 +83,7 @@ function Reset_game(){
 
 function Loadup(){
   $("#start_button").html("Start Game");
+  $("#gameover").hide();
 }
 
 function Show_Lives(){
@@ -157,4 +158,6 @@ function End_game(){
   playing = false;
   clearInterval(animate);
   $("#start_button").html("Start Game");
+  $("#gameover").html("Game Over");
+  $("#gameover").show();
 }
