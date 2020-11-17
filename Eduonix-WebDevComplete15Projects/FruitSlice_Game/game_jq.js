@@ -86,6 +86,7 @@ function Loadup(){
 }
 
 function Show_Lives(){
+  $("#lives").empty();
   for(i=0; i<lives; i++){
     $("#lives").append(' <img src="images/heart.png" class="hearts">');
   }
@@ -134,9 +135,9 @@ function Check_fruit_pos(){
   var y = $("#main").height();
   if(x>y){
     Update_lives();
-    // Choose_Fruit();
-    // Position_fruit();
-    // Generate_step();
+    Choose_Fruit();
+    Position_fruit();
+    Generate_step();
   }
 }
 
@@ -145,8 +146,15 @@ function Update_lives(){
     lives--;
     Show_Lives();
   }
-  // else{
-  //   lives = 0;
-  //   Show_Lives();
-  // }
+  else{
+    lives = 0;
+    Show_Lives();
+    End_game();
+  }
+}
+
+function End_game(){
+  playing = false;
+  clearInterval(animate);
+  $("#start_button").html("Start Game");
 }
