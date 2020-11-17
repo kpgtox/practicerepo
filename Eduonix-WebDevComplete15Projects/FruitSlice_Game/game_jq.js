@@ -99,6 +99,7 @@ function Start_Action(){
   Choose_Fruit();
   Position_fruit();
   Move_fruit();
+  Track_input();
 }
 
 function Choose_Fruit(){
@@ -115,6 +116,14 @@ function Position_fruit(){
 function Move_fruit(){
   Generate_step();
   Add_step();
+}
+
+function Track_input(){
+  $("#fruit1").mouseover(function(){
+    console.log("hovered");
+    score++;
+    $("#score_val").html(score);
+  });
 }
 
 function Generate_step(){
