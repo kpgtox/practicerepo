@@ -5,7 +5,7 @@
 // print something first to check if this js file is linked to the html page:
 console.log("hellllo");
 
-// All jquery codemust goin the following function:
+// All jquery code must go in the following function:
 // $(function(){});
 
 // jq syntax for a button call:
@@ -51,6 +51,7 @@ $(function(){
   $("#start_button").click(function(){
     // while playing:
     if(playing){
+      // reload page:
       location.reload();
     }
     // when game over / page reload:
@@ -76,10 +77,14 @@ function Add_Lives(){
 function Start_Action(){
   Choose_Fruit();
   $("#fruit1").show();
+  Position_fruit();
 }
 
 function Choose_Fruit(){
   var x = Math.round(5*Math.random());
   $("#fruit1").attr('src','images/' + fruits[x] + '.png');
-  console.log("x: " + x);
+}
+
+function Position_fruit(){
+  $("#fruit1").css({'left':-30,'top':-30});
 }
