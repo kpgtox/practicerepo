@@ -47,7 +47,7 @@ var score = 0;
 var lives = 3;
 var fruits = ['apple','banana','grapes','watermelon','orange','pineapple'];
 var fruit_container_width = 550;
-var fruit_container_height = 300;
+var animate;
 
 $(function(){
   $("#start_button").click(function(){
@@ -80,6 +80,7 @@ function Start_Action(){
   Choose_Fruit();
   $("#fruit1").show();
   Position_fruit();
+  Move_fruit();
 }
 
 function Choose_Fruit(){
@@ -89,5 +90,17 @@ function Choose_Fruit(){
 
 function Position_fruit(){
   var x = Math.round(fruit_container_width * Math.random());
-  $("#fruit1").css({'left': x,'top':-30});
+  $("#fruit1").css({'left': x,'top':-200});
+}
+
+function Move_fruit(){
+  //gen a random step to move the fruit with:
+  var step = 1 + Math.round(5*Math.random());
+  //Move fruit down by one random step every 10ms:
+  animate = setInterval(function(){
+    // edit the top attribute of fruit1's css, add step to its current top position's value:
+    $("#fruit1").css('top', $("#fruit1").position().top + step);
+  }, 10);
+
+
 }
