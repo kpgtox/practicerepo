@@ -46,6 +46,8 @@ var playing = false;
 var score = 0;
 var lives = 3;
 var fruits = ['apple','banana','grapes','watermelon','orange','pineapple'];
+var fruit_container_width = 550;
+var fruit_container_height = 300;
 
 $(function(){
   $("#start_button").click(function(){
@@ -86,5 +88,6 @@ function Choose_Fruit(){
 }
 
 function Position_fruit(){
-  $("#fruit1").css({'left':-30,'top':-30});
+  var x = Math.round(fruit_container_width * Math.random());
+  $("#fruit1").css({'left': x,'top':-30});
 }
