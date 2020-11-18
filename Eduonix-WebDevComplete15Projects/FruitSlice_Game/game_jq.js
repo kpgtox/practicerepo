@@ -102,6 +102,29 @@ function Start_Action(){
   Track_input();
 }
 
+function Track_input(){
+  $("#fruit1").mouseover(function(){
+    // DOM command:
+    // document.getElementById("slicesound").play();
+    //OR
+    // the jquery selector returns an array, the first element of the array contains the audio:ß
+    $("#slicesound")[0].play();
+    // update score:
+    score++;
+    $("#score_val").html(score);
+    clearInterval(animate);
+    // embedd jquery ui for the below effect:
+    $("#fruit1").hide("explode",500);
+    setTimeout(Rerun,500);
+  });
+}
+
+function Rerun(){
+  Choose_Fruit();
+  Position_fruit();
+  Move_fruit();
+}
+
 function Choose_Fruit(){
   var x = Math.round(5*Math.random());
   $("#fruit1").attr('src','images/' + fruits[x] + '.png');
@@ -116,14 +139,6 @@ function Position_fruit(){
 function Move_fruit(){
   Generate_step();
   Add_step();
-}
-
-function Track_input(){
-  $("#fruit1").mouseover(function(){
-    console.log("hovered");
-    score++;
-    $("#score_val").html(score);
-  });
 }
 
 function Generate_step(){
