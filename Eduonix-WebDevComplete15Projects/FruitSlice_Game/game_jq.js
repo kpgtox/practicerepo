@@ -1,6 +1,7 @@
 // program flowchart:
 // click on start/reset
-// if playing, reload else : show lives, change button text, create fruit, move fruit by one step, check fruit level,
+// On start button > if already playing, reload page.
+//
 
 // print something first to check if this js file is linked to the html page:
 // console.log("hellllo");
@@ -44,10 +45,11 @@
 
 var playing = false;
 var score = 0;
+var point = 1;
 var lives = 3;
 var fruits = ['apple','banana','grapes','watermelon','orange','pineapple'];
 var fruit_container_width = 550;
-var animate;
+var animate = null;
 var step = 0;
 
 $(function(){
@@ -58,33 +60,23 @@ $(function(){
 function Start_game(){
   // if start button clicked:
   $("#start_button").click(function(){
-    // while playing:
     if(playing){
-      // reload page:
       location.reload();
     }
-    // when game over / page reload:
     else{
-      Reset_game();
+      Start_Action();
     }
   });
 }
 
-function Reset_game(){
-  playing = true;
+function Loadup(){
   score = 0;
   lives = 3;
   step = 0;
   Draw_lives();
-  $("#gameover").hide();
-  $("#score_val").html(score);
-  $("#start_button").html("Reset Game");
-  Start_Action();
-}
-
-function Loadup(){
   $("#start_button").html("Start Game");
   $("#gameover").hide();
+  $("#score_val").html(score);
 }
 
 function Draw_lives(){
@@ -96,49 +88,43 @@ function Draw_lives(){
 }
 
 function Start_Action(){
+  playing = true;
+  $("#start_button").html("Reload Game");
   Choose_Fruit();
   Position_fruit();
-  Move_fruit();
+  Generate_step();
+  Add_step();
   Track_input();
 }
 
 function Track_input(){
   $("#fruit1").mouseover(function(){
-    // DOM command:
+    // DOM command to play sound:
     // document.getElementById("slicesound").play();
     //OR
     // the jquery selector returns an array, the first element of the array contains the audio:ß
     $("#slicesound")[0].play();
-    // update score:
-    score++;
-    $("#score_val").html(score);
-    clearInterval(animate);
-    // embedd jquery ui for the below effect:
-    $("#fruit1").hide("explode",500);
-    setTimeout(Rerun,500);
+    Update_score();
+    Choose_Fruit();
+    Position_fruit();
+    Generate_step();
   });
 }
 
-function Rerun(){
-  Choose_Fruit();
-  Position_fruit();
-  Move_fruit();
+function Update_score(){
+  score = score + point;
+  $("#score_val").html(score);
 }
 
 function Choose_Fruit(){
   var x = Math.round(5*Math.random());
   $("#fruit1").attr('src','images/' + fruits[x] + '.png');
-  $("#fruit1").show();
 }
 
 function Position_fruit(){
   var x = Math.round(fruit_container_width * Math.random());
   $("#fruit1").css({'left': x,'top':-200});
-}
-
-function Move_fruit(){
-  Generate_step();
-  Add_step();
+  $("#fruit1").show();
 }
 
 function Generate_step(){
@@ -180,9 +166,8 @@ function Check_lives(){
 }
 
 function End_game(){
-  playing = false;
   clearInterval(animate);
-  $("#start_button").html("Start Game");
-  $("#gameover").html("Game Over");
+  $("#start_button").html("Reload Game");
+  $("#gameover").html("Game Over, Your score is " + score);
   $("#gameover").show();
 }
